@@ -1,1 +1,1 @@
-![screenshot](./llinks.PNG)
+![screenshot](https://github.com/bgoonz/Links-Shortcut-Site/blob/master/links.PNG)
