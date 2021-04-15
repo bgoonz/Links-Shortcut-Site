@@ -1,1 +1,1 @@
-![screenshot](https://github.com/bgoonz/Links-Shortcut-Site/blob/master/links.PNG)
+![screenshot](./screencapture-links4242-netlify-app-2021-04-15-11_24_16.png)
