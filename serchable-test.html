@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <style>
-        body {
+   body {
             display: block;
             margin: 4px;
             zoom: 0.7;
@@ -68,7 +68,7 @@
             white-space: normal;
             border-radius: 10px;
             min-width: 25em;
-
+width:40%;
             box-shadow: 0 0 9px;
 
         }
@@ -90,12 +90,19 @@
             border-top: 1px solid #CCCCCC;
             border-right: 1px solid #333333;
             border-bottom: 1px solid #333333;
-            border-left: 1px solid #18047a;
+            border-left: 1px solid #725cdf;
         }
 
 
 
+        li{
+    margin-top: 10px;
+    border:1px solid grey;
+}
 
+li:first-child {
+    margin-top:0;
+}
 
 
         h1,
@@ -158,6 +165,16 @@
 </head>
 
 <body>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <iframe height="800" style="width: 100%;" scrolling="no" title="Async Search Bar with Javascript" src="https://codepen.io/bgoonz/embed/XWRaWdq?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href="https://codepen.io/bgoonz/pen/XWRaWdq">
+        Async Search Bar with Javascript</a> by Bryan C Guner (<a href="https://codepen.io/bgoonz">@bgoonz</a>)
+        on <a href="https://codepen.io">CodePen</a>.
+      </iframe>
     <br>
     <br>
     <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search">

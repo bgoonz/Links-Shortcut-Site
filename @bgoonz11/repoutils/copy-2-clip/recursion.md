@@ -1,294 +1,290 @@
-WEEK 7 *Data Structures and Algorithms*
-=======================================
+# WEEK 7 _Data Structures and Algorithms_
 
-------------------------------------------------------------------------
+---
 
--   [WEEK 7  
-    *Data Structures and Algorithms* {ignore=true}](#week-7data-structures-and-algorithms-ignoretrue)
--   [WEEK-07  
-    *Learning Objectives* {ignore=true}](#week-07-learning-objectives-ignoretrue)
--   [GitHub Profile and Projects Objectives](#github-profile-and-projects-objectives)
--   [Big O Learning Objectives](#big-o-learning-objectives)
--   [Memoization And Tabulation Learning Objectives](#memoization-and-tabulation-learning-objectives)
--   [Sorting Algorithms](#sorting-algorithms)
--   [Lists, Stacks, and Queues](#lists-stacks-and-queues)
--   [Graphs and Heaps](#graphs-and-heaps)
--   [WEEK-07 DAY-1  
-    *Your GitHub Identity* {ignore=true}](#week-07-day-1your-github-identity-ignoretrue)
--   [GitHub Profile and Projects Objectives](#github-profile-and-projects-objectives-1)
--   [Improving Your Profile Using GitHub](#improving-your-profile-using-github)
-    -   [Wikis (pre-project)](#wikis-pre-project)
-    -   [README files (post-project)](#readme-files-post-project)
-    -   [Wrap up](#wrap-up)
--   [Your GitHub Identity](#your-github-identity)
--   [WEEK-07 DAY-2  
-    *Big-O and Optimizations* {ignore=true}](#week-07-day-2big-o-and-optimizations-ignoretrue)
--   [Big O Learning Objectives](#big-o-learning-objectives-1)
--   [Memoization And Tabulation Learning Objectives](#memoization-and-tabulation-learning-objectives-1)
--   [Recursion Videos](#recursion-videos)
--   [Big-O By Colt Steele](#big-o-by-colt-steele)
--   [Curating Complexity: A Guide to Big-O Notation](#curating-complexity-a-guide-to-big-o-notation)
-    -   [Why Big-O?](#why-big-o)
-    -   [Big-O Notation](#big-o-notation)
-        -   [Simplifying Math Terms](#simplifying-math-terms)
-        -   [Simplifying a Product](#simplifying-a-product)
-        -   [Simplifying a Sum](#simplifying-a-sum)
-        -   [Putting it all together](#putting-it-all-together)
-    -   [What you've learned](#what-youve-learned)
--   [Common Complexity Classes](#common-complexity-classes)
-    -   [The seven major classes](#the-seven-major-classes)
-        -   [O(1) - Constant](#o1---constant)
-            -   [Constant growth](#constant-growth)
-            -   [Example Constant code](#example-constant-code)
-        -   [O(log(n)) - Logarithmic](#ologn---logarithmic)
-            -   [Logarithmic growth](#logarithmic-growth)
-            -   [Example logarithmic code](#example-logarithmic-code)
-        -   [O(n) - Linear](#on---linear)
-            -   [Linear growth](#linear-growth)
-            -   [Example linear code](#example-linear-code)
-        -   [O(n \* log(n)) - Loglinear](#on--logn---loglinear)
-            -   [Loglinear growth](#loglinear-growth)
-            -   [Example loglinear code](#example-loglinear-code)
-        -   [O(n<sup>c</sup>) - Polynomial](#onsupcsup---polynomial)
-            -   [Polynomial growth](#polynomial-growth)
-            -   [Example polynomial code](#example-polynomial-code)
-        -   [O(c<sup>n</sup>) - Exponential](#ocsupnsup---exponential)
-            -   [Exponential growth](#exponential-growth)
-            -   [Exponential code example](#exponential-code-example)
-        -   [O(n!) - Factorial](#on---factorial)
-            -   [Factorial growth](#factorial-growth)
-            -   [Factorial code example](#factorial-code-example)
-    -   [What you've learned](#what-youve-learned-1)
--   [Memoization](#memoization)
-    -   [Memoizing factorial](#memoizing-factorial)
-    -   [Memoizing the Fibonacci generator](#memoizing-the-fibonacci-generator)
-    -   [The memoization formula](#the-memoization-formula)
-    -   [What you learned](#what-you-learned)
--   [Tabulation](#tabulation)
-    -   [Tabulating the Fibonacci number](#tabulating-the-fibonacci-number)
-    -   [Aside: Refactoring for O(1) Space](#aside-refactoring-for-o1-space)
-        -   [The Tabulation Formula](#the-tabulation-formula)
-    -   [What you learned](#what-you-learned-1)
--   [Analysis of Linear Search](#analysis-of-linear-search)
--   [Analysis of Binary Search](#analysis-of-binary-search)
--   [Analysis of the Merge Sort](#analysis-of-the-merge-sort)
--   [Analysis of Bubble Sort](#analysis-of-bubble-sort)
--   [LeetCode.com](#leetcodecom)
--   [Memoization Problems](#memoization-problems)
--   [Tabulation Problems](#tabulation-problems)
--   [WEEK-07 DAY-3  
-    *Sorting Algorithms* {ignore=true}](#week-07-day-3sorting-algorithms-ignoretrue)
--   [Sorting Algorithms](#sorting-algorithms-1)
--   [Bubble Sort](#bubble-sort)
-    -   [*“But…then…why are we…”*](#butthenwhy-are-we)
-    -   [The algorithm bubbles up](#the-algorithm-bubbles-up)
-    -   [How does a pass of Bubble Sort work?](#how-does-a-pass-of-bubble-sort-work)
-    -   [Ending the Bubble Sort](#ending-the-bubble-sort)
-    -   [Pseudocode for Bubble Sort](#pseudocode-for-bubble-sort)
--   [Selection Sort](#selection-sort)
-    -   [The algorithm: select the next smallest](#the-algorithm-select-the-next-smallest)
-    -   [The pseudocode](#the-pseudocode)
--   [Insertion Sort](#insertion-sort)
-    -   [The algorithm: insert into the sorted region](#the-algorithm-insert-into-the-sorted-region)
-    -   [The Steps](#the-steps)
-    -   [The pseudocode](#the-pseudocode-1)
--   [Merge Sort](#merge-sort)
-    -   [The algorithm: divide and conquer](#the-algorithm-divide-and-conquer)
--   [Quick Sort](#quick-sort)
-    -   [How does it work?](#how-does-it-work)
-    -   [The algorithm: divide and conquer](#the-algorithm-divide-and-conquer-1)
-        -   [Partition](#partition)
-    -   [The pseudocode](#the-pseudocode-2)
--   [Binary Search](#binary-search)
-    -   [The Algorithm: “check the middle and half the search space”](#the-algorithm-check-the-middle-and-half-the-search-space)
-    -   [The pseudocode](#the-pseudocode-3)
--   [Bubble Sort Analysis](#bubble-sort-analysis)
-    -   [Bubble Sort JS Implementation](#bubble-sort-js-implementation)
-    -   [Time Complexity: O(n<sup>2</sup>)](#time-complexity-onsup2sup)
-    -   [Space Complexity: O(1)](#space-complexity-o1)
-    -   [When should you use Bubble Sort?](#when-should-you-use-bubble-sort)
--   [Selection Sort Analysis](#selection-sort-analysis)
-    -   [Selection Sort JS Implementation](#selection-sort-js-implementation)
-    -   [Time Complexity Analysis](#time-complexity-analysis)
-    -   [Space Complexity Analysis: O(1)](#space-complexity-analysis-o1)
-    -   [When should we use Selection Sort?](#when-should-we-use-selection-sort)
--   [Insertion Sort Analysis](#insertion-sort-analysis)
-    -   [Time and Space Complexity Analysis](#time-and-space-complexity-analysis)
-        -   [Space Complexity: O(1)](#space-complexity-o1-1)
-    -   [When should you use Insertion Sort?](#when-should-you-use-insertion-sort)
--   [Merge Sort Analysis](#merge-sort-analysis)
-    -   [Full code](#full-code)
-    -   [Merging two sorted arrays](#merging-two-sorted-arrays)
-    -   [Divide and conquer, step-by-step](#divide-and-conquer-step-by-step)
-    -   [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-1)
-        -   [Time Complexity: O(n log(n))](#time-complexity-on-logn)
-        -   [Space Complexity: O(n)](#space-complexity-on)
-        -   [When should you use Merge Sort?](#when-should-you-use-merge-sort)
--   [Quick Sort](#quick-sort-1)
-    -   [Quicksort Sort JS Implementation](#quicksort-sort-js-implementation)
-    -   [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-2)
-        -   [Time Complexity](#time-complexity)
-        -   [Space Complexity](#space-complexity)
-        -   [When should you use Quick Sort?](#when-should-you-use-quick-sort)
--   [Binary Search](#binary-search-1)
-    -   [Binary Search JS Implementation](#binary-search-js-implementation)
-    -   [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-3)
-        -   [Time Complexity: O(log(n))](#time-complexity-ologn)
-        -   [Space Complexity: O(n)](#space-complexity-on-1)
-        -   [When should we use Binary Search?](#when-should-we-use-binary-search)
--   [Bubble Sort](#bubble-sort-1)
-    -   [Instructions](#instructions)
--   [Selection Sort](#selection-sort-1)
-    -   [Instructions](#instructions-1)
--   [Insertion Sort](#insertion-sort-1)
-    -   [Instructions](#instructions-2)
--   [Merge Sort](#merge-sort-1)
-    -   [Instructions](#instructions-3)
--   [Quick Sort](#quick-sort-2)
-    -   [Instructions](#instructions-4)
--   [Binary Search](#binary-search-2)
-    -   [Instructions](#instructions-5)
--   [WEEK-07 DAY-4  
-    *Lists, Stacks, Queues* {ignore=true}](#week-07-day-4lists-stacks-queues-ignoretrue)
--   [Lists, Stacks, and Queues](#lists-stacks-and-queues-1)
--   [Linked Lists](#linked-lists)
-    -   [What is a Linked List?](#what-is-a-linked-list)
-        -   [*“So…this sounds a lot like an Array…”*](#sothis-sounds-a-lot-like-an-array)
-    -   [Types of Linked Lists](#types-of-linked-lists)
-    -   [Linked List Methods](#linked-list-methods)
-    -   [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-4)
-    -   [Time Complexity - Access and Search:](#time-complexity---access-and-search)
-        -   [Scenarios:](#scenarios)
-        -   [Discussion:](#discussion)
-    -   [Time Complexity - Insertion and Deletion:](#time-complexity---insertion-and-deletion)
-        -   [Scenarios:](#scenarios-1)
-        -   [Discussion:](#discussion-1)
-        -   [NOTE:](#note)
-    -   [Space Complexity:](#space-complexity-1)
-        -   [Scenarios:](#scenarios-2)
-        -   [Discussion:](#discussion-2)
-        -   [NOTE:](#note-1)
--   [Stacks and Queues](#stacks-and-queues)
-    -   [What is a Stack?](#what-is-a-stack)
-    -   [What is a Queue?](#what-is-a-queue)
-    -   [Stack and Queue Properties](#stack-and-queue-properties)
-    -   [Stack Methods](#stack-methods)
-    -   [Queue Methods](#queue-methods)
-    -   [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-5)
-        -   [Time Complexity - Access and Search:](#time-complexity---access-and-search-1)
-        -   [Time Complexity - Insertion and Deletion:](#time-complexity---insertion-and-deletion-1)
-        -   [Space Complexity:](#space-complexity-2)
-    -   [When should we use Stacks and Queues?](#when-should-we-use-stacks-and-queues)
-        -   [Stacks:](#stacks)
-        -   [Queues:](#queues)
--   [Linked List Project](#linked-list-project)
-    -   [Instructions](#instructions-6)
--   [Stack Project](#stack-project)
-    -   [Instructions](#instructions-7)
--   [Queue Project](#queue-project)
-    -   [Instructions](#instructions-8)
--   [WEEK-07 DAY-5  
-    *Heaps* {ignore=true}](#week-07-day-5heaps-ignoretrue)
--   [Graphs and Heaps](#graphs-and-heaps-1)
--   [Introduction to Heaps](#introduction-to-heaps)
-    -   [Complete Trees](#complete-trees)
-    -   [When to Use Heaps?](#when-to-use-heaps)
--   [Introduction to Heaps](#introduction-to-heaps-1)
-    -   [Complete Trees](#complete-trees-1)
-    -   [When to Use Heaps?](#when-to-use-heaps-1)
-    -   [Complete Trees](#complete-trees-2)
-    -   [When to Use Heaps?](#when-to-use-heaps-2)
-    -   [Binary Heap Implementation](#binary-heap-implementation)
-        -   [Insert](#insert)
-            -   [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes)
-            -   [Translating that into array operations:](#translating-that-into-array-operations)
-        -   [DeleteMax](#deletemax)
-            -   [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-1)
-            -   [Translating that into array operations:](#translating-that-into-array-operations-1)
-        -   [Time Complexity Analysis](#time-complexity-analysis-1)
-            -   [Array Heapify Analysis](#array-heapify-analysis)
-        -   [Space Complexity Analysis](#space-complexity-analysis)
-        -   [Insert](#insert-1)
-            -   [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-2)
-            -   [Translating that into array operations:](#translating-that-into-array-operations-2)
-        -   [DeleteMax](#deletemax-1)
-            -   [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-3)
-            -   [Translating that into array operations:](#translating-that-into-array-operations-3)
-        -   [Time Complexity Analysis](#time-complexity-analysis-2)
-            -   [Array Heapify Analysis](#array-heapify-analysis-1)
-        -   [Space Complexity Analysis](#space-complexity-analysis-1)
-    -   [Binary Heap Implementation](#binary-heap-implementation-1)
-        -   [Insert](#insert-2)
-            -   [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-4)
-            -   [Translating that into array operations:](#translating-that-into-array-operations-4)
-        -   [DeleteMax](#deletemax-2)
-            -   [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-5)
-            -   [Translating that into array operations:](#translating-that-into-array-operations-5)
-        -   [Time Complexity Analysis](#time-complexity-analysis-3)
-            -   [Array Heapify Analysis](#array-heapify-analysis-2)
-        -   [Space Complexity Analysis](#space-complexity-analysis-2)
-    -   [Heap Sort](#heap-sort)
-        -   [Time Complexity Analysis: O(nlog(n))](#time-complexity-analysis-onlogn)
-        -   [Space Complexity Analysis:](#space-complexity-analysis-3)
-    -   [In-Place Heap Sort](#in-place-heap-sort)
-        -   [Heapify](#heapify)
-        -   [Construct the Sorted Array](#construct-the-sorted-array)
-        -   [In-Place Heap Sort JavaScript Implementation](#in-place-heap-sort-javascript-implementation)
--   [Heaps Project](#heaps-project)
-    -   [Instructions](#instructions-9)
+- [WEEK 7  
+  _Data Structures and Algorithms_ {ignore=true}](#week-7data-structures-and-algorithms-ignoretrue)
+- [WEEK-07  
+  _Learning Objectives_ {ignore=true}](#week-07-learning-objectives-ignoretrue)
+- [GitHub Profile and Projects Objectives](#github-profile-and-projects-objectives)
+- [Big O Learning Objectives](#big-o-learning-objectives)
+- [Memoization And Tabulation Learning Objectives](#memoization-and-tabulation-learning-objectives)
+- [Sorting Algorithms](#sorting-algorithms)
+- [Lists, Stacks, and Queues](#lists-stacks-and-queues)
+- [Graphs and Heaps](#graphs-and-heaps)
+- [WEEK-07 DAY-1  
+  _Your GitHub Identity_ {ignore=true}](#week-07-day-1your-github-identity-ignoretrue)
+- [GitHub Profile and Projects Objectives](#github-profile-and-projects-objectives-1)
+- [Improving Your Profile Using GitHub](#improving-your-profile-using-github)
+  - [Wikis (pre-project)](#wikis-pre-project)
+  - [README files (post-project)](#readme-files-post-project)
+  - [Wrap up](#wrap-up)
+- [Your GitHub Identity](#your-github-identity)
+- [WEEK-07 DAY-2  
+  _Big-O and Optimizations_ {ignore=true}](#week-07-day-2big-o-and-optimizations-ignoretrue)
+- [Big O Learning Objectives](#big-o-learning-objectives-1)
+- [Memoization And Tabulation Learning Objectives](#memoization-and-tabulation-learning-objectives-1)
+- [Recursion Videos](#recursion-videos)
+- [Big-O By Colt Steele](#big-o-by-colt-steele)
+- [Curating Complexity: A Guide to Big-O Notation](#curating-complexity-a-guide-to-big-o-notation)
+  - [Why Big-O?](#why-big-o)
+  - [Big-O Notation](#big-o-notation)
+    - [Simplifying Math Terms](#simplifying-math-terms)
+    - [Simplifying a Product](#simplifying-a-product)
+    - [Simplifying a Sum](#simplifying-a-sum)
+    - [Putting it all together](#putting-it-all-together)
+  - [What you've learned](#what-youve-learned)
+- [Common Complexity Classes](#common-complexity-classes)
+  - [The seven major classes](#the-seven-major-classes)
+    - [O(1) - Constant](#o1---constant)
+      - [Constant growth](#constant-growth)
+      - [Example Constant code](#example-constant-code)
+    - [O(log(n)) - Logarithmic](#ologn---logarithmic)
+      - [Logarithmic growth](#logarithmic-growth)
+      - [Example logarithmic code](#example-logarithmic-code)
+    - [O(n) - Linear](#on---linear)
+      - [Linear growth](#linear-growth)
+      - [Example linear code](#example-linear-code)
+    - [O(n \* log(n)) - Loglinear](#on--logn---loglinear)
+      - [Loglinear growth](#loglinear-growth)
+      - [Example loglinear code](#example-loglinear-code)
+    - [O(n<sup>c</sup>) - Polynomial](#onsupcsup---polynomial)
+      - [Polynomial growth](#polynomial-growth)
+      - [Example polynomial code](#example-polynomial-code)
+    - [O(c<sup>n</sup>) - Exponential](#ocsupnsup---exponential)
+      - [Exponential growth](#exponential-growth)
+      - [Exponential code example](#exponential-code-example)
+    - [O(n!) - Factorial](#on---factorial)
+      - [Factorial growth](#factorial-growth)
+      - [Factorial code example](#factorial-code-example)
+  - [What you've learned](#what-youve-learned-1)
+- [Memoization](#memoization)
+  - [Memoizing factorial](#memoizing-factorial)
+  - [Memoizing the Fibonacci generator](#memoizing-the-fibonacci-generator)
+  - [The memoization formula](#the-memoization-formula)
+  - [What you learned](#what-you-learned)
+- [Tabulation](#tabulation)
+  - [Tabulating the Fibonacci number](#tabulating-the-fibonacci-number)
+  - [Aside: Refactoring for O(1) Space](#aside-refactoring-for-o1-space)
+    - [The Tabulation Formula](#the-tabulation-formula)
+  - [What you learned](#what-you-learned-1)
+- [Analysis of Linear Search](#analysis-of-linear-search)
+- [Analysis of Binary Search](#analysis-of-binary-search)
+- [Analysis of the Merge Sort](#analysis-of-the-merge-sort)
+- [Analysis of Bubble Sort](#analysis-of-bubble-sort)
+- [LeetCode.com](#leetcodecom)
+- [Memoization Problems](#memoization-problems)
+- [Tabulation Problems](#tabulation-problems)
+- [WEEK-07 DAY-3  
+  _Sorting Algorithms_ {ignore=true}](#week-07-day-3sorting-algorithms-ignoretrue)
+- [Sorting Algorithms](#sorting-algorithms-1)
+- [Bubble Sort](#bubble-sort)
+  - [_“But…then…why are we…”_](#butthenwhy-are-we)
+  - [The algorithm bubbles up](#the-algorithm-bubbles-up)
+  - [How does a pass of Bubble Sort work?](#how-does-a-pass-of-bubble-sort-work)
+  - [Ending the Bubble Sort](#ending-the-bubble-sort)
+  - [Pseudocode for Bubble Sort](#pseudocode-for-bubble-sort)
+- [Selection Sort](#selection-sort)
+  - [The algorithm: select the next smallest](#the-algorithm-select-the-next-smallest)
+  - [The pseudocode](#the-pseudocode)
+- [Insertion Sort](#insertion-sort)
+  - [The algorithm: insert into the sorted region](#the-algorithm-insert-into-the-sorted-region)
+  - [The Steps](#the-steps)
+  - [The pseudocode](#the-pseudocode-1)
+- [Merge Sort](#merge-sort)
+  - [The algorithm: divide and conquer](#the-algorithm-divide-and-conquer)
+- [Quick Sort](#quick-sort)
+  - [How does it work?](#how-does-it-work)
+  - [The algorithm: divide and conquer](#the-algorithm-divide-and-conquer-1)
+    - [Partition](#partition)
+  - [The pseudocode](#the-pseudocode-2)
+- [Binary Search](#binary-search)
+  - [The Algorithm: “check the middle and half the search space”](#the-algorithm-check-the-middle-and-half-the-search-space)
+  - [The pseudocode](#the-pseudocode-3)
+- [Bubble Sort Analysis](#bubble-sort-analysis)
+  - [Bubble Sort JS Implementation](#bubble-sort-js-implementation)
+  - [Time Complexity: O(n<sup>2</sup>)](#time-complexity-onsup2sup)
+  - [Space Complexity: O(1)](#space-complexity-o1)
+  - [When should you use Bubble Sort?](#when-should-you-use-bubble-sort)
+- [Selection Sort Analysis](#selection-sort-analysis)
+  - [Selection Sort JS Implementation](#selection-sort-js-implementation)
+  - [Time Complexity Analysis](#time-complexity-analysis)
+  - [Space Complexity Analysis: O(1)](#space-complexity-analysis-o1)
+  - [When should we use Selection Sort?](#when-should-we-use-selection-sort)
+- [Insertion Sort Analysis](#insertion-sort-analysis)
+  - [Time and Space Complexity Analysis](#time-and-space-complexity-analysis)
+    - [Space Complexity: O(1)](#space-complexity-o1-1)
+  - [When should you use Insertion Sort?](#when-should-you-use-insertion-sort)
+- [Merge Sort Analysis](#merge-sort-analysis)
+  - [Full code](#full-code)
+  - [Merging two sorted arrays](#merging-two-sorted-arrays)
+  - [Divide and conquer, step-by-step](#divide-and-conquer-step-by-step)
+  - [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-1)
+    - [Time Complexity: O(n log(n))](#time-complexity-on-logn)
+    - [Space Complexity: O(n)](#space-complexity-on)
+    - [When should you use Merge Sort?](#when-should-you-use-merge-sort)
+- [Quick Sort](#quick-sort-1)
+  - [Quicksort Sort JS Implementation](#quicksort-sort-js-implementation)
+  - [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-2)
+    - [Time Complexity](#time-complexity)
+    - [Space Complexity](#space-complexity)
+    - [When should you use Quick Sort?](#when-should-you-use-quick-sort)
+- [Binary Search](#binary-search-1)
+  - [Binary Search JS Implementation](#binary-search-js-implementation)
+  - [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-3)
+    - [Time Complexity: O(log(n))](#time-complexity-ologn)
+    - [Space Complexity: O(n)](#space-complexity-on-1)
+    - [When should we use Binary Search?](#when-should-we-use-binary-search)
+- [Bubble Sort](#bubble-sort-1)
+  - [Instructions](#instructions)
+- [Selection Sort](#selection-sort-1)
+  - [Instructions](#instructions-1)
+- [Insertion Sort](#insertion-sort-1)
+  - [Instructions](#instructions-2)
+- [Merge Sort](#merge-sort-1)
+  - [Instructions](#instructions-3)
+- [Quick Sort](#quick-sort-2)
+  - [Instructions](#instructions-4)
+- [Binary Search](#binary-search-2)
+  - [Instructions](#instructions-5)
+- [WEEK-07 DAY-4  
+  _Lists, Stacks, Queues_ {ignore=true}](#week-07-day-4lists-stacks-queues-ignoretrue)
+- [Lists, Stacks, and Queues](#lists-stacks-and-queues-1)
+- [Linked Lists](#linked-lists)
+  - [What is a Linked List?](#what-is-a-linked-list)
+    - [_“So…this sounds a lot like an Array…”_](#sothis-sounds-a-lot-like-an-array)
+  - [Types of Linked Lists](#types-of-linked-lists)
+  - [Linked List Methods](#linked-list-methods)
+  - [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-4)
+  - [Time Complexity - Access and Search:](#time-complexity---access-and-search)
+    - [Scenarios:](#scenarios)
+    - [Discussion:](#discussion)
+  - [Time Complexity - Insertion and Deletion:](#time-complexity---insertion-and-deletion)
+    - [Scenarios:](#scenarios-1)
+    - [Discussion:](#discussion-1)
+    - [NOTE:](#note)
+  - [Space Complexity:](#space-complexity-1)
+    - [Scenarios:](#scenarios-2)
+    - [Discussion:](#discussion-2)
+    - [NOTE:](#note-1)
+- [Stacks and Queues](#stacks-and-queues)
+  - [What is a Stack?](#what-is-a-stack)
+  - [What is a Queue?](#what-is-a-queue)
+  - [Stack and Queue Properties](#stack-and-queue-properties)
+  - [Stack Methods](#stack-methods)
+  - [Queue Methods](#queue-methods)
+  - [Time and Space Complexity Analysis](#time-and-space-complexity-analysis-5)
+    - [Time Complexity - Access and Search:](#time-complexity---access-and-search-1)
+    - [Time Complexity - Insertion and Deletion:](#time-complexity---insertion-and-deletion-1)
+    - [Space Complexity:](#space-complexity-2)
+  - [When should we use Stacks and Queues?](#when-should-we-use-stacks-and-queues)
+    - [Stacks:](#stacks)
+    - [Queues:](#queues)
+- [Linked List Project](#linked-list-project)
+  - [Instructions](#instructions-6)
+- [Stack Project](#stack-project)
+  - [Instructions](#instructions-7)
+- [Queue Project](#queue-project)
+  - [Instructions](#instructions-8)
+- [WEEK-07 DAY-5  
+  _Heaps_ {ignore=true}](#week-07-day-5heaps-ignoretrue)
+- [Graphs and Heaps](#graphs-and-heaps-1)
+- [Introduction to Heaps](#introduction-to-heaps)
+  - [Complete Trees](#complete-trees)
+  - [When to Use Heaps?](#when-to-use-heaps)
+- [Introduction to Heaps](#introduction-to-heaps-1)
+  - [Complete Trees](#complete-trees-1)
+  - [When to Use Heaps?](#when-to-use-heaps-1)
+  - [Complete Trees](#complete-trees-2)
+  - [When to Use Heaps?](#when-to-use-heaps-2)
+  - [Binary Heap Implementation](#binary-heap-implementation)
+    - [Insert](#insert)
+      - [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes)
+      - [Translating that into array operations:](#translating-that-into-array-operations)
+    - [DeleteMax](#deletemax)
+      - [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-1)
+      - [Translating that into array operations:](#translating-that-into-array-operations-1)
+    - [Time Complexity Analysis](#time-complexity-analysis-1)
+      - [Array Heapify Analysis](#array-heapify-analysis)
+    - [Space Complexity Analysis](#space-complexity-analysis)
+    - [Insert](#insert-1)
+      - [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-2)
+      - [Translating that into array operations:](#translating-that-into-array-operations-2)
+    - [DeleteMax](#deletemax-1)
+      - [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-3)
+      - [Translating that into array operations:](#translating-that-into-array-operations-3)
+    - [Time Complexity Analysis](#time-complexity-analysis-2)
+      - [Array Heapify Analysis](#array-heapify-analysis-1)
+    - [Space Complexity Analysis](#space-complexity-analysis-1)
+  - [Binary Heap Implementation](#binary-heap-implementation-1)
+    - [Insert](#insert-2)
+      - [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-4)
+      - [Translating that into array operations:](#translating-that-into-array-operations-4)
+    - [DeleteMax](#deletemax-2)
+      - [Visualizing our heap as a tree of nodes:](#visualizing-our-heap-as-a-tree-of-nodes-5)
+      - [Translating that into array operations:](#translating-that-into-array-operations-5)
+    - [Time Complexity Analysis](#time-complexity-analysis-3)
+      - [Array Heapify Analysis](#array-heapify-analysis-2)
+    - [Space Complexity Analysis](#space-complexity-analysis-2)
+  - [Heap Sort](#heap-sort)
+    - [Time Complexity Analysis: O(nlog(n))](#time-complexity-analysis-onlogn)
+    - [Space Complexity Analysis:](#space-complexity-analysis-3)
+  - [In-Place Heap Sort](#in-place-heap-sort)
+    - [Heapify](#heapify)
+    - [Construct the Sorted Array](#construct-the-sorted-array)
+    - [In-Place Heap Sort JavaScript Implementation](#in-place-heap-sort-javascript-implementation)
+- [Heaps Project](#heaps-project)
+  - [Instructions](#instructions-9)
 
-------------------------------------------------------------------------
+---
 
-------------------------------------------------------------------------
+---
 
-WEEK-07 *Learning Objectives*
-=============================
+# WEEK-07 _Learning Objectives_
 
-------------------------------------------------------------------------
+---
 
-GitHub Profile and Projects Objectives
-======================================
+# GitHub Profile and Projects Objectives
 
 GitHub is a powerful platform that hiring managers and other developers can use to see how you create software.
 
--   You will be able to participate in the social aspects of GitHub by starring
+- You will be able to participate in the social aspects of GitHub by starring
 
-    repositories, following other developers, and reviewing your followers
+  repositories, following other developers, and reviewing your followers
 
--   You will be able to use Markdown to write code snippets in your README files
--   You will craft your GitHub profile and contribute throughout the course by
+- You will be able to use Markdown to write code snippets in your README files
+- You will craft your GitHub profile and contribute throughout the course by
 
-    keeping your “gardens green”
+  keeping your “gardens green”
 
--   You will be able to identify the basics of a good Wiki entries for proposals
+- You will be able to identify the basics of a good Wiki entries for proposals
 
-    and minimum viable products
+  and minimum viable products
 
--   You will be able to identify the basics of a good project README that includes
+- You will be able to identify the basics of a good project README that includes
 
-    technologies at the top, images, descriptions and code snippetsing managers and other developers can use to see how you create software.
+  technologies at the top, images, descriptions and code snippetsing managers and other developers can use to see how you create software.
 
--   You will be able to participate in the social aspects of GitHub by starring
+- You will be able to participate in the social aspects of GitHub by starring
 
-    repositories, following other developers, and reviewing your followers
+  repositories, following other developers, and reviewing your followers
 
--   You will be able to use Markdown to write code snippets in your README files
--   You will craft your GitHub profile and contribute throughout the course by
+- You will be able to use Markdown to write code snippets in your README files
+- You will craft your GitHub profile and contribute throughout the course by
 
-    keeping your “gardens green”
+  keeping your “gardens green”
 
--   You will be able to identify the basics of a good Wiki entries for proposals
+- You will be able to identify the basics of a good Wiki entries for proposals
 
-    and minimum viable products
+  and minimum viable products
 
--   You will be able to identify the basics of a good project README that includes
+- You will be able to identify the basics of a good project README that includes
 
-    technologies at the top, images, descriptions and code snippets
+  technologies at the top, images, descriptions and code snippets
 
-------------------------------------------------------------------------
+---
 
-Big O Learning Objectives
-=========================
+# Big O Learning Objectives
 
 **The objective of this lesson** is get you comfortable with identifying the time and space complexity of code you see. Being able to diagnose time complexity for algorithms is an essential for interviewing software engineers.
 
@@ -306,10 +302,9 @@ At the end of this, you will be able to
 2.  Identify the complexity classes of common sort methods
 3.  Identify complexity classes of code
 
-------------------------------------------------------------------------
+---
 
-Memoization And Tabulation Learning Objectives
-==============================================
+# Memoization And Tabulation Learning Objectives
 
 **The objective of this lesson** is to give you a couple of ways to optimize a computation (algorithm) from a higher complexity class to a lower complexity class. Being able to optimize algorithms is an essential for interviewing software engineers.
 
@@ -333,10 +328,9 @@ At the end of this, you will be able to
 
     time.
 
-------------------------------------------------------------------------
+---
 
-Sorting Algorithms
-==================
+# Sorting Algorithms
 
 **The objective of this lesson** is for you to get experience implementing common sorting algorithms that will come up during a lot of interviews. It is also important for you to understand how different sorting algorithms behave when given output.
 
@@ -346,11 +340,11 @@ At the end of this, you will be able to
 
     an array of numbers.
 
-2.  Explain the complexity of and write a function that performs `selection             sort`
+2.  Explain the complexity of and write a function that performs `selection sort`
 
     on an array of numbers.
 
-3.  Explain the complexity of and write a function that performs `insertion             sort`
+3.  Explain the complexity of and write a function that performs `insertion sort`
 
     on an array of numbers.
 
@@ -372,11 +366,11 @@ At the end of this, you will be able to
 
     an array of numbers.
 
-2.  Explain the complexity of and write a function that performs `selection             sort`
+2.  Explain the complexity of and write a function that performs `selection sort`
 
     on an array of numbers.
 
-3.  Explain the complexity of and write a function that performs `insertion             sort`
+3.  Explain the complexity of and write a function that performs `insertion sort`
 
     on an array of numbers.
 
@@ -392,10 +386,9 @@ At the end of this, you will be able to
 
     on a sorted array of numbers.
 
-------------------------------------------------------------------------
+---
 
-Lists, Stacks, and Queues
-=========================
+# Lists, Stacks, and Queues
 
 **The objective of this lesson** is for you to become comfortable with implementing common data structures. This is important because questions about data structures are incredibly likely to be interview questions for software engineers from junior to senior levels. Moreover, understanding how different data structures work will influence the libraries and frameworks that you choose when writing software.
 
@@ -413,10 +406,9 @@ When you are done, you will be able to:
 2.  Explain and implement a Stack.
 3.  Explain and implement a Queue.
 
-------------------------------------------------------------------------
+---
 
-Graphs and Heaps
-================
+# Graphs and Heaps
 
 **The objective of this lesson** is for you to become comfortable with implementing common data structures. This is important because questions about data structures are incredibly likely to be interview questions for software engineers from junior to senior levels. Moreover, understanding how different data structures work will influence the libraries and frameworks that you choose when writing software.
 
@@ -432,56 +424,53 @@ When you are done, you will be able to:
 1.  Explain and implement a Heap.
 2.  Explain and implement a Graph.
 
-------------------------------------------------------------------------
+---
 
-WEEK-07 DAY-1 *Your GitHub Identity*
-====================================
+# WEEK-07 DAY-1 _Your GitHub Identity_
 
-------------------------------------------------------------------------
+---
 
-GitHub Profile and Projects Objectives
-======================================
+# GitHub Profile and Projects Objectives
 
 GitHub is a powerful platform that hiring managers and other developers can use to see how you create software.
 
--   You will be able to participate in the social aspects of GitHub by starring
+- You will be able to participate in the social aspects of GitHub by starring
 
-    repositories, following other developers, and reviewing your followers
+  repositories, following other developers, and reviewing your followers
 
--   You will be able to use Markdown to write code snippets in your README files
--   You will craft your GitHub profile and contribute throughout the course by
+- You will be able to use Markdown to write code snippets in your README files
+- You will craft your GitHub profile and contribute throughout the course by
 
-    keeping your “gardens green”
+  keeping your “gardens green”
 
--   You will be able to identify the basics of a good Wiki entries for proposals
+- You will be able to identify the basics of a good Wiki entries for proposals
 
-    and minimum viable products
+  and minimum viable products
 
--   You will be able to identify the basics of a good project README that includes
+- You will be able to identify the basics of a good project README that includes
 
-    technologies at the top, images, descriptions and code snippetsing managers and other developers can use to see how you create software.
+  technologies at the top, images, descriptions and code snippetsing managers and other developers can use to see how you create software.
 
--   You will be able to participate in the social aspects of GitHub by starring
+- You will be able to participate in the social aspects of GitHub by starring
 
-    repositories, following other developers, and reviewing your followers
+  repositories, following other developers, and reviewing your followers
 
--   You will be able to use Markdown to write code snippets in your README files
--   You will craft your GitHub profile and contribute throughout the course by
+- You will be able to use Markdown to write code snippets in your README files
+- You will craft your GitHub profile and contribute throughout the course by
 
-    keeping your “gardens green”
+  keeping your “gardens green”
 
--   You will be able to identify the basics of a good Wiki entries for proposals
+- You will be able to identify the basics of a good Wiki entries for proposals
 
-    and minimum viable products
+  and minimum viable products
 
--   You will be able to identify the basics of a good project README that includes
+- You will be able to identify the basics of a good project README that includes
 
-    technologies at the top, images, descriptions and code snippets
+  technologies at the top, images, descriptions and code snippets
 
-------------------------------------------------------------------------
+---
 
-Improving Your Profile Using GitHub
-===================================
+# Improving Your Profile Using GitHub
 
 By now you are likely familiar with certain aspects of GitHub. You know how to create repos and add and commit code, but there is much, much more that GitHub can do.
 
@@ -489,28 +478,27 @@ GitHub is an online community of software engineers - a place where we not only 
 
 Aside from your actual code repositories, there are several other sections that represent who you are as a developer.
 
--   **Followers and Following**: Think of this as your "friends' list on GitHub.
+- **Followers and Following**: Think of this as your "friends' list on GitHub.
 
-    If you see a social media profile of a person with two friends, what are you going to think? Though you're not expected to have hundreds of followers on GitHub, you should follow your peers and encourage them to follow you to show industry engineers that there are people who would vouch for your skillset.
+  If you see a social media profile of a person with two friends, what are you going to think? Though you're not expected to have hundreds of followers on GitHub, you should follow your peers and encourage them to follow you to show industry engineers that there are people who would vouch for your skillset.
 
--   **Stars**: These are the “likes” on your GitHub profile. Similar to
+- **Stars**: These are the “likes” on your GitHub profile. Similar to
 
-    encouraging others to follow you and following them, you should also “star” their popular repositories. By the end of the curriculum, you should have several stars on each of your portfolio projects.
+  encouraging others to follow you and following them, you should also “star” their popular repositories. By the end of the curriculum, you should have several stars on each of your portfolio projects.
 
--   **Green Gardens**: This is birds-eye view of your “newsfeed” if your newsfeed
+- **Green Gardens**: This is birds-eye view of your “newsfeed” if your newsfeed
 
-    reflected the number of commits that you were making. If you are very active on GitHub, your activity squares, AKA “green gardens” will be verdant and green. This tells anyone who views your profile that you are actively coding and engaged with your identity as a software engineer. However, if your “green gardens” are not green, this suggests that you are not actively coding and therefore perhaps not the best candidates for a development job.
+  reflected the number of commits that you were making. If you are very active on GitHub, your activity squares, AKA “green gardens” will be verdant and green. This tells anyone who views your profile that you are actively coding and engaged with your identity as a software engineer. However, if your “green gardens” are not green, this suggests that you are not actively coding and therefore perhaps not the best candidates for a development job.
 
--   **Photo and brief intro**: This is fairly straight-forward and should mirror
+- **Photo and brief intro**: This is fairly straight-forward and should mirror
 
-    the photo from you LinkedIn. Choose a professional photo and brief description that highlights the fact that you are a software engineer.
+  the photo from you LinkedIn. Choose a professional photo and brief description that highlights the fact that you are a software engineer.
 
 Your followers, stars, green gardens, and photo represent who you are as a developer and should be constantly monitored and updated. It can be easy to fall into the trap of not pushing commits to GitHub or keeping your commits on your local machine - be careful to avoid these tendencies because they are counter-productive to your candidacy as a software engineer.
 
 Not only is GitHub as representation of you as a developer, but it is also a place to present proposals, recaps, and provide additional project context. Two features that you will soon become familiar with are Wikis and READMEs.
 
-Wikis (pre-project)
--------------------
+## Wikis (pre-project)
 
 Wikis are features of PUBLIC repositories on GitHub and are where your design documents, explanation of technologies used and insight into what your repo contains will live.
 
@@ -522,26 +510,25 @@ To create or update your repository's Wiki, click on the “Wiki” tab in your 
 
 Best practices for Wiki creation:
 
--   List of technologies in a visually accessible place
--   Separate design documents into their own sections
--   Write clearly and concisely - grammar and spelling matters!
+- List of technologies in a visually accessible place
+- Separate design documents into their own sections
+- Write clearly and concisely - grammar and spelling matters!
 
 Design documents will become very important when you begin your projects, but for now just know that you will spend time creating a solid Wiki in order to facilitate a smooth development process. One of the most important aspects of your Wiki will be the outline of your project's features and the **minimum viable product** (MVP).
 
 As you begin any project, you will consider what constitutes a “final product” and break down features into bite-sized “minimum viable products.” For example, if you intend to create an a/A version of Twitter, your list of MVPs may include:
 
--   Users are able to log into application
--   Users are able to create, edit, and delete tweets
--   Users are able to follow other users and see their tweets
--   Users are able to like other users tweets
--   Users are able to comment on other users tweets
+- Users are able to log into application
+- Users are able to create, edit, and delete tweets
+- Users are able to follow other users and see their tweets
+- Users are able to like other users tweets
+- Users are able to comment on other users tweets
 
 In order for your project to stay on track, it is very important to break down your features and tackle one MVP at a time. All of the MVPs combined result in a final application.
 
 Your MVP breakdown will live in your project's Wiki and is subject to evolution. As your project comes to life, your MVPs may merge, divide, or become irrelevant. Update your Wiki as things change and continue to referring to it as your go through the development process.
 
-README files (post-project)
----------------------------
+## README files (post-project)
 
 READMEs are text files that introduce and explain a project. Typically, READMEs are created and completed when you are ready to roll your application into production. READMEs should contain information about two impressive features that you implemented in your project, the technologies used, how to install the program, and anything else that makes you stand out as a software developer.
 
@@ -551,30 +538,28 @@ When it is time to create your README, you should allocate about three hours to 
 
 README.md files are written using markdown syntax (.md) which makes them appear nicely on-screen. Markdown is a lightweight markup language with plain text formatting syntax. It's a very simple language used to create beautiful and presentable README and Wiki files for GitHub. There are many good resources out there for creating markdown documents, but here are two of our favorite:
 
--   GitHub's guide to [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
--   [Repository with a collection of examples](https://github.com/matiassingers/awesome-readme)
--   [Browser side-by-side markdown and on-screen program](https://stackedit.io/app#) (this is a favorite, code
+- GitHub's guide to [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+- [Repository with a collection of examples](https://github.com/matiassingers/awesome-readme)
+- [Browser side-by-side markdown and on-screen program](https://stackedit.io/app#) (this is a favorite, code
 
-    here and copy markdown into GitHub).
+  here and copy markdown into GitHub).
 
 README Best Practices
 
--   Divide your README into distinct sections
--   List the technologies used at the top of your README for increased visibility
--   Include nice pictures or Gifs to show and/or demonstrate how things work
--   Include code snippets
--   Provide instructions for how to install project (if applicable)
--   Include link to the live site
+- Divide your README into distinct sections
+- List the technologies used at the top of your README for increased visibility
+- Include nice pictures or Gifs to show and/or demonstrate how things work
+- Include code snippets
+- Provide instructions for how to install project (if applicable)
+- Include link to the live site
 
-Wrap up
--------
+## Wrap up
 
 The bottom line is that the way you represent yourself on GitHub matters! Take the time you need to write clearly, accurately reflect your process and applications, and immerse yourself in the diverse and interesting pool of software professionals who work and play on GitHub.
 
-------------------------------------------------------------------------
+---
 
-Your GitHub Identity
-====================
+# Your GitHub Identity
 
 It is hard to write about yourself. But, today, you need to do that. This is a day of starting to establish how other software developers and hiring managers will perceive you.
 
@@ -588,15 +573,13 @@ Now, go follow all of your class mates and star their personal Web site reposito
 
 If you want to get really fancy and set up a blog, you can use a “static site generator” known as **Jekyll** to do that. It's a Ruby-based program; however, you don't need to know Ruby to use it. All you have to be able to do is use command line programs, something you're really getting to be a pro at! To do this, follow the well-documented instructions at [Setting up a GitHub Pages site with Jekyll](https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll).
 
-------------------------------------------------------------------------
+---
 
-WEEK-07 DAY-2 *Big-O and Optimizations*
-=======================================
+# WEEK-07 DAY-2 _Big-O and Optimizations_
 
-------------------------------------------------------------------------
+---
 
-Big O Learning Objectives
-=========================
+# Big O Learning Objectives
 
 **The objective of this lesson** is get you comfortable with identifying the time and space complexity of code you see. Being able to diagnose time complexity for algorithms is an essential for interviewing software engineers.
 
@@ -614,10 +597,9 @@ At the end of this, you will be able to
 2.  Identify the complexity classes of common sort methods
 3.  Identify complexity classes of code
 
-------------------------------------------------------------------------
+---
 
-Memoization And Tabulation Learning Objectives
-==============================================
+# Memoization And Tabulation Learning Objectives
 
 **The objective of this lesson** is to give you a couple of ways to optimize a computation (algorithm) from a higher complexity class to a lower complexity class. Being able to optimize algorithms is an essential for interviewing software engineers.
 
@@ -641,40 +623,36 @@ At the end of this, you will be able to
 
     time.
 
-------------------------------------------------------------------------
+---
 
-Recursion Videos
-================
+# Recursion Videos
 
 A lot of algorithms that we use in the upcoming days will use recursion. The next two videos are just helpful reminders about recursion so that you can get that thought process back into your brain.
 
-------------------------------------------------------------------------
+---
 
-Big-O By Colt Steele
-====================
+# Big-O By Colt Steele
 
 Colt Steele provides a very nice, non-mathy introduction to Big-O notation. Please watch this so you can get the easy introduction. Big-O is, by its very nature, math based. It's good to get an understanding before jumping in to math expressions.
 
 [Complete Beginner's Guide to Big O Notation](https://www.youtube.com/embed/kS_gr2_-ws8) by Colt Steele.
 
-------------------------------------------------------------------------
+---
 
-Curating Complexity: A Guide to Big-O Notation
-==============================================
+# Curating Complexity: A Guide to Big-O Notation
 
-As software engineers, our goal is not just to solve problems. Rather, our goal is to solve problems efficiently and elegantly. Not all solutions are made equal! In this section we'll explore how to analyze the efficiency of algorithms in terms of their speed (*time complexity*) and memory consumption (*space complexity*).
+As software engineers, our goal is not just to solve problems. Rather, our goal is to solve problems efficiently and elegantly. Not all solutions are made equal! In this section we'll explore how to analyze the efficiency of algorithms in terms of their speed (_time complexity_) and memory consumption (_space complexity_).
 
-> In this article, we'll use the word *efficiency* to describe the amount of resources a program needs to execute. The two resources we are concerned with are *time* and *space*. Our goal is to *minimize* the amount of time and space that our programs use.
+> In this article, we'll use the word _efficiency_ to describe the amount of resources a program needs to execute. The two resources we are concerned with are _time_ and _space_. Our goal is to _minimize_ the amount of time and space that our programs use.
 
 When you finish this article you will be able to:
 
--   explain why computer scientists use Big-O notation
--   simplify a mathematical function into Big-O notation
+- explain why computer scientists use Big-O notation
+- simplify a mathematical function into Big-O notation
 
-Why Big-O?
-----------
+## Why Big-O?
 
-Let's begin by understanding what method we should *not* use when describing the efficiency of our algorithms. Most importantly, we'll want to avoid using absolute units of time when describing speed. When the software engineer exclaims, “My function runs in 0.2 seconds, it's so fast!!!”, the computer scientist is not impressed. Skeptical, the computer scientist asks the following questions:
+Let's begin by understanding what method we should _not_ use when describing the efficiency of our algorithms. Most importantly, we'll want to avoid using absolute units of time when describing speed. When the software engineer exclaims, “My function runs in 0.2 seconds, it's so fast!!!”, the computer scientist is not impressed. Skeptical, the computer scientist asks the following questions:
 
 1.  What computer did you run it on? \_Maybe the credit belongs to the hardware
 
@@ -682,7 +660,7 @@ Let's begin by understanding what method we should *not* use when describing the
 
 2.  Were there other background processes running on the computer that could have
 
-    effected the runtime? *It's hard to control the environment during performance experiments.*
+    effected the runtime? _It's hard to control the environment during performance experiments._
 
 3.  Will your code still be performant if we increase the size of the input? \_For
 
@@ -690,15 +668,14 @@ Let's begin by understanding what method we should *not* use when describing the
 
 The job of the software engineer is to focus on the software detail and not necessarily the hardware it will run on. Because we can't answer points 1 and 2 with total certainty, we'll want to avoid using concrete units like “milliseconds” or “seconds” when describing the efficiency of our algorithms. Instead, we'll opt for a more abstract approach that focuses on point 3. This means that we should focus on how the performance of our algorithm is affected by increasing the size of the input. **In other words, how does our performance scale?**
 
-> The argument above focuses on *time*, but a similar argument could also be made for *space*. For example, we should not analyze our code in terms of the amount of absolute kilobytes of memory it uses, because this is dependent on the programming language.
+> The argument above focuses on _time_, but a similar argument could also be made for _space_. For example, we should not analyze our code in terms of the amount of absolute kilobytes of memory it uses, because this is dependent on the programming language.
 
-Big-O Notation
---------------
+## Big-O Notation
 
 In Computer Science, we use Big-O notation as a tool for describing the efficiency of algorithms with respect to the size of the input argument(s). We use mathematical functions in Big-O notation, so there are a few big picture ideas that we'll want to keep in mind:
 
 1.  The function should be defined in terms of the size of the input(s).
-2.  A *smaller* Big-O function is more desirable than a larger one. Intuitively,
+2.  A _smaller_ Big-O function is more desirable than a larger one. Intuitively,
 
     we want our algorithms to use a minimal amount of time and space.
 
@@ -716,19 +693,19 @@ The first 3 points are conceptual, so they are easy to swallow. However, point 4
 
 We want our Big-O notation to describe the performance of our algorithm with respect to the input size and nothing else. Because of this, we should to simplify our Big-O functions using the following rules:
 
--   **Simplify Products:** if the function is a product of many terms, we drop the
+- **Simplify Products:** if the function is a product of many terms, we drop the
 
-    terms that *don't* depend on the size of the input.
+  terms that _don't_ depend on the size of the input.
 
--   **Simplify Sums:** if the function is a sum of many terms, we keep the term
+- **Simplify Sums:** if the function is a sum of many terms, we keep the term
 
-    with the *largest* growth rate and drop the other terms.
+  with the _largest_ growth rate and drop the other terms.
 
 We'll look at these rules in action, but first we'll define a few things:
 
--   **n** is the size of the input
--   **T(f)** refers to an unsimplified mathematical **f**unction
--   **O(f)** refers to the Big-O simplified mathematical **f**unction
+- **n** is the size of the input
+- **T(f)** refers to an unsimplified mathematical **f**unction
+- **O(f)** refers to the Big-O simplified mathematical **f**unction
 
 ### Simplifying a Product
 
@@ -738,7 +715,7 @@ If a function consists of a product of many factors, we drop the factors that do
 
 Note that in the third example, we can simplify `T( n / 12 )` to `O( n )`
 
-because we can rewrite a division into an equivalent multiplication. In other words, `T( n / 12 ) = T( 1/12 * n         ) = O( n )` .
+because we can rewrite a division into an equivalent multiplication. In other words, `T( n / 12 ) = T( 1/12 * n ) = O( n )` .
 
 ### Simplifying a Sum
 
@@ -748,41 +725,38 @@ If the function consists of a sum of many terms, we only need to show the term t
 
 ### Putting it all together
 
-The *product* and *sum* rules are all we'll need to Big-O simplify any math functions. We just apply the *product rule* to drop all constants, then apply the *sum rule* to select the single most dominant term.
+The _product_ and _sum_ rules are all we'll need to Big-O simplify any math functions. We just apply the _product rule_ to drop all constants, then apply the _sum rule_ to select the single most dominant term.
 
 <table><thead><tr class="header"><th>Unsimplified</th><th>Big-O Simplified</th></tr></thead><tbody><tr class="odd"><td>T( 5n<sup>2</sup> + 99n )</td><td>O( n<sup>2</sup> )</td></tr><tr class="even"><td>T( 2n + nlog(n) )</td><td>O( nlog(n) )</td></tr><tr class="odd"><td>T( 2<sup>n</sup> + 5n<sup>1000</sup>)</td><td>O( 2<sup>n</sup> )</td></tr></tbody></table>
 
-> Aside: We'll often omit the multiplication symbol in expressions as a form of shorthand. For example, we'll write *O( 5n<sup>2</sup> )* in place of *O( 5 \* n<sup>2</sup> )*.
+> Aside: We'll often omit the multiplication symbol in expressions as a form of shorthand. For example, we'll write _O( 5n<sup>2</sup> )_ in place of _O( 5 \* n<sup>2</sup> )_.
 
-What you've learned
--------------------
+## What you've learned
 
 In this reading we:
 
--   explained why Big-O is the preferred notation used to describe the efficiency
+- explained why Big-O is the preferred notation used to describe the efficiency
 
-    of algorithms
+  of algorithms
 
--   used the product and sum rules to simplify mathematical functions into Big-O
+- used the product and sum rules to simplify mathematical functions into Big-O
 
-    notation
+  notation
 
-------------------------------------------------------------------------
+---
 
-Common Complexity Classes
-=========================
+# Common Complexity Classes
 
 Analyzing the efficiency of our code seems like a daunting task because there are many different possibilities in how we may choose to implement something. Luckily, most code we write can be categorized into one of a handful of common complexity classes. In this reading, we'll identify the common classes and explore some of the code characteristics that will lead to these classes.
 
 When you finish this reading, you should be able to:
 
--   name *and* order the seven common complexity classes
--   identify the time complexity class of a given code snippet
+- name _and_ order the seven common complexity classes
+- identify the time complexity class of a given code snippet
 
-The seven major classes
------------------------
+## The seven major classes
 
-There are seven complexity classes that we will encounter most often. Below is a list of each complexity class as well as its Big-O notation. This list is ordered from *smallest to largest*. Bear in mind that a “more efficient” algorithm is one with a smaller complexity class, because it requires fewer resources.
+There are seven complexity classes that we will encounter most often. Below is a list of each complexity class as well as its Big-O notation. This list is ordered from _smallest to largest_. Bear in mind that a “more efficient” algorithm is one with a smaller complexity class, because it requires fewer resources.
 
 <table><thead><tr class="header"><th>Big-O</th><th>Complexity Class Name</th></tr></thead><tbody><tr class="odd"><td>O(1)</td><td>constant</td></tr><tr class="even"><td>O(log(n))</td><td>logarithmic</td></tr><tr class="odd"><td>O(n)</td><td>linear</td></tr><tr class="even"><td>O(n * log(n))</td><td>loglinear, linearithmic, quasilinear</td></tr><tr class="odd"><td>O(n<sup>c</sup>) - O(n<sup>2</sup>), O(n<sup>3</sup>), etc.</td><td>polynomial</td></tr><tr class="even"><td>O(c<sup>n</sup>) - O(2<sup>n</sup>), O(3<sup>n</sup>), etc.</td><td>exponential</td></tr><tr class="odd"><td>O(n!)</td><td>factorial</td></tr></tbody></table>
 
@@ -796,7 +770,7 @@ Constant complexity means that the algorithm takes roughly the same number of st
 
 #### Constant growth
 
-The table below shows the growing behavior of a constant function. Notice that the behavior stays *constant* for all values of n.
+The table below shows the growing behavior of a constant function. Notice that the behavior stays _constant_ for all values of n.
 
 <table><thead><tr class="header"><th>n</th><th>O(1)</th></tr></thead><tbody><tr class="odd"><td>1</td><td>~1</td></tr><tr class="even"><td>2</td><td>~1</td></tr><tr class="odd"><td>3</td><td>~1</td></tr><tr class="even"><td>…</td><td>…</td></tr><tr class="odd"><td>128</td><td>~1</td></tr></tbody></table>
 
@@ -994,7 +968,7 @@ The `exponential2n` function has O(2<sup>n</sup>) runtime because each call will
 
 ### O(n!) - Factorial
 
-Recall that `n! = (n) * (n - 1) * (n - 2) * ... * 1` . This complexity is typically the largest/worst that we will end up implementing. An indicator of this complexity class is recursive code that has a variable number of recursive calls in each stack frame. Note that *factorial* is worse than *exponential* because *factorial* algorithms have a *variable* amount of recursive calls in each stack frame, whereas *exponential* algorithms have a *constant* amount of recursive calls in each frame.
+Recall that `n! = (n) * (n - 1) * (n - 2) * ... * 1` . This complexity is typically the largest/worst that we will end up implementing. An indicator of this complexity class is recursive code that has a variable number of recursive calls in each stack frame. Note that _factorial_ is worse than _exponential_ because _factorial_ algorithms have a _variable_ amount of recursive calls in each stack frame, whereas _exponential_ algorithms have a _constant_ amount of recursive calls in each frame.
 
 #### Factorial growth
 
@@ -1016,12 +990,11 @@ Below is an example of a function with factorial runtime.
      }
     }
 
-The `factorial` function has O(n!) runtime because the code is *recursive* but the number of recursive calls made in a single stack frame depends on the input. This contrasts with an *exponential* function because exponential functions have a *fixed* number of calls in each stack frame.
+The `factorial` function has O(n!) runtime because the code is _recursive_ but the number of recursive calls made in a single stack frame depends on the input. This contrasts with an _exponential_ function because exponential functions have a _fixed_ number of calls in each stack frame.
 
-You may it difficult to identify the complexity class of a given code snippet, especially if the code falls into the loglinear, exponential, or factorial classes. In the upcoming videos, we'll explain the analysis of these functions in greater detail. For now, you should focus on the *relative order* of these seven complexity classes!
+You may it difficult to identify the complexity class of a given code snippet, especially if the code falls into the loglinear, exponential, or factorial classes. In the upcoming videos, we'll explain the analysis of these functions in greater detail. For now, you should focus on the _relative order_ of these seven complexity classes!
 
-What you've learned
--------------------
+## What you've learned
 
 In this reading, we listed the seven common complexity classes and saw some example code for each. In order of ascending growth, the seven classes are:
 
@@ -1033,19 +1006,18 @@ In this reading, we listed the seven common complexity classes and saw some exam
 6.  Exponential
 7.  Factorial
 
-------------------------------------------------------------------------
+---
 
-Memoization
-===========
+# Memoization
 
 **Memoization** is a design pattern used to reduce the overall number of calculations that can occur in algorithms that use recursive strategies to solve.
 
 Recall that recursion solves a large problem by dividing it into smaller sub-problems that are more manageable. Memoization will store the results of the sub-problems in some other data structure, meaning that you avoid duplicate calculations and only “solve” each subproblem once. There are two features that comprise memoization:
 
--   the function is recursive
--   the additional data structure used is typically an object (we refer to this as
+- the function is recursive
+- the additional data structure used is typically an object (we refer to this as
 
-    the memo!)
+  the memo!)
 
 This is a trade-off between the time it takes to run an algorithm (without memoization) and the memory used to run the algorithm (with memoization). Usually memoization is a good trade-off when dealing with large data or calculations.
 
@@ -1057,8 +1029,7 @@ Here's an example of a problem that has such a structure:
 
 You'll explore this exact problem in depth later on. For now, here is some food for thought. Along the way to calculating the smallest coin combination of 27 cents, you should also calculate the smallest coin combination of say, 25 cents as a component of that problem. This is the essence of an overlapping subproblem structure.
 
-Memoizing factorial
--------------------
+## Memoizing factorial
 
 Here's an example of a function that computes the factorial of the number passed into it.
 
@@ -1116,22 +1087,21 @@ The `memo` object above will map an argument of `factorial` to its return value.
 
 Here's some food for thought: By the time your first call to `factorial(6)`
 
-returns, you will not have just the argument `6` stored in the memo. Rather, you will have *all* arguments 2 to 6 stored in the memo.
+returns, you will not have just the argument `6` stored in the memo. Rather, you will have _all_ arguments 2 to 6 stored in the memo.
 
 Hopefully you sense the efficiency you can get by memoizing your functions, but maybe you are not convinced by the last example for two reasons:
 
--   You didn't improve the speed of the algorithm by an order of Big-O (it is
+- You didn't improve the speed of the algorithm by an order of Big-O (it is
 
-    still O(n)).
+  still O(n)).
 
--   The code uses some global variable, so it's kind of ugly.
+- The code uses some global variable, so it's kind of ugly.
 
 Both of those points are true, so take a look at a more advanced example that benefits from memoization.
 
-Memoizing the Fibonacci generator
----------------------------------
+## Memoizing the Fibonacci generator
 
-Here's a *naive* implementation of a function that calculates the Fibonacci number for a given input.
+Here's a _naive_ implementation of a function that calculates the Fibonacci number for a given input.
 
     code class="language-javascript"function fib(n) {
         if (n === 1 || n === 2) return 1;
@@ -1144,7 +1114,7 @@ Before you optimize this, ask yourself what complexity class it falls into in th
 
 The time complexity of this function is not super intuitive to describe because the code branches twice recursively. Fret not! You'll find it useful to visualize the calls needed to do this with a tree. When reasoning about the time complexity for recursive functions, draw a tree that helps you see the calls. Every node of the tree represents a call of the recursion:
 
-![fib\_tree](images/fib_tree.png)
+![fib_tree](images/fib_tree.png)
 
 In general, the height of this tree will be `n` . You derive this by following the path going straight down the left side of the tree. You can also see that each internal node leads to two more nodes. Overall, this means that the tree will have roughly 2<sup>n</sup> nodes which is the same as saying that the `fib`
 
@@ -1152,7 +1122,7 @@ function has an exponential time complexity of 2<sup>n</sup>. That is very slow!
 
 Okay. So the `fib` function is slow. Is there anyway to speed it up? Take a look at the tree above. Can you find any repetitive regions of the tree?
 
-![fib\_tree\_duplicates](images/fib_tree_duplicates.png)
+![fib_tree_duplicates](images/fib_tree_duplicates.png)
 
 As the `n` grows bigger, the number of duplicate sub-trees grows exponentially. Luckily you can fix this using memoization by using a similar object strategy as before. You can use some JavaScript default arguments to clean things up:
 
@@ -1171,12 +1141,11 @@ As the `n` grows bigger, the number of duplicate sub-trees grows exponentially. 
 
 The code above can calculate the 50th Fibonacci number almost instantly! Thanks to the `memo` object, you only need to explore a subtree fully once. Visually, the `fastFib` recursion has this structure:
 
-![fib\_memoized](images/fib_memoized.png)
+![fib_memoized](images/fib_memoized.png)
 
 You can see the marked nodes (function calls) that access the memo in green. It's easy to see that this version of the Fibonacci generator will do far less computations as `n` grows larger! In fact, this memoization has brought the time complexity down to linear `O(n)` time because the tree only branches on the left side. This is an enormous gain if you recall the complexity class hierarchy.
 
-The memoization formula
------------------------
+## The memoization formula
 
 Now that you understand memoization, when should you apply it? Memoization is useful when attacking recursive problems that have many overlapping sub-problems. You'll find it most useful to draw out the visual tree first. If you notice duplicate sub-trees, time to memoize. Here are the hard and fast rules you can use to memoize a slow function:
 
@@ -1193,27 +1162,24 @@ Now that you understand memoization, when should you apply it? Memoization is us
 
     value and make the function's argument it's key.
 
-What you learned
-----------------
+## What you learned
 
 You learned a secret to possibly changing an algorithm of one complexity class to a lower complexity class by using memory to store intermediate results. This is a powerful technique to use to make sure your programs that must do recursive calculations can benefit from running much faster.
 
-------------------------------------------------------------------------
+---
 
-Tabulation
-==========
+# Tabulation
 
-Now that you are familiar with *memoization*, you can explore a related method of algorithmic optimization: **Tabulation**. There are two main features that comprise the Tabulation strategy:
+Now that you are familiar with _memoization_, you can explore a related method of algorithmic optimization: **Tabulation**. There are two main features that comprise the Tabulation strategy:
 
--   the function is iterative and *not* recursive
--   the additional data structure used is typically an array, commonly referred to
+- the function is iterative and _not_ recursive
+- the additional data structure used is typically an array, commonly referred to
 
-    as the table
+  as the table
 
 Many problems that can be solved with memoization can also be solved with tabulation as long as you convert the recursion to iteration. The first example is the canonical example of recursion, calculating the Fibonacci number for an input. However, in the example, you'll see the iteration version of it for a fresh start!
 
-Tabulating the Fibonacci number
--------------------------------
+## Tabulating the Fibonacci number
 
 Tabulation is all about creating a table (array) and filling it out with elements. In general, you will complete the table by filling entries from “left to right”. This means that the first entry of the table (first element of the array) will correspond to the smallest subproblem. Naturally, the final entry of the table (last element of the array) will correspond to the largest problem, which is also the final answer.
 
@@ -1258,10 +1224,9 @@ will contain the final solution as well as all sub-solutions calculated along th
 
 To compute the complexity class of this `tabulatedFib` is very straightforward since the code is iterative. The dominant operation in the function is the loop used to fill out the entire table. The length of the table is roughly `n`
 
-elements long, so the algorithm will have an *O(n)* runtime. The space taken by our algorithm is also *O(n)* due to the size of the table. Overall, this should be a satisfying solution for the efficiency of the algorithm.
+elements long, so the algorithm will have an _O(n)_ runtime. The space taken by our algorithm is also _O(n)_ due to the size of the table. Overall, this should be a satisfying solution for the efficiency of the algorithm.
 
-Aside: Refactoring for O(1) Space
----------------------------------
+## Aside: Refactoring for O(1) Space
 
 You may notice that you can cut down on the space used by the function. At any point of the loop, the calculation really only need the previous two subproblems' results. There is little utility to storing the full array. This refactor is easy to do by using two variables:
 
@@ -1303,15 +1268,13 @@ Here are the general guidelines for implementing the tabulation strategy. This i
 
 4.  Your final answer is (usually) the last entry in the table
 
-What you learned
-----------------
+## What you learned
 
 You learned another way of possibly changing an algorithm of one complexity class to a lower complexity class by using memory to store intermediate results. This is a powerful technique to use to make sure your programs that must do iterative calculations can benefit from running much faster.
 
-------------------------------------------------------------------------
+---
 
-Analysis of Linear Search
-=========================
+# Analysis of Linear Search
 
 Consider the following search algorithm known as **linear search**.
 
@@ -1327,12 +1290,11 @@ Consider the following search algorithm known as **linear search**.
 
 Most Big-O analysis is done on the “worst-case scenario” and provides an upper bound. In the worst case analysis, you calculate the upper bound on running time of an algorithm. You must know the case that causes the maximum number of operations to be executed.
 
-For *linear search*, the worst case happens when the element to be searched ( `term` in the above code) is not present in the array. When `term` is not present, the `search` function compares it with all the elements of `array` one by one. Therefore, the worst-case time complexity of linear search would be O(n).
+For _linear search_, the worst case happens when the element to be searched ( `term` in the above code) is not present in the array. When `term` is not present, the `search` function compares it with all the elements of `array` one by one. Therefore, the worst-case time complexity of linear search would be O(n).
 
-------------------------------------------------------------------------
+---
 
-Analysis of Binary Search
-=========================
+# Analysis of Binary Search
 
 Consider the following search algorithm known as the **binary search**. This kind of search only works if the array is already sorted.
 
@@ -1353,26 +1315,25 @@ Consider the following search algorithm known as the **binary search**. This kin
      }
     }
 
-For the *binary search*, you cut the search space in half every time. This means that it reduces the number of searches you must do by half, every time. That means the number of steps it takes to get to the desired item (if it exists in the array), in the worst case takes the same amount of steps for every number within a range defined by the powers of 2.
+For the _binary search_, you cut the search space in half every time. This means that it reduces the number of searches you must do by half, every time. That means the number of steps it takes to get to the desired item (if it exists in the array), in the worst case takes the same amount of steps for every number within a range defined by the powers of 2.
 
--   7 -&gt; 4 -&gt; 2 -&gt; 1
--   8 -&gt; 4 -&gt; 2 -&gt; 1
--   9 -&gt; 5 -&gt; 3 -&gt; 2 -&gt; 1
--   15 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
--   16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
--   17 -&gt; 9 -&gt; 5 -&gt; 3 -&gt; 2 -&gt; 1
--   31 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
--   32 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
--   33 -&gt; 17 -&gt; 9 -&gt; 5 -&gt; 3 -&gt; 2 -&gt; 1
+- 7 -&gt; 4 -&gt; 2 -&gt; 1
+- 8 -&gt; 4 -&gt; 2 -&gt; 1
+- 9 -&gt; 5 -&gt; 3 -&gt; 2 -&gt; 1
+- 15 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
+- 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
+- 17 -&gt; 9 -&gt; 5 -&gt; 3 -&gt; 2 -&gt; 1
+- 31 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
+- 32 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
+- 33 -&gt; 17 -&gt; 9 -&gt; 5 -&gt; 3 -&gt; 2 -&gt; 1
 
-So, for any number of items in the sorted array between 2<sup>n-1</sup> and 2<sup>n</sup>, it takes *n* number of steps. That means if you have *k* items in the array, then it will take *log*<sub>*2*</sub>*k*.
+So, for any number of items in the sorted array between 2<sup>n-1</sup> and 2<sup>n</sup>, it takes _n_ number of steps. That means if you have _k_ items in the array, then it will take _log_<sub>_2_</sub>_k_.
 
-Binary searches are *O*(*log*<sub>*2*</sub>*n*).
+Binary searches are _O_(_log_<sub>_2_</sub>_n_).
 
-------------------------------------------------------------------------
+---
 
-Analysis of the Merge Sort
-==========================
+# Analysis of the Merge Sort
 
 Consider the following divide-and-conquer sort method known as the **merge sort**.
 
@@ -1425,14 +1386,13 @@ Consider the following divide-and-conquer sort method known as the **merge sort*
      return merge(leftArray, rightArray);
     }
 
-For the *merge sort*, you cut the sort space in half every time. In each of those halves, you have to loop through the number of items in the array. That means that, for the worst case, you get that same *log*<sub>*2*</sub>*n* but it must be multiplied by the number of elements in the array, *n*.
+For the _merge sort_, you cut the sort space in half every time. In each of those halves, you have to loop through the number of items in the array. That means that, for the worst case, you get that same _log_<sub>_2_</sub>_n_ but it must be multiplied by the number of elements in the array, _n_.
 
-Merge sorts are *O*(*n\*log*<sub>*2*</sub>*n*).
+Merge sorts are _O_(_n\*log_<sub>_2_</sub>_n_).
 
-------------------------------------------------------------------------
+---
 
-Analysis of Bubble Sort
-=======================
+# Analysis of Bubble Sort
 
 Consider the following sort algorithm known as the **bubble sort**.
 
@@ -1452,86 +1412,81 @@ Consider the following sort algorithm known as the **bubble sort**.
      }
     }
 
-For the *bubble sort*, the worst case is the same as the best case because it always makes nested loops. So, the outer loop loops the number of times of the items in the array. For each one of those loops, the inner loop loops again a number of times for the items in the array. So, if there are *n* values in the array, then a loop inside a loop is *n* \* *n*. So, this is O(n<sup>2</sup>). That's polynomial, which ain't that good.
+For the _bubble sort_, the worst case is the same as the best case because it always makes nested loops. So, the outer loop loops the number of times of the items in the array. For each one of those loops, the inner loop loops again a number of times for the items in the array. So, if there are _n_ values in the array, then a loop inside a loop is _n_ \* _n_. So, this is O(n<sup>2</sup>). That's polynomial, which ain't that good.
 
-------------------------------------------------------------------------
+---
 
-LeetCode.com
-============
+# LeetCode.com
 
 Some of the problems in the projects ask you to use the LeetCode platform to check your work rather than relying on local mocha tests. If you don't already have an account at LeetCode.com, please click https://leetcode.com/accounts/signup/ to sign up for a free account.
 
 After you sign up for the account, please verify the account with the email address that you used so that you can actually run your solution on LeetCode.com.
 
-In the projects, you will see files that are named “leet\_code\_«number».js”. When you open those, you will see a link in the file that you can use to go directly to the corresponding problem on LeetCode.com.
+In the projects, you will see files that are named “leet_code\_«number».js”. When you open those, you will see a link in the file that you can use to go directly to the corresponding problem on LeetCode.com.
 
 Use the local JavaScript file in Visual Studio Code to collaborate on the solution. Then, you can run the proposed solution in the LeetCode.com code runner to validate its correctness.
 
-------------------------------------------------------------------------
+---
 
-Memoization Problems
-====================
+# Memoization Problems
 
 This project contains two test-driven problems and one problem on LeetCode.com.
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-memoization-project.
+  https://github.com/appacademy-starters/algorithms-memoization-project.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npx test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npx test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib` files to pass all specs.
+  the `/lib` files to pass all specs.
 
-    -   In `problems.js`, you will write code to make the `lucasNumberMemo` and
+  - In `problems.js`, you will write code to make the `lucasNumberMemo` and
 
 `minChange` functions pass.
 
--   In `leet_code_518.js`, you will use that file as a scratch pad to work on
+- In `leet_code_518.js`, you will use that file as a scratch pad to work on
 
-    the LeetCode.com problem at https://leetcode.com/problems/coin-change-2/.
+  the LeetCode.com problem at https://leetcode.com/problems/coin-change-2/.
 
-------------------------------------------------------------------------
+---
 
-Tabulation Problems
-===================
+# Tabulation Problems
 
 This project contains two test-driven problems and one problem on LeetCode.com.
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-tabulation-project.
+  https://github.com/appacademy-starters/algorithms-tabulation-project.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npx test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npx test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib` files to pass all specs.
+  the `/lib` files to pass all specs.
 
-    -   In `problems.js`, you will write code to make the `stepper`,
+  - In `problems.js`, you will write code to make the `stepper`,
 
 `maxNonAdjacentSum` , and `minChange` functions pass.
 
--   In `leet_code_64.js`, you will use that file as a scratch pad to work on the
+- In `leet_code_64.js`, you will use that file as a scratch pad to work on the
 
-    LeetCode.com problem at https://leetcode.com/problems/minimum-path-sum/.
+  LeetCode.com problem at https://leetcode.com/problems/minimum-path-sum/.
 
--   In `leet_code_70.js`, you will use that file as a scratch pad to work on the
+- In `leet_code_70.js`, you will use that file as a scratch pad to work on the
 
-    LeetCode.com problem at https://leetcode.com/problems/climbing-stairs/.
+  LeetCode.com problem at https://leetcode.com/problems/climbing-stairs/.
 
-------------------------------------------------------------------------
+---
 
-WEEK-07 DAY-3 *Sorting Algorithms*
-==================================
+# WEEK-07 DAY-3 _Sorting Algorithms_
 
-------------------------------------------------------------------------
+---
 
-Sorting Algorithms
-==================
+# Sorting Algorithms
 
 **The objective of this lesson** is for you to get experience implementing common sorting algorithms that will come up during a lot of interviews. It is also important for you to understand how different sorting algorithms behave when given output.
 
@@ -1541,11 +1496,11 @@ At the end of this, you will be able to
 
     an array of numbers.
 
-2.  Explain the complexity of and write a function that performs `selection             sort`
+2.  Explain the complexity of and write a function that performs `selection sort`
 
     on an array of numbers.
 
-3.  Explain the complexity of and write a function that performs `insertion             sort`
+3.  Explain the complexity of and write a function that performs `insertion sort`
 
     on an array of numbers.
 
@@ -1567,11 +1522,11 @@ At the end of this, you will be able to
 
     an array of numbers.
 
-2.  Explain the complexity of and write a function that performs `selection             sort`
+2.  Explain the complexity of and write a function that performs `selection sort`
 
     on an array of numbers.
 
-3.  Explain the complexity of and write a function that performs `insertion             sort`
+3.  Explain the complexity of and write a function that performs `insertion sort`
 
     on an array of numbers.
 
@@ -1587,34 +1542,31 @@ At the end of this, you will be able to
 
     on a sorted array of numbers.
 
-------------------------------------------------------------------------
+---
 
-Bubble Sort
-===========
+# Bubble Sort
 
 Bubble Sort is generally the first major sorting algorithm to come up in most introductory programming courses. Learning about this algorithm is useful educationally, as it provides a good introduction to the challenges you face when tasked with converting unsorted data into sorted data, such as conducting logical comparisons, making swaps while iterating, and making optimizations. It's also quite simple to implement, and can be done quickly.
 
-Bubble Sort is *almost never* a good choice in production. simply because:
+Bubble Sort is _almost never_ a good choice in production. simply because:
 
--   It is not efficient
--   It is not commonly used
--   There is a stigma attached to using it
+- It is not efficient
+- It is not commonly used
+- There is a stigma attached to using it
 
-*“But…then…why are we…”*
-------------------------
+## _“But…then…why are we…”_
 
-It is *quite useful* as an educational base for you, and as a conversational base for you while interviewing, because you can discuss how other more elegant and efficient algorithms improve upon it. Taking naive code and improving upon it by weighing the technical tradeoffs of your other options is 100% the name of the game when trying to level yourself up from a junior engineer to a senior engineer.
+It is _quite useful_ as an educational base for you, and as a conversational base for you while interviewing, because you can discuss how other more elegant and efficient algorithms improve upon it. Taking naive code and improving upon it by weighing the technical tradeoffs of your other options is 100% the name of the game when trying to level yourself up from a junior engineer to a senior engineer.
 
-The algorithm bubbles up
-------------------------
+## The algorithm bubbles up
 
 As you progress through the algorithms and data structures of this course, you'll eventually notice that there are some recurring funny terms. “Bubbling up” is one of those terms.
 
 When someone writes that an item in a collection “bubbles up,” you should infer that:
 
--   The item is *in motion*
--   The item is moving *in some direction*
--   The item *has some final resting destination*
+- The item is _in motion_
+- The item is moving _in some direction_
+- The item _has some final resting destination_
 
 When invoking Bubble Sort to sort an array of integers in ascending order, the largest integers will “bubble up” to the “top” (the end) of the array, one at a time.
 
@@ -1624,57 +1576,52 @@ The largest values are captured, put into motion in the direction defined by the
 
 As the algorithm iterates through the array, it compares each element to the element's right neighbor. If the current element is larger than its neighbor, the algorithm swaps them. This continues until all elements in the array are sorted.
 
-How does a pass of Bubble Sort work?
-------------------------------------
+## How does a pass of Bubble Sort work?
 
-Bubble sort works by performing multiple *passes* to move elements closer to their final positions. A single pass will iterate through the entire array once.
+Bubble sort works by performing multiple _passes_ to move elements closer to their final positions. A single pass will iterate through the entire array once.
 
 A pass works by scanning the array from left to right, two elements at a time, and checking if they are ordered correctly. To be ordered correctly the first element must be less than or equal to the second. If the two elements are not ordered properly, then we swap them to correct their order. Afterwards, it scans the next two numbers and continue repeat this process until we have gone through the entire array.
 
 See one pass of bubble sort on the array `[2, 8, 5, 2, 6]` . On each step the elements currently being scanned are in **bold**.
 
--   \[**2**, **8**, 5, 2, 6\] - ordered, so leave them alone
--   \[2, **8**, **5**, 2, 6\] - not ordered, so swap
--   \[2, 5, **8**, **2**, 6\] - not ordered, so swap
--   \[2, 5, 2, **8**, **6**\] - not ordered, so swap
--   \[2, 5, 2, 6, 8\] - the first pass is complete
+- \[**2**, **8**, 5, 2, 6\] - ordered, so leave them alone
+- \[2, **8**, **5**, 2, 6\] - not ordered, so swap
+- \[2, 5, **8**, **2**, 6\] - not ordered, so swap
+- \[2, 5, 2, **8**, **6**\] - not ordered, so swap
+- \[2, 5, 2, 6, 8\] - the first pass is complete
 
 Because at least one swap occurred, the algorithm knows that it wasn't sorted. It needs to make another pass. It starts over again at the first entry and goes to the next-to-last entry doing the comparisons, again. It only needs to go to the next-to-last entry because the previous “bubbling” put the largest entry in the last position.
 
--   \[**2**, **5**, 2, 6, 8\] - ordered, so leave them alone
--   \[2, **5**, **2**, 6, 8\] - not ordered, so swap
--   \[2, 2, **5**, **6**, 8\] - ordered, so leave them alone
--   \[2, 2, 5, 6, 8\] - the second pass is complete
+- \[**2**, **5**, 2, 6, 8\] - ordered, so leave them alone
+- \[2, **5**, **2**, 6, 8\] - not ordered, so swap
+- \[2, 2, **5**, **6**, 8\] - ordered, so leave them alone
+- \[2, 2, 5, 6, 8\] - the second pass is complete
 
 Because at least one swap occurred, the algorithm knows that it wasn't sorted. Now, it can bubble from the first position to the last-2 position because the last two values are sorted.
 
--   \[**2**, **2**, 5, 6, 8\] - ordered, so leave them alone
--   \[2, **2**, **5**, 6, 8\] - ordered, so leave them alone
--   \[2, 2, 5, 6, 8\] - the third pass is complete
+- \[**2**, **2**, 5, 6, 8\] - ordered, so leave them alone
+- \[2, **2**, **5**, 6, 8\] - ordered, so leave them alone
+- \[2, 2, 5, 6, 8\] - the third pass is complete
 
 No swap occurred, so the Bubble Sort stops.
 
-Ending the Bubble Sort
-----------------------
+## Ending the Bubble Sort
 
 During Bubble Sort, you can tell if the array is in sorted order by checking if a swap was made during the previous pass performed. If a swap was not performed during the previous pass, then the array must be totally sorted and the algorithm can stop.
 
 You're probably wondering why that makes sense. Recall that a pass of Bubble Sort checks if any adjacent elements are **out of order** and swaps them if they are. If we don't make any swaps during a pass, then everything must be already **in order**, so our job is done. Let that marinate for a bit.
 
-Pseudocode for Bubble Sort
---------------------------
+## Pseudocode for Bubble Sort
 
-`Bubble Sort: (array)   n := length(array)   repeat   swapped = false   for i := 1 to n - 1 inclusive do        /* if this pair is out of order */       if array[i - 1] > array[i] then          /* swap them and remember something changed */         swap(array, i - 1, i)         swapped := true        end if     end for   until not swapped`
+`Bubble Sort: (array) n := length(array) repeat swapped = false for i := 1 to n - 1 inclusive do /* if this pair is out of order */ if array[i - 1] > array[i] then /* swap them and remember something changed */ swap(array, i - 1, i) swapped := true end if end for until not swapped`
 
-------------------------------------------------------------------------
+---
 
-Selection Sort
-==============
+# Selection Sort
 
-Selection Sort is very similar to Bubble Sort. The major difference between the two is that Bubble Sort bubbles the *largest* elements up to the end of the array, while Selection Sort selects the *smallest* elements of the array and directly places them at the beginning of the array in sorted position. Selection sort will utilize swapping just as bubble sort did. Let's carefully break this sorting algorithm down.
+Selection Sort is very similar to Bubble Sort. The major difference between the two is that Bubble Sort bubbles the _largest_ elements up to the end of the array, while Selection Sort selects the _smallest_ elements of the array and directly places them at the beginning of the array in sorted position. Selection sort will utilize swapping just as bubble sort did. Let's carefully break this sorting algorithm down.
 
-The algorithm: select the next smallest
----------------------------------------
+## The algorithm: select the next smallest
 
 Selection sort works by maintaining a sorted region on the left side of the input array; this sorted region will grow by one element with every “pass” of the algorithm. A single “pass” of selection sort will select the next smallest element of unsorted region of the array and move it to the sorted region. Because a single pass of selection sort will move an element of the unsorted region into the sorted region, this means a single pass will shrink the unsorted region by 1 element whilst increasing the sorted region by 1 element. Selection sort is complete when the sorted region spans the entire array and the unsorted region is empty!
 
@@ -1688,22 +1635,19 @@ The algorithm can be summarized as the following:
 4.  Increment MIN to point to next element
 5.  Repeat until list is sorted
 
-The pseudocode
---------------
+## The pseudocode
 
 In pseudocode, the Selection Sort can be written as this.
 
-`procedure selection sort    list  : array of items    n     : size of list     for i = 1 to n - 1    /* set current element as minimum*/       min = i        /* check the element to be minimum */        for j = i+1 to n          if list[j] < list[min] then             min = j;          end if       end for        /* swap the minimum element with the current element*/       if indexMin != i  then          swap list[min] and list[i]       end if    end for end procedure`
+`procedure selection sort list : array of items n : size of list for i = 1 to n - 1 /* set current element as minimum*/ min = i /* check the element to be minimum */ for j = i+1 to n if list[j] < list[min] then min = j; end if end for /* swap the minimum element with the current element*/ if indexMin != i then swap list[min] and list[i] end if end for end procedure`
 
-------------------------------------------------------------------------
+---
 
-Insertion Sort
-==============
+# Insertion Sort
 
 With Bubble Sort and Selection Sort now in your tool box, you're starting to get some experience points under your belt! Time to learn one more “naive” sorting algorithm before you get to the efficient sorting algorithms.
 
-The algorithm: insert into the sorted region
---------------------------------------------
+## The algorithm: insert into the sorted region
 
 Insertion Sort is similar to Selection Sort in that it gradually builds up a larger and larger sorted region at the left-most end of the array.
 
@@ -1713,8 +1657,7 @@ See if you can observe the behavior described above in the following animation:
 
 ![insertion sort](images/InsertionSort.gif)
 
-The Steps
----------
+## The Steps
 
 Insertion Sort grows a sorted array on the left side of the input array by:
 
@@ -1730,27 +1673,24 @@ Insertion Sort grows a sorted array on the left side of the input array by:
 
 These steps are easy to confuse with selection sort, so you'll want to watch the video lecture and drawing that accompanies this reading as always!
 
-The pseudocode
---------------
+## The pseudocode
 
-`procedure insertionSort( A : array of items )    int holePosition    int valueToInsert     for i = 1 to length(A) inclusive do:        /* select value to be inserted */       valueToInsert = A[i]       holePosition = i        /*locate hole position for the element to be inserted */        while holePosition > 0 and A[holePosition-1] > valueToInsert do:          A[holePosition] = A[holePosition-1]          holePosition = holePosition -1       end while        /* insert the number at hole position */       A[holePosition] = valueToInsert     end for  end procedure`
+`procedure insertionSort( A : array of items ) int holePosition int valueToInsert for i = 1 to length(A) inclusive do: /* select value to be inserted */ valueToInsert = A[i] holePosition = i /*locate hole position for the element to be inserted */ while holePosition > 0 and A[holePosition-1] > valueToInsert do: A[holePosition] = A[holePosition-1] holePosition = holePosition -1 end while /* insert the number at hole position */ A[holePosition] = valueToInsert end for end procedure`
 
-------------------------------------------------------------------------
+---
 
-Merge Sort
-==========
+# Merge Sort
 
 You've explored a few sorting algorithms already, all of them being quite slow with a runtime of O(n<sup>2</sup>). It's time to level up and learn your first time-efficient sorting algorithm! You'll explore **merge sort** in detail soon, but first, you should jot down some key ideas for now. The following points are not steps to an algorithm yet; rather, they are ideas that will motivate how you can derive this algorithm.
 
--   it is easy to merge elements of two sorted arrays into a single sorted array
--   you can consider an array containing only a single element as already
+- it is easy to merge elements of two sorted arrays into a single sorted array
+- you can consider an array containing only a single element as already
 
-    trivially sorted
+  trivially sorted
 
--   you can also consider an empty array as trivially sorted
+- you can also consider an empty array as trivially sorted
 
-The algorithm: divide and conquer
----------------------------------
+## The algorithm: divide and conquer
 
 You're going to need a helper function that solves the first major point from above. How might you merge two sorted arrays? In other words you want a `merge`
 
@@ -1762,7 +1702,7 @@ function that will behave like so:
 
 Once you have that, you get to the “divide and conquer” bit.
 
-The algorithm for merge sort is actually *really* simple.
+The algorithm for merge sort is actually _really_ simple.
 
 1.  if there is only one element in the list, it is already sorted. return that
 
@@ -1780,22 +1720,20 @@ The process is visualized below. When elements are moved to the bottom of the pi
 
 The pseudocode for the algorithm is as follows.
 
-`procedure mergesort( a as array )    if ( n == 1 ) return a     /* Split the array into two */    var l1 as array = a[0] ... a[n/2]    var l2 as array = a[n/2+1] ... a[n]     l1 = mergesort( l1 )    l2 = mergesort( l2 )     return merge( l1, l2 ) end procedure  procedure merge( a as array, b as array )    var result as array    while ( a and b have elements )       if ( a[0] > b[0] )          add b[0] to the end of result          remove b[0] from b       else          add a[0] to the end of result          remove a[0] from a       end if    end while     while ( a has elements )       add a[0] to the end of result       remove a[0] from a    end while     while ( b has elements )       add b[0] to the end of result       remove b[0] from b    end while     return result end procedure`
+`procedure mergesort( a as array ) if ( n == 1 ) return a /* Split the array into two */ var l1 as array = a[0] ... a[n/2] var l2 as array = a[n/2+1] ... a[n] l1 = mergesort( l1 ) l2 = mergesort( l2 ) return merge( l1, l2 ) end procedure procedure merge( a as array, b as array ) var result as array while ( a and b have elements ) if ( a[0] > b[0] ) add b[0] to the end of result remove b[0] from b else add a[0] to the end of result remove a[0] from a end if end while while ( a has elements ) add a[0] to the end of result remove a[0] from a end while while ( b has elements ) add b[0] to the end of result remove b[0] from b end while return result end procedure`
 
-------------------------------------------------------------------------
+---
 
-Quick Sort
-==========
+# Quick Sort
 
 Quick Sort has a similar “divide and conquer” strategy to Merge Sort. Here are a few key ideas that will motivate the design:
 
--   it is easy to sort elements of an array relative to a particular target value
--   an array of 0 or 1 elements is already trivially sorted
+- it is easy to sort elements of an array relative to a particular target value
+- an array of 0 or 1 elements is already trivially sorted
 
 Regarding that first point, for example given `[7, 3, 8, 9, 2]` and a target of `5` , we know `[3, 2]` are numbers less than `5` and `[7, 8, 9]` are numbers greater than `5` .
 
-How does it work?
------------------
+## How does it work?
 
 In general, the strategy is to divide the input array into two subarrays: one with the smaller elements, and one with the larger elements. Then, it recursively operates on the two new subarrays. It continues this process until of dividing into smaller arrays until it reaches subarrays of length 1 or smaller. As you have seen with Merge Sort, arrays of such length are automatically sorted.
 
@@ -1818,14 +1756,13 @@ Before we move forward, see if you can observe the behavior described above in t
 
 ![quick sort](images/QuickSort.gif)
 
-The algorithm: divide and conquer
----------------------------------
+## The algorithm: divide and conquer
 
 Formally, we want to partition elements of an array relative to a pivot value. That is, we want elements less than the pivot to be separated from elements that are greater than or equal to the pivot. Our goal is to create a function with this behavior:
 
     code class="language-javascript"let arr = [7, 3, 8, 9, 2];
             partition(arr, 5); // => [[3, 2], [7,8,9]]
-            
+
 
 ### Partition
 
@@ -1858,44 +1795,41 @@ Seems simple enough! Let's implement it in JavaScript:
 
 You don't have to use an explicit `partition` helper function in your Quick Sort implementation; however, we will borrow heavily from this pattern. As you design algorithms, it helps to think about key patterns in isolation, although your solution may not feature that exact helper. Some would say we like to divide and conquer.
 
-The pseudocode
---------------
+## The pseudocode
 
-It is *so* small, this algorithm. It's amazing that it performs so well with so little code!
+It is _so_ small, this algorithm. It's amazing that it performs so well with so little code!
 
-`procedure quickSort(left, right)    if the length of the array is 0 or 1, return the array    set the pivot to the first element of the array   remove the first element of the array    put all values less than the pivot value into an array called left   put all values greater than the pivot value into an array called right    call quick sort on left and assign the return value to leftSorted   call quick sort on right and assign the return value to rightSorted    return the concatenation of leftSorted, the pivot value, and rightSorted  end procedure`
+`procedure quickSort(left, right) if the length of the array is 0 or 1, return the array set the pivot to the first element of the array remove the first element of the array put all values less than the pivot value into an array called left put all values greater than the pivot value into an array called right call quick sort on left and assign the return value to leftSorted call quick sort on right and assign the return value to rightSorted return the concatenation of leftSorted, the pivot value, and rightSorted end procedure`
 
-------------------------------------------------------------------------
+---
 
-Binary Search
-=============
+# Binary Search
 
 We've explored many ways to sort arrays so far, but why did we go through all of that trouble? By sorting elements of an array, we are organizing the data in a way that gives us a quick way to look up elements later on. For simplicity, we have been using arrays of numbers up until this point. However, these sorting concepts can be generalized to other data types. For example, it would be easy to modify our comparison-based sorting algorithms to sort strings: instead of leveraging facts like `0 < 1` , we can say `'A' < 'B'` .
 
 Think of a dictionary. A dictionary contains alphabetically sorted words and their definitions. A dictionary is pretty much only useful if it is ordered in this way. Let's say you wanted to look up the definition of “stupendous.” What steps might you take?
 
--   you open up the dictionary at the roughly middle page
-    -   you land in the “m” section
--   you know “s” comes somewhere after “m” in the book, so you disregard all pages
+- you open up the dictionary at the roughly middle page
+  - you land in the “m” section
+- you know “s” comes somewhere after “m” in the book, so you disregard all pages
 
-    before the “m” section. Instead, you flip to the roughly middle page between “m” and “z”
+  before the “m” section. Instead, you flip to the roughly middle page between “m” and “z”
 
-    -   you land in the “u” section
+  - you land in the “u” section
 
--   you know “s” comes somewhere before “u”, so you can disregard all pages after
+- you know “s” comes somewhere before “u”, so you can disregard all pages after
 
-    the “u” section. Instead, you flip to the roughly middle page between the previous “m” page and “u”
+  the “u” section. Instead, you flip to the roughly middle page between the previous “m” page and “u”
 
--   …
+- …
 
 You are essentially using the `binarySearch` algorithm in the real world.
 
-The Algorithm: “check the middle and half the search space”
------------------------------------------------------------
+## The Algorithm: “check the middle and half the search space”
 
 Formally, our `binarySearch` will seek to solve the following problem:
 
-`Given a sorted array of numbers and a target num, return a boolean indicating whether     or not that target is contained in the array.`
+`Given a sorted array of numbers and a target num, return a boolean indicating whether or not that target is contained in the array.`
 
 Programmatically, we want to satisfy the following behavior:
 
@@ -1912,15 +1846,13 @@ Programmatically, we want to satisfy the following behavior:
 
 Before we move on, really internalize the fact that `binarySearch` will only work on **sorted** arrays! Obviously we can search any array, sorted or unsorted, in `O(n)` time. But now our goal is be able to search the array with a sub-linear time complexity (less than `O(n)` ).
 
-The pseudocode
---------------
+## The pseudocode
 
-`procedure binary search (list, target)   parameter list: a list of sorted value   parameter target: the value to search for    if the list has zero length, then return false    determine the slice point:     if the list has an even number of elements,       the slice point is the number of elements       divided by two     if the list has an odd number of elements,       the slice point is the number of elements       minus one divided by two    create an list of the elements from 0 to the     slice point, not including the slice point,     which is known as the "left half"   create an list of the elements from the     slice point to the end of the list which is     known as the "right half"    if the target is less than the value in the     original array at the slice point, then     return the binary search of the "left half"     and the target   if the target is greater than the value in the     original array at the slice point, then     return the binary search of the "right half"     and the target   if neither of those is true, return true end procedure binary search`
+`procedure binary search (list, target) parameter list: a list of sorted value parameter target: the value to search for if the list has zero length, then return false determine the slice point: if the list has an even number of elements, the slice point is the number of elements divided by two if the list has an odd number of elements, the slice point is the number of elements minus one divided by two create an list of the elements from 0 to the slice point, not including the slice point, which is known as the "left half" create an list of the elements from the slice point to the end of the list which is known as the "right half" if the target is less than the value in the original array at the slice point, then return the binary search of the "left half" and the target if the target is greater than the value in the original array at the slice point, then return the binary search of the "right half" and the target if neither of those is true, return true end procedure binary search`
 
-------------------------------------------------------------------------
+---
 
-Bubble Sort Analysis
-====================
+# Bubble Sort Analysis
 
 Bubble Sort manipulates the array by swapping the position of two elements. To implement Bubble Sort in JS, you'll need to perform this operation. It helps to have a function to do that. A key detail in this function is that you need an extra variable to store one of the elements since you will be overwriting them in the array:
 
@@ -2006,44 +1938,40 @@ Take a look at the snippet below and try to understand how it corresponds to the
      return array;
     }
 
-Time Complexity: O(n<sup>2</sup>)
----------------------------------
+## Time Complexity: O(n<sup>2</sup>)
 
 Picture the worst case scenario where the input array is completely unsorted. Say it's sorted in fully decreasing order, but the goal is to sort it in increasing order:
 
--   n is the length of the input array
--   The inner `for` loop along contributes *O(n)* in isolation
--   The outer while loop contributes *O(n)* in isolation because a single
+- n is the length of the input array
+- The inner `for` loop along contributes _O(n)_ in isolation
+- The outer while loop contributes _O(n)_ in isolation because a single
 
-    iteration of the while loop will bring one element to its final resting position. In other words, it keeps running the while loop until the array is fully sorted. To fully sort the array we will need to bring all `n` elements into their final resting positions.
+  iteration of the while loop will bring one element to its final resting position. In other words, it keeps running the while loop until the array is fully sorted. To fully sort the array we will need to bring all `n` elements into their final resting positions.
 
--   Those two loops are nested so the total time complexity is O(n \* n) =
+- Those two loops are nested so the total time complexity is O(n \* n) =
 
-    O(n<sup>2</sup>).
+  O(n<sup>2</sup>).
 
-It's worth mentioning that the best case scenario is when the input array is already fully sorted. This will cause our for loop to conduct a single pass without performing any swap, so the `while` loop will not trigger further iterations. This means best case time complexity is *O(n)* for bubble sort. This best case linear time is probably the only advantage of bubble sort. Programmers are usually interested only in the worst-case analysis and ignore best-case analysis.
+It's worth mentioning that the best case scenario is when the input array is already fully sorted. This will cause our for loop to conduct a single pass without performing any swap, so the `while` loop will not trigger further iterations. This means best case time complexity is _O(n)_ for bubble sort. This best case linear time is probably the only advantage of bubble sort. Programmers are usually interested only in the worst-case analysis and ignore best-case analysis.
 
-Space Complexity: O(1)
-----------------------
+## Space Complexity: O(1)
 
 Bubble Sort is a constant space, O(1), algorithm. The amount of memory consumed by the algorithm does not increase relative to the size of the input array. It uses the same amount of memory and create the same amount of variables regardless of the size of the input, making this algorithm quite space efficient. The space efficiency mostly comes from the fact that it mutates the input array in-place. This is known as a **destructive sort** because it “destroys” the positions of the values in the array.
 
-When should you use Bubble Sort?
---------------------------------
+## When should you use Bubble Sort?
 
 Nearly never, but it may be a good choice in the following list of special cases:
 
--   When sorting really small arrays where run time will be negligible no matter
+- When sorting really small arrays where run time will be negligible no matter
 
-    what algorithm you choose.
+  what algorithm you choose.
 
--   When sorting arrays that you expect to already be nearly sorted.
--   At parties
+- When sorting arrays that you expect to already be nearly sorted.
+- At parties
 
-------------------------------------------------------------------------
+---
 
-Selection Sort Analysis
-=======================
+# Selection Sort Analysis
 
 Since a component of Selection Sort requires us to locate the smallest value in the array, let's focus on that pattern in isolation:
 
@@ -2062,8 +1990,7 @@ Since a component of Selection Sort requires us to locate the smallest value in 
 
 Pretty basic code right? We won't use this explicit helper function to solve selection sort, however we will borrow from this pattern soon.
 
-Selection Sort JS Implementation
---------------------------------
+## Selection Sort JS Implementation
 
 We'll also utilize the classic swap pattern that we introduced in the bubble sort. To refresh:
 
@@ -2121,42 +2048,39 @@ Now for the punchline! Take a look at the snippet below and try to understand ho
      return arr;
     }
 
-Time Complexity Analysis
-------------------------
+## Time Complexity Analysis
 
 Selection Sort runtime is O(n<sup>2</sup>) because:
 
--   `n` is the length of the input array
--   The outer loop i contributes O(n) in isolation, this is plain to see
--   The inner loop j is more complicated, it will make one less iteration for
+- `n` is the length of the input array
+- The outer loop i contributes O(n) in isolation, this is plain to see
+- The inner loop j is more complicated, it will make one less iteration for
 
-    every iteration of i.
+  every iteration of i.
 
-    -   for example, let's say we have an array of 10 elements, `n = 10`.
-    -   the first full cycle of `j` will have 9 iterations
-    -   the second full cycle of `j` will have 8 iterations
-    -   the third full cycle of `j` will have 7 iterations
-    -   …
-    -   the last full cycle of `j` will have 1 iteration
-    -   This means that the inner loop j will contribute roughly O(n / 2) on
+  - for example, let's say we have an array of 10 elements, `n = 10`.
+  - the first full cycle of `j` will have 9 iterations
+  - the second full cycle of `j` will have 8 iterations
+  - the third full cycle of `j` will have 7 iterations
+  - …
+  - the last full cycle of `j` will have 1 iteration
+  - This means that the inner loop j will contribute roughly O(n / 2) on
 
-        average
+    average
 
--   The two loops are nested so our total time complexity is O(n \* n / 2) =
+- The two loops are nested so our total time complexity is O(n \* n / 2) =
 
-    O(n<sup>2</sup>)
+  O(n<sup>2</sup>)
 
 You'll notice that during this analysis we said something silly like O(n / 2). In some analyses such as this one, we'll prefer to drop the constants only at the end of the sketch so you understand the logical steps we took to derive a complicated time complexity.
 
-Space Complexity Analysis: O(1)
--------------------------------
+## Space Complexity Analysis: O(1)
 
 The amount of memory consumed by the algorithm does not increase relative to the size of the input array. We use the same amount of memory and create the same amount of variables regardless of the size of our input. A quick indicator of this is the fact that we don't create any arrays.
 
-When should we use Selection Sort?
-----------------------------------
+## When should we use Selection Sort?
 
-There is really only one use case where Selection Sort becomes superior to Bubble Sort. Both algorithms are quadratic in time and constant in space, but the point at which they differ is in the *number of swaps* they make.
+There is really only one use case where Selection Sort becomes superior to Bubble Sort. Both algorithms are quadratic in time and constant in space, but the point at which they differ is in the _number of swaps_ they make.
 
 Bubble Sort, in the worst case, invokes a swap on every single comparison. Selection Sort only swaps once our inner loop has completely finished traversing the array. Therefore, Selection Sort is optimized to make the least possible number of swaps.
 
@@ -2164,10 +2088,9 @@ Selection Sort becomes advantageous when making a swap is the most expensive ope
 
 Though in industry this situation is very rare, the insights above make for a fantastic conversational piece when weighing technical tradeoffs while strategizing solutions in an interview setting. This commentary may help deliver the impression that you are well-versed in system design and technical analysis, a key indicator that someone is prepared for a senior level position.
 
-------------------------------------------------------------------------
+---
 
-Insertion Sort Analysis
-=======================
+# Insertion Sort Analysis
 
 Take a look at the snippet below and try to understand how it corresponds to our conceptual understanding of the Insertion Sort algorithm. Scroll down to the commented version when you get stuck:
 
@@ -2227,7 +2150,7 @@ There are a few key pieces to point out in the above solution before moving forw
 
     to a while loop!
 
-    -   It continues iterating to the left toward `j = 0`, *only while* the
+    - It continues iterating to the left toward `j = 0`, _only while_ the
 
 `currElement` is less than `arr[j]` .
 
@@ -2235,50 +2158,48 @@ There are a few key pieces to point out in the above solution before moving forw
 
 `currElement` , and then we exit the inner loop!
 
-1.  When shifting elements in the sorted region to the right, it *does not*
+1.  When shifting elements in the sorted region to the right, it _does not_
 
-    replace the value at their old index! If the input array is `[1, 2, 4,                 3]` , and `currElement` is `3` , after comparing `4` and `3` , but before inserting `3` between `2` and `4` , the array will look like this: `[1, 2, 4, 4]` .
+    replace the value at their old index! If the input array is `[1, 2, 4, 3]` , and `currElement` is `3` , after comparing `4` and `3` , but before inserting `3` between `2` and `4` , the array will look like this: `[1, 2, 4, 4]` .
 
 If you are currently scratching your head, that is perfectly okay because when this one clicks, it clicks for good.
 
-If you're struggling, you should try taking out a pen and paper and step through the solution provided above one step at a time. Keep track of `i` , `j` , `currElement` , `arr[j]` , and the input `arr` itself *at every step*. After going through this a few times, you'll have your “ah HA!” moment.
+If you're struggling, you should try taking out a pen and paper and step through the solution provided above one step at a time. Keep track of `i` , `j` , `currElement` , `arr[j]` , and the input `arr` itself _at every step_. After going through this a few times, you'll have your “ah HA!” moment.
 
-Time and Space Complexity Analysis
-----------------------------------
+## Time and Space Complexity Analysis
 
 Insertion Sort runtime is O(n<sup>2</sup>) because:
 
 In the **worst case scenario** where our input array is entirely unsorted, since this algorithm contains a nested loop, its run time behaves similarly to `bubbleSort` and `selectionSort` . In this case, we are forced to make a comparison at each iteration of the inner loop. Not convinced? Let's derive the complexity. We'll use much of the same argument as we did in `selectionSort` . Say we had the worst case scenario where are input array is sorted in full decreasing order, but we wanted to sort it in increasing order:
 
--   `n` is the length of the input array
--   The outer loop i contributes O(n) in isolation, this is plain to see
--   The inner loop j is more complicated. We know j will iterate until it finds an
+- `n` is the length of the input array
+- The outer loop i contributes O(n) in isolation, this is plain to see
+- The inner loop j is more complicated. We know j will iterate until it finds an
 
-    appropriate place to insert the `currElement` into the sorted region. However, since we are discussing the case where the data is already in decreasing order, the element must travel the maximum distance to find it's insertion point! We know this insertion point to be index 0, since every `currElement`
+  appropriate place to insert the `currElement` into the sorted region. However, since we are discussing the case where the data is already in decreasing order, the element must travel the maximum distance to find it's insertion point! We know this insertion point to be index 0, since every `currElement`
 
-    will be the next smallest of the array. So:
+  will be the next smallest of the array. So:
 
-    -   the 1st element travels 1 distance to be inserted
-    -   the 2nd element travels 2 distance to be inserted
-    -   the 3rd element travels 3 distance to be inserted
-    -   …
-    -   the n-1th element travels n-1 distance to be inserted
-    -   This means that our inner loop j will contribute roughly O(n / 2) on
+  - the 1st element travels 1 distance to be inserted
+  - the 2nd element travels 2 distance to be inserted
+  - the 3rd element travels 3 distance to be inserted
+  - …
+  - the n-1th element travels n-1 distance to be inserted
+  - This means that our inner loop j will contribute roughly O(n / 2) on
 
-        average
+    average
 
--   The two loops are nested so our total time complexity is O(n \* n / 2) =
+- The two loops are nested so our total time complexity is O(n \* n / 2) =
 
-    O(n<sup>2</sup>)
+  O(n<sup>2</sup>)
 
 ### Space Complexity: O(1)
 
 The amount of memory consumed by the algorithm does not increase relative to the size of the input array. We use the same amount of memory and create the same amount of variables regardless of the size of our input. A quick indicator of this is the fact that we don't create any arrays.
 
-When should you use Insertion Sort?
------------------------------------
+## When should you use Insertion Sort?
 
-Insertion Sort has one advantage that makes it absolutely supreme in one special case. Insertion Sort is what's known as an “online” algorithm. Online algorithms are great when you're dealing with *streaming data*, because they can sort the data live *as it is received*.
+Insertion Sort has one advantage that makes it absolutely supreme in one special case. Insertion Sort is what's known as an “online” algorithm. Online algorithms are great when you're dealing with _streaming data_, because they can sort the data live _as it is received_.
 
 If you must sort a set of data that is ever-incoming, for example, maybe you are sorting the most relevant posts in a social media feed so that those posts that are most likely to impact the site's audience always appear at the top of the feed, an online algorithm like Insertion Sort is a great option.
 
@@ -2288,21 +2209,19 @@ Well, if you have data constantly being pushed to the array, it will always be a
 
 Otherwise, Insertion Sort is, in general, useful in all the same situations as Bubble Sort. It's a good option when:
 
--   You are sorting really small arrays where run time will be negligible no
+- You are sorting really small arrays where run time will be negligible no
 
-    matter what algorithm we choose.
+  matter what algorithm we choose.
 
--   You are sorting an array that you expect to already be nearly sorted.
+- You are sorting an array that you expect to already be nearly sorted.
 
-------------------------------------------------------------------------
+---
 
-Merge Sort Analysis
-===================
+# Merge Sort Analysis
 
 You needed to come up with two pieces of code to make merge sort work.
 
-Full code
----------
+## Full code
 
     code class="language-javascript"function merge(array1, array2) {
      let merged = [];
@@ -2344,8 +2263,7 @@ Full code
      return merge(sortedLeft, sortedRight);
     }
 
-Merging two sorted arrays
--------------------------
+## Merging two sorted arrays
 
 Merging two sorted arrays is simple. Since both arrays are sorted, we know the smallest numbers to always be at the front of the arrays. We can construct the new array by comparing the first elements of both input arrays. We remove the smaller element from it's respective array and add it to our new array. Do this until both input arrays are empty:
 
@@ -2371,12 +2289,12 @@ Merging two sorted arrays is simple. Since both arrays are sorted, we know the s
 
 Remember the following about JavaScript to understand the above code.
 
--   `0` is considered a falsey value, meaning it acts like `false` when used in
+- `0` is considered a falsey value, meaning it acts like `false` when used in
 
-    Boolean expressions. All other numbers are truthy.
+  Boolean expressions. All other numbers are truthy.
 
--   `Infinity` is a value that is guaranteed to be greater than any other quantity
--   `shift` is an array method that removes and returns the first element
+- `Infinity` is a value that is guaranteed to be greater than any other quantity
+- `shift` is an array method that removes and returns the first element
 
 Here's the annotated version.
 
@@ -2420,8 +2338,7 @@ In other words, we can safely handle this edge case:
 
 Nice! We now have a way to merge two sorted arrays into a single sorted array. It's worth mentioning that `merge` will have a `O(n)` runtime where `n` is the combined length of the two input arrays. This is what we meant when we said it was “easy” to merge two sorted arrays; linear time is fast! We'll find fact this useful later.
 
-Divide and conquer, step-by-step
---------------------------------
+## Divide and conquer, step-by-step
 
 Now that we satisfied the merge idea, let's handle the second point. That is, we say an array of 1 or 0 elements is already sorted. This will be the base case of our recursion. Let's begin adding this code:
 
@@ -2471,32 +2388,31 @@ Wow. that's it. Notice how light the implementation of `mergeSort` is. Much of t
 
 `mergeSort` is a classic example of a “Divide and Conquer” algorithm. In other words, we keep breaking the array into smaller and smaller sub arrays. This is the same as saying we take the problem and break it down into smaller and smaller subproblems. We do this until the subproblems are so small that we trivially know the answer to them (an array length 0 or 1 is already sorted). Once we have those subanswers we can combine to reconstruct the larger problems that we previously divided (merge the left and right subarrays).
 
-Time and Space Complexity Analysis
-----------------------------------
+## Time and Space Complexity Analysis
 
 ### Time Complexity: O(n log(n))
 
--   `n` is the length of the input array
--   We must calculate how many recursive calls we make. The number of recursive
+- `n` is the length of the input array
+- We must calculate how many recursive calls we make. The number of recursive
 
-    calls is the number of times we must split the array to reach the base case. Since we split in half each time, the number of recursive calls is `O(log(n))` .
+  calls is the number of times we must split the array to reach the base case. Since we split in half each time, the number of recursive calls is `O(log(n))` .
 
-    -   for example, say we had an array of length `32`
-    -   then the length would change as `32 -> 16 -> 8 -> 4 -> 2                         ->                         1`, we have to
+  - for example, say we had an array of length `32`
+  - then the length would change as `32 -> 16 -> 8 -> 4 -> 2 -> 1`, we have to
 
-        split 5 times before reaching the base case, `log(32) = 5`
+    split 5 times before reaching the base case, `log(32) = 5`
 
-    -   in our algorithm, **log(n)** describes how many times we must halve **n**
+  - in our algorithm, **log(n)** describes how many times we must halve **n**
 
-        until the quantity reaches 1.
+    until the quantity reaches 1.
 
--   Besides the recursive calls, we must consider the while loop within the
+- Besides the recursive calls, we must consider the while loop within the
 
 `merge` function, which contributes `O(n)` in isolation
 
--   We call `merge` in every recursive `mergeSort` call, so the total complexity
+- We call `merge` in every recursive `mergeSort` call, so the total complexity
 
-    is **O(n \* log(n))**
+  is **O(n \* log(n))**
 
 ### Space Complexity: O(n)
 
@@ -2506,21 +2422,20 @@ The larger the size of our input array, the greater the number of subarrays we m
 
 ### When should you use Merge Sort?
 
-Unless we, the engineers, have access in advance to some unique, exploitable insight about our dataset, it turns out that O(n log n) time is *the best* we can do when sorting unknown datasets.
+Unless we, the engineers, have access in advance to some unique, exploitable insight about our dataset, it turns out that O(n log n) time is _the best_ we can do when sorting unknown datasets.
 
 That means that Merge Sort is fast! It's way faster than Bubble Sort, Selection Sort, and Insertion Sort. However, due to its linear space complexity, we must always weigh the trade off between speed and memory consumption when making the choice to use Merge Sort. Consider the following:
 
--   If you have unlimited memory available, use it, it's fast!
--   If you have a decent amount of memory available and a medium sized dataset,
+- If you have unlimited memory available, use it, it's fast!
+- If you have a decent amount of memory available and a medium sized dataset,
 
-    run some tests first, but use it!
+  run some tests first, but use it!
 
--   In other cases, maybe you should consider other options.
+- In other cases, maybe you should consider other options.
 
-------------------------------------------------------------------------
+---
 
-Quick Sort
-==========
+# Quick Sort
 
 Let's begin structuring the recursion. The base case of any recursive problem is where the input is so trivial, we immediately know the answer without calculation. If our problem is to sort an array, what is the trivial array? An array of 1 or 0 elements! Let's establish the code:
 
@@ -2634,38 +2549,37 @@ That code was so clean we should show it again. Here's the complete code for you
         return [...leftSorted, pivot, ...rightSorted];
     }
 
-Time and Space Complexity Analysis
-----------------------------------
+## Time and Space Complexity Analysis
 
 Here is a summary of the complexity.
 
 ### Time Complexity
 
--   Avg Case: O(n log(n))
--   Worst Case: O(n<sup>2</sup>)
+- Avg Case: O(n log(n))
+- Worst Case: O(n<sup>2</sup>)
 
 The runtime analysis of `quickSort` is more complex than `mergeSort`
 
--   `n` is the length of the input array
--   The partition step alone is `O(n)`
--   We must calculate how many recursive calls we make. The number of recursive
+- `n` is the length of the input array
+- The partition step alone is `O(n)`
+- We must calculate how many recursive calls we make. The number of recursive
 
-    calls is the number of times we must split the array to reach the base case. This is dependent on how we choose the pivot. Let's analyze the best and worst case:
+  calls is the number of times we must split the array to reach the base case. This is dependent on how we choose the pivot. Let's analyze the best and worst case:
 
-    -   **Best Case:** We are lucky and always choose the median as the pivot.
+  - **Best Case:** We are lucky and always choose the median as the pivot.
 
-        This means the left and right partitions will have equal length. This will halve the array length at every step of the recursion. We benefit from this halving with `O(log(n))` recursive calls to reach the base case.
+    This means the left and right partitions will have equal length. This will halve the array length at every step of the recursion. We benefit from this halving with `O(log(n))` recursive calls to reach the base case.
 
-    -   **Worst Case:** We are unlucky and always choose the min or max as the
+  - **Worst Case:** We are unlucky and always choose the min or max as the
 
-        pivot. This means one partition will contain everything, and the other partition is empty. This will decrease the array length by 1 at every step of the recursion. We suffer from `O(n)` recursive calls to reach the base case.
+    pivot. This means one partition will contain everything, and the other partition is empty. This will decrease the array length by 1 at every step of the recursion. We suffer from `O(n)` recursive calls to reach the base case.
 
--   The partition step occurs in every recursive call, so our total complexities
+- The partition step occurs in every recursive call, so our total complexities
 
-    are:
+  are:
 
-    -   **Best Case:** O(n \* log(n))
-    -   **Worst Case:** O(n<sup>2</sup>)
+  - **Best Case:** O(n \* log(n))
+  - **Worst Case:** O(n<sup>2</sup>)
 
 Although we typically take the worst case when describing Big-O for an algorithm, much research on `quickSort` has shown the worst case to be an exceedingly rare occurrence even if we choose the pivot at random. Because of this we still consider `quickSort` an efficient algorithm. This is a common interview talking point, so you should be familiar with the relationship between the choice of pivot and efficiency of the algorithm.
 
@@ -2677,20 +2591,19 @@ Our implementation of `quickSort` uses `O(n)` space because of the partition arr
 
 ### When should you use Quick Sort?
 
--   When you are in a pinch and need to throw down an efficient sort (on average).
+- When you are in a pinch and need to throw down an efficient sort (on average).
 
-    The recursive code is light and simple to implement; much smaller than `mergeSort` .
+  The recursive code is light and simple to implement; much smaller than `mergeSort` .
 
--   When constant space is important to you, use the in-place version. This will
+- When constant space is important to you, use the in-place version. This will
 
-    of course trade off some simplicity of implementation.
+  of course trade off some simplicity of implementation.
 
 If you know some constraints about dataset you can make some modifications to optimize pivot choice. Here's some food for thought. Our implementation of `quickSort` will always take the first element as the pivot. This means we will suffer from the worst case time complexity in the event that we are given an already sorted array (ironic isn't it?). If you know your input data to be mostly already sorted, randomize the choice of pivot - this is a very easy change. Bam. Solved like a true engineer.
 
-------------------------------------------------------------------------
+---
 
-Binary Search
-=============
+# Binary Search
 
 We'll implement binary search recursively. As always, we start with a base case that captures the scenario of the input array being so trivial, that we know the answer without further calculation. If we are given an empty array and a target, we can be certain that the target is not inside of the array:
 
@@ -2738,7 +2651,7 @@ Here is where we leverage the sorted property of the array. If the target is les
      // ...
     }
 
-We know `binarySeach` will return the correct Boolean, so we just pass that result up by returning it ourselves. However, something is lacking in our code. It is only possible to get a false from the literal `return false` line, but there is no `return         true` . Looking at our conditionals, we handle the cases where the target is less than middle or the target is greater than the middle, but what if the product is **equal** to the middle? If the target is equal to the middle, then we found the target and should `return true` ! This is easy to add with an `else` :
+We know `binarySeach` will return the correct Boolean, so we just pass that result up by returning it ourselves. However, something is lacking in our code. It is only possible to get a false from the literal `return false` line, but there is no `return true` . Looking at our conditionals, we handle the cases where the target is less than middle or the target is greater than the middle, but what if the product is **equal** to the middle? If the target is equal to the middle, then we found the target and should `return true` ! This is easy to add with an `else` :
 
     code class="language-javascript"function binarySearch(array, target) {
         if (array.length === 0) {
@@ -2785,25 +2698,24 @@ Here is the code again for your quick reference:
         }
     }
 
-Time and Space Complexity Analysis
-----------------------------------
+## Time and Space Complexity Analysis
 
 The complexity analysis of this algorithm is easier to explain through visuals, so we **highly encourage** you to watch the lecture that accompanies this reading. In any case, here is a summary of the complexity:
 
 ### Time Complexity: O(log(n))
 
--   `n` is the length of the input array
--   We have no loops, so we must only consider the number of recursive calls it
+- `n` is the length of the input array
+- We have no loops, so we must only consider the number of recursive calls it
 
-    takes to hit the base case
+  takes to hit the base case
 
--   The number of recursive calls is the number of times we must halve the array
+- The number of recursive calls is the number of times we must halve the array
 
-    until it's length becomes 0. This number can be described by `log(n)`
+  until it's length becomes 0. This number can be described by `log(n)`
 
-    -   for example, say we had an array of 8 elements, `n = 8`
-    -   the length would halve as `8 -> 4 -> 2 -> 1`
-    -   it takes 3 calls, `log(8) = 3`
+  - for example, say we had an array of 8 elements, `n = 8`
+  - the length would halve as `8 -> 4 -> 2 -> 1`
+  - it takes 3 calls, `log(8) = 3`
 
 ### Space Complexity: O(n)
 
@@ -2811,37 +2723,34 @@ Our implementation uses `n` space due to half arrays we create using slice. Note
 
 ### When should we use Binary Search?
 
-Use this algorithm when the input data is sorted!!! This is a heavy requirement, but if you have it, you'll have an insanely fast algorithm. Of course, you can use one of your high-functioning sorting algorithms to sort the input and *then* perform the binary search!
+Use this algorithm when the input data is sorted!!! This is a heavy requirement, but if you have it, you'll have an insanely fast algorithm. Of course, you can use one of your high-functioning sorting algorithms to sort the input and _then_ perform the binary search!
 
-------------------------------------------------------------------------
+---
 
-Bubble Sort
-===========
+# Bubble Sort
 
-This project contains a skeleton for you to implement Bubble Sort. In the file **lib/bubble\_sort.js**, you should implement the Bubble Sort. This is a description of how the Bubble Sort works (and is also in the code file).
+This project contains a skeleton for you to implement Bubble Sort. In the file **lib/bubble_sort.js**, you should implement the Bubble Sort. This is a description of how the Bubble Sort works (and is also in the code file).
 
-`Bubble Sort: (array)     n := length(array)     repeat     swapped = false     for i := 1 to n - 1 inclusive do      /* if this pair is out of order */     if array[i - 1] > array[i] then      /* swap them and remember something changed */     swap(array, i - 1, i)     swapped := true      end if     end for     until not swapped`
+`Bubble Sort: (array) n := length(array) repeat swapped = false for i := 1 to n - 1 inclusive do /* if this pair is out of order */ if array[i - 1] > array[i] then /* swap them and remember something changed */ swap(array, i - 1, i) swapped := true end if end for until not swapped`
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-bubble-sort-starter.
+  https://github.com/appacademy-starters/algorithms-bubble-sort-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/bubble_sort.js` that implements the Bubble Sort.
+  the `/lib/bubble_sort.js` that implements the Bubble Sort.
 
-------------------------------------------------------------------------
+---
 
-Selection Sort
-==============
+# Selection Sort
 
-This project contains a skeleton for you to implement Selection Sort. In the file **lib/selection\_sort.js**, you should implement the Selection Sort. You can use the same `swap` function from Bubble Sort; however, try to implement it on your own, first.
+This project contains a skeleton for you to implement Selection Sort. In the file **lib/selection_sort.js**, you should implement the Selection Sort. You can use the same `swap` function from Bubble Sort; however, try to implement it on your own, first.
 
 The algorithm can be summarized as the following:
 
@@ -2853,28 +2762,26 @@ The algorithm can be summarized as the following:
 
 This is a description of how the Selection Sort works (and is also in the code file).
 
-`procedure selection sort(list)     list : array of items     n : size of list      for i = 1 to n - 1     /* set current element as minimum*/     min = i      /* check the element to be minimum */      for j = i+1 to n     if list[j] < list[min] then     min = j;     end if     end for      /* swap the minimum element with the current element*/     if indexMin != i then     swap list[min] and list[i]     end if     end for     end procedure`
+`procedure selection sort(list) list : array of items n : size of list for i = 1 to n - 1 /* set current element as minimum*/ min = i /* check the element to be minimum */ for j = i+1 to n if list[j] < list[min] then min = j; end if end for /* swap the minimum element with the current element*/ if indexMin != i then swap list[min] and list[i] end if end for end procedure`
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-selection-sort-starter.
+  https://github.com/appacademy-starters/algorithms-selection-sort-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/selection_sort.js` that implements the Selection Sort.
+  the `/lib/selection_sort.js` that implements the Selection Sort.
 
-------------------------------------------------------------------------
+---
 
-Insertion Sort
-==============
+# Insertion Sort
 
-This project contains a skeleton for you to implement Insertion Sort. In the file **lib/insertion\_sort.js**, you should implement the Insertion Sort.
+This project contains a skeleton for you to implement Insertion Sort. In the file **lib/insertion_sort.js**, you should implement the Insertion Sort.
 
 The algorithm can be summarized as the following:
 
@@ -2890,28 +2797,26 @@ The algorithm can be summarized as the following:
 
 This is a description of how the Insertion Sort works (and is also in the code file).
 
-`procedure insertionSort( A : array of items )     int holePosition     int valueToInsert      for i = 1 to length(A) inclusive do:      /* select value to be inserted */     valueToInsert = A[i]     holePosition = i      /*locate hole position for the element to be inserted */      while holePosition > 0 and A[holePosition-1] > valueToInsert do:     A[holePosition] = A[holePosition-1]     holePosition = holePosition -1     end while      /* insert the number at hole position */     A[holePosition] = valueToInsert      end for      end procedure`
+`procedure insertionSort( A : array of items ) int holePosition int valueToInsert for i = 1 to length(A) inclusive do: /* select value to be inserted */ valueToInsert = A[i] holePosition = i /*locate hole position for the element to be inserted */ while holePosition > 0 and A[holePosition-1] > valueToInsert do: A[holePosition] = A[holePosition-1] holePosition = holePosition -1 end while /* insert the number at hole position */ A[holePosition] = valueToInsert end for end procedure`
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-insertion-sort-starter.
+  https://github.com/appacademy-starters/algorithms-insertion-sort-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/insertion_sort.js` that implements the Insertion Sort.
+  the `/lib/insertion_sort.js` that implements the Insertion Sort.
 
-------------------------------------------------------------------------
+---
 
-Merge Sort
-==========
+# Merge Sort
 
-This project contains a skeleton for you to implement Merge Sort. In the file **lib/merge\_sort.js**, you should implement the Merge Sort.
+This project contains a skeleton for you to implement Merge Sort. In the file **lib/merge_sort.js**, you should implement the Merge Sort.
 
 The algorithm can be summarized as the following:
 
@@ -2927,51 +2832,47 @@ The algorithm can be summarized as the following:
 
 This is a description of how the Merge Sort works (and is also in the code file).
 
-`procedure mergesort( a as array )     if ( n == 1 ) return a      /* Split the array into two */     var l1 as array = a[0] ... a[n/2]     var l2 as array = a[n/2+1] ... a[n]      l1 = mergesort( l1 )     l2 = mergesort( l2 )      return merge( l1, l2 )     end procedure      procedure merge( a as array, b as array )     var result as array     while ( a and b have elements )     if ( a[0] > b[0] )     add b[0] to the end of result     remove b[0] from b     else     add a[0] to the end of result     remove a[0] from a     end if     end while      while ( a has elements )     add a[0] to the end of result     remove a[0] from a     end while      while ( b has elements )     add b[0] to the end of result     remove b[0] from b     end while      return result     end procedure`
+`procedure mergesort( a as array ) if ( n == 1 ) return a /* Split the array into two */ var l1 as array = a[0] ... a[n/2] var l2 as array = a[n/2+1] ... a[n] l1 = mergesort( l1 ) l2 = mergesort( l2 ) return merge( l1, l2 ) end procedure procedure merge( a as array, b as array ) var result as array while ( a and b have elements ) if ( a[0] > b[0] ) add b[0] to the end of result remove b[0] from b else add a[0] to the end of result remove a[0] from a end if end while while ( a has elements ) add a[0] to the end of result remove a[0] from a end while while ( b has elements ) add b[0] to the end of result remove b[0] from b end while return result end procedure`
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-merge-sort-starter.
+  https://github.com/appacademy-starters/algorithms-merge-sort-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/merge_sort.js` that implements the Merge Sort.
+  the `/lib/merge_sort.js` that implements the Merge Sort.
 
-------------------------------------------------------------------------
+---
 
-Quick Sort
-==========
+# Quick Sort
 
-This project contains a skeleton for you to implement Quick Sort. In the file **lib/quick\_sort.js**, you should implement the Quick Sort. This is a description of how the Quick Sort works (and is also in the code file).
+This project contains a skeleton for you to implement Quick Sort. In the file **lib/quick_sort.js**, you should implement the Quick Sort. This is a description of how the Quick Sort works (and is also in the code file).
 
-`procedure quick sort (array)     if the length of the array is 0 or 1, return the array      set the pivot to the first element of the array     remove the first element of the array      put all values less than the pivot value into an array called left     put all values greater than the pivot value into an array called right      call quick sort on left and assign the return value to leftSorted     call quick sort on right and assign the return value to rightSorted      return the concatenation of leftSorted, the pivot value, and rightSorted     end procedure quick sort`
+`procedure quick sort (array) if the length of the array is 0 or 1, return the array set the pivot to the first element of the array remove the first element of the array put all values less than the pivot value into an array called left put all values greater than the pivot value into an array called right call quick sort on left and assign the return value to leftSorted call quick sort on right and assign the return value to rightSorted return the concatenation of leftSorted, the pivot value, and rightSorted end procedure quick sort`
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-quick-sort-starter.
+  https://github.com/appacademy-starters/algorithms-quick-sort-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/quick_sort.js` that implements the Quick Sort.
+  the `/lib/quick_sort.js` that implements the Quick Sort.
 
-------------------------------------------------------------------------
+---
 
-Binary Search
-=============
+# Binary Search
 
-This project contains a skeleton for you to implement Binary Search. In the file **lib/binary\_search.js**, you should implement the Binary Search and its cousin Binary Search Index.
+This project contains a skeleton for you to implement Binary Search. In the file **lib/binary_search.js**, you should implement the Binary Search and its cousin Binary Search Index.
 
 The Binary Search algorithm can be summarized as the following:
 
@@ -2988,35 +2889,32 @@ The Binary Search algorithm can be summarized as the following:
 
 This is a description of how the Binary Search works (and is also in the code file).
 
-`procedure binary search (list, target)     parameter list: a list of sorted value     parameter target: the value to search for      if the list has zero length, then return false      determine the slice point:     if the list has an even number of elements,     the slice point is the number of elements     divided by two     if the list has an odd number of elements,     the slice point is the number of elements     minus one divided by two      create an list of the elements from 0 to the     slice point, not including the slice point,     which is known as the "left half"     create an list of the elements from the     slice point to the end of the list which is     known as the "right half"      if the target is less than the value in the     original array at the slice point, then     return the binary search of the "left half"     and the target     if the target is greater than the value in the     original array at the slice point, then     return the binary search of the "right half"     and the target     if neither of those is true, return true     end procedure binary search`
+`procedure binary search (list, target) parameter list: a list of sorted value parameter target: the value to search for if the list has zero length, then return false determine the slice point: if the list has an even number of elements, the slice point is the number of elements divided by two if the list has an odd number of elements, the slice point is the number of elements minus one divided by two create an list of the elements from 0 to the slice point, not including the slice point, which is known as the "left half" create an list of the elements from the slice point to the end of the list which is known as the "right half" if the target is less than the value in the original array at the slice point, then return the binary search of the "left half" and the target if the target is greater than the value in the original array at the slice point, then return the binary search of the "right half" and the target if neither of those is true, return true end procedure binary search`
 
-Then you need to adapt that to return *the index* of the found item rather than a Boolean value. The pseudocode is also in the code file.
+Then you need to adapt that to return _the index_ of the found item rather than a Boolean value. The pseudocode is also in the code file.
 
-`procedure binary search index(list, target, low, high)     parameter list: a list of sorted value     parameter target: the value to search for     parameter low: the lower index for the search     parameter high: the upper index for the search      if low is equal to high, then return -1 to indicate     that the value was not found      determine the slice point:     if the list between the high index and the low index     has an even number of elements,     the slice point is the number of elements     between high and low divided by two     if the list between the high index and the low index     has an odd number of elements,     the slice point is the number of elements     between high and low minus one, divided by two      if the target is less than the value in the     original array at the slice point, then     return the binary search of the array,     the target, low, and the slice point     if the target is greater than the value in the     original array at the slice point, then return     the binary search of the array, the target,     the slice point plus one, and high     if neither of those is true, return the slice point     end procedure binary search index`
+`procedure binary search index(list, target, low, high) parameter list: a list of sorted value parameter target: the value to search for parameter low: the lower index for the search parameter high: the upper index for the search if low is equal to high, then return -1 to indicate that the value was not found determine the slice point: if the list between the high index and the low index has an even number of elements, the slice point is the number of elements between high and low divided by two if the list between the high index and the low index has an odd number of elements, the slice point is the number of elements between high and low minus one, divided by two if the target is less than the value in the original array at the slice point, then return the binary search of the array, the target, low, and the slice point if the target is greater than the value in the original array at the slice point, then return the binary search of the array, the target, the slice point plus one, and high if neither of those is true, return the slice point end procedure binary search index`
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/algorithms-binary-search-starter.
+  https://github.com/appacademy-starters/algorithms-binary-search-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/binary_search.js` that implements the Binary Search and Binary Search Index.
+  the `/lib/binary_search.js` that implements the Binary Search and Binary Search Index.
 
-------------------------------------------------------------------------
+---
 
-WEEK-07 DAY-4 *Lists, Stacks, Queues*
-=====================================
+# WEEK-07 DAY-4 _Lists, Stacks, Queues_
 
-------------------------------------------------------------------------
+---
 
-Lists, Stacks, and Queues
-=========================
+# Lists, Stacks, and Queues
 
 **The objective of this lesson** is for you to become comfortable with implementing common data structures. This is important because questions about data structures are incredibly likely to be interview questions for software engineers from junior to senior levels. Moreover, understanding how different data structures work will influence the libraries and frameworks that you choose when writing software.
 
@@ -3034,10 +2932,9 @@ When you are done, you will be able to:
 2.  Explain and implement a Stack.
 3.  Explain and implement a Queue.
 
-------------------------------------------------------------------------
+---
 
-Linked Lists
-============
+# Linked Lists
 
 In the university setting, it's common for Linked Lists to appear early on in an undergraduate's Computer Science coursework. While they don't always have the most practical real-world applications in industry, Linked Lists make for an important and effective educational tool in helping develop a student's mental model on what data structures actually are to begin with.
 
@@ -3045,8 +2942,7 @@ Linked lists are simple. They have many compelling, reoccurring edge cases to co
 
 They also come up in software engineering interviews quite often.
 
-What is a Linked List?
-----------------------
+## What is a Linked List?
 
 A Linked List data structure represents a linear sequence of “vertices” (or “nodes”), and tracks three important properties.
 
@@ -3064,21 +2960,19 @@ Depending on the type of Linked List (there are many), Node instances track some
 
 **NOTE:** The `previous` property is for Doubly Linked Lists only!
 
-Linked Lists contain *ordered* data, just like arrays. The first node in the list is, indeed, first. From the perspective of the very first node in the list, the *next* node is the second node. From the perspective of the second node in the list, the *previous* node is the first node, and the *next* node is the third node. And so it goes.
+Linked Lists contain _ordered_ data, just like arrays. The first node in the list is, indeed, first. From the perspective of the very first node in the list, the _next_ node is the second node. From the perspective of the second node in the list, the _previous_ node is the first node, and the _next_ node is the third node. And so it goes.
 
-#### *“So…this sounds a lot like an Array…”*
+#### _“So…this sounds a lot like an Array…”_
 
-Admittedly, this does *sound* a lot like an Array so far, and that's because Arrays and Linked Lists are both implementations of the List ADT. However, there is an incredibly important distinction to be made between Arrays and Linked Lists, and that is how they *physically store* their data. (As opposed to how they *represent* the order of their data.)
+Admittedly, this does _sound_ a lot like an Array so far, and that's because Arrays and Linked Lists are both implementations of the List ADT. However, there is an incredibly important distinction to be made between Arrays and Linked Lists, and that is how they _physically store_ their data. (As opposed to how they _represent_ the order of their data.)
 
-Recall that Arrays contain *contiguous* data. Each element of an array is actually stored *next to* it's neighboring element *in the actual hardware of your machine*, in a single continuous block in memory.
+Recall that Arrays contain _contiguous_ data. Each element of an array is actually stored _next to_ it's neighboring element _in the actual hardware of your machine_, in a single continuous block in memory.
 
 ![Array in Memory](images/array-in-memory.png)
 
-*An Array's contiguous data being stored in a continuous block of addresses in memory.*
+_An Array's contiguous data being stored in a continuous block of addresses in memory._
 
-  
-
-Unlike Arrays, Linked Lists contain *non-contiguous* data. Though Linked Lists *represent* data that is ordered linearly, that mental model is just that - an interpretation of the *representation* of information, not reality.
+Unlike Arrays, Linked Lists contain _non-contiguous_ data. Though Linked Lists _represent_ data that is ordered linearly, that mental model is just that - an interpretation of the _representation_ of information, not reality.
 
 In reality, in the actual hardware of your machine, whether it be in disk or in memory, a Linked List's Nodes are not stored in a single continuous block of addresses. Rather, Linked List Nodes live at randomly distributed addresses throughout your machine! The only reason we know which node comes next in the list is because we've assigned its reference to the current node's `next`
 
@@ -3086,16 +2980,13 @@ pointer.
 
 ![Array in Memory](images/SLL-diagram.png)
 
-*A Singly Linked List's non-contiguous data (Nodes) being stored at randomly distributed addresses in memory.*
+_A Singly Linked List's non-contiguous data (Nodes) being stored at randomly distributed addresses in memory._
 
-  
+For this reason, Linked List Nodes have _no indices_, and no _random access_. Without random access, we do not have the ability to look up an individual Linked List Node in constant time. Instead, to find a particular Node, we have to start at the very first Node and iterate through the Linked List one node at a time, checking each Node's _next_ Node until we find the one we're interested in.
 
-For this reason, Linked List Nodes have *no indices*, and no *random access*. Without random access, we do not have the ability to look up an individual Linked List Node in constant time. Instead, to find a particular Node, we have to start at the very first Node and iterate through the Linked List one node at a time, checking each Node's *next* Node until we find the one we're interested in.
+So when implementing a Linked List, we actually must implement both the Linked List class _and_ the Node class. Since the actual data lives in the Nodes, it's simpler to implement the Node class first.
 
-So when implementing a Linked List, we actually must implement both the Linked List class *and* the Node class. Since the actual data lives in the Nodes, it's simpler to implement the Node class first.
-
-Types of Linked Lists
----------------------
+## Types of Linked Lists
 
 There are four flavors of Linked List you should be familiar with when walking into your job interviews.
 
@@ -3107,18 +2998,17 @@ There are four flavors of Linked List you should be familiar with when walking i
 
 For instance:
 
--   Any type of Linked List can be implemented Circularly (e.g. A Circular
+- Any type of Linked List can be implemented Circularly (e.g. A Circular
 
-    Doubly Linked List).
+  Doubly Linked List).
 
--   A Doubly Linked List is actually just a special case of a Multiply Linked
+- A Doubly Linked List is actually just a special case of a Multiply Linked
 
-    List.
+  List.
 
-You are most likely to encounter Singly and Doubly Linked Lists in your upcoming job search, so we are going to focus exclusively on those two moving forward. However, in more senior level interviews, it is very valuable to have some familiarity with the other types of Linked Lists. Though you may not actually code them out, *you will win extra points by illustrating your ability to weigh the tradeoffs of your technical decisions* by discussing how your choice of Linked List type may affect the efficiency of the solutions you propose.
+You are most likely to encounter Singly and Doubly Linked Lists in your upcoming job search, so we are going to focus exclusively on those two moving forward. However, in more senior level interviews, it is very valuable to have some familiarity with the other types of Linked Lists. Though you may not actually code them out, _you will win extra points by illustrating your ability to weigh the tradeoffs of your technical decisions_ by discussing how your choice of Linked List type may affect the efficiency of the solutions you propose.
 
-Linked List Methods
--------------------
+## Linked List Methods
 
 Linked Lists are great foundation builders when learning about data structures because they share a number of similar methods (and edge cases) with many other common data structures. You will find that many of the concepts discussed here will repeat themselves as we dive into some of the more complex non-linear data structures later on, like Trees and Graphs.
 
@@ -3126,8 +3016,7 @@ In the project that follows, we will implement the following Linked List methods
 
 <table style="width:98%;"><colgroup><col style="width: 7%" /><col style="width: 10%" /><col style="width: 66%" /><col style="width: 15%" /></colgroup><thead><tr class="header"><th style="text-align: center;">Type</th><th style="text-align: center;">Name</th><th style="text-align: center;">Description</th><th style="text-align: center;">Returns</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">Insertion</td><td style="text-align: center;"><code class="language-javascript">addToTail</code></td><td style="text-align: center;">Adds a new node to the tail of the Linked List.</td><td style="text-align: center;">Updated Linked List</td></tr><tr class="even"><td style="text-align: center;">Insertion</td><td style="text-align: center;"><code class="language-javascript">addToHead</code></td><td style="text-align: center;">Adds a new node to the head of the Linked List.</td><td style="text-align: center;">Updated Linked List</td></tr><tr class="odd"><td style="text-align: center;">Insertion</td><td style="text-align: center;"><code class="language-javascript">insertAt</code></td><td style="text-align: center;">Inserts a new node at the “index”, or position, specified.</td><td style="text-align: center;">Boolean</td></tr><tr class="even"><td style="text-align: center;">Deletion</td><td style="text-align: center;"><code class="language-javascript">removeTail</code></td><td style="text-align: center;">Removes the node at the tail of the Linked List.</td><td style="text-align: center;">Removed node</td></tr><tr class="odd"><td style="text-align: center;">Deletion</td><td style="text-align: center;"><code class="language-javascript">removeHead</code></td><td style="text-align: center;">Removes the node at the head of the Linked List.</td><td style="text-align: center;">Removed node</td></tr><tr class="even"><td style="text-align: center;">Deletion</td><td style="text-align: center;"><code class="language-javascript">removeFrom</code></td><td style="text-align: center;">Removes the node at the “index”, or position, specified.</td><td style="text-align: center;">Removed node</td></tr><tr class="odd"><td style="text-align: center;">Search</td><td style="text-align: center;"><code class="language-javascript">contains</code></td><td style="text-align: center;">Searches the Linked List for a node with the value specified.</td><td style="text-align: center;">Boolean</td></tr><tr class="even"><td style="text-align: center;">Access</td><td style="text-align: center;"><code class="language-javascript">get</code></td><td style="text-align: center;">Gets the node at the “index”, or position, specified.</td><td style="text-align: center;">Node at index</td></tr><tr class="odd"><td style="text-align: center;">Access</td><td style="text-align: center;"><code class="language-javascript">set</code></td><td style="text-align: center;">Updates the value of a node at the “index”, or position, specified.</td><td style="text-align: center;">Boolean</td></tr><tr class="even"><td style="text-align: center;">Meta</td><td style="text-align: center;"><code class="language-javascript">size</code></td><td style="text-align: center;">Returns the current size of the Linked List.</td><td style="text-align: center;">Integer</td></tr></tbody></table>
 
-Time and Space Complexity Analysis
-----------------------------------
+## Time and Space Complexity Analysis
 
 Before we begin our analysis, here is a quick summary of the Time and Space constraints of each Linked List Operation. The complexities below apply to both Singly and Doubly Linked Lists:
 
@@ -3135,8 +3024,7 @@ Before we begin our analysis, here is a quick summary of the Time and Space cons
 
 Before moving forward, see if you can reason to yourself why each operation has the time and space complexity listed above!
 
-Time Complexity - Access and Search:
-------------------------------------
+## Time Complexity - Access and Search:
 
 ### Scenarios:
 
@@ -3153,8 +3041,7 @@ In Scenario 1, we'll know we're there because we've iterated 8 times. In Scenari
 
 In the worst case scenario, we may have to traverse the entire Linked List until we arrive at the final node. This makes both Access & Search **Linear Time** operations.
 
-Time Complexity - Insertion and Deletion:
------------------------------------------
+## Time Complexity - Insertion and Deletion:
 
 ### Scenarios:
 
@@ -3194,10 +3081,9 @@ For this reason, we separate the Access time complexity from the Insertion/Delet
 
 ### NOTE:
 
-Without a reference to the node at which an insertion or deletion will occur, due to linear time lookup, an insertion or deletion *in the middle* of a Linked List will still take Linear Time, sum total.
+Without a reference to the node at which an insertion or deletion will occur, due to linear time lookup, an insertion or deletion _in the middle_ of a Linked List will still take Linear Time, sum total.
 
-Space Complexity:
------------------
+## Space Complexity:
 
 ### Scenarios:
 
@@ -3208,20 +3094,19 @@ Space Complexity:
 
 ### Discussion:
 
-It's obvious that Linked Lists have one node for every one item in the list, and for that reason we know that Linked Lists take up Linear Space in memory. However, when asked in an interview setting what the Space Complexity *of your solution* to a problem is, it's important to recognize the difference between the two scenarios above.
+It's obvious that Linked Lists have one node for every one item in the list, and for that reason we know that Linked Lists take up Linear Space in memory. However, when asked in an interview setting what the Space Complexity _of your solution_ to a problem is, it's important to recognize the difference between the two scenarios above.
 
-In Scenario 1, we *are not* creating a new Linked List. We simply need to operate on the one given. Since we are not storing a *new* node for every node represented in the Linked List we are provided, our solution is *not necessarily* linear in space.
+In Scenario 1, we _are not_ creating a new Linked List. We simply need to operate on the one given. Since we are not storing a _new_ node for every node represented in the Linked List we are provided, our solution is _not necessarily_ linear in space.
 
-In Scenario 2, we *are* creating a new Linked List. If the number of nodes we create is linearly correlated to the size of our input data, we are now operating in Linear Space.
+In Scenario 2, we _are_ creating a new Linked List. If the number of nodes we create is linearly correlated to the size of our input data, we are now operating in Linear Space.
 
 ### NOTE:
 
-Linked Lists can be traversed both iteratively and recursively. *If you choose to traverse a Linked List recursively*, there will be a recursive function call added to the call stack for every node in the Linked List. Even if you're provided the Linked List, as in Scenario 1, you will still use Linear Space in the call stack, and that counts.
+Linked Lists can be traversed both iteratively and recursively. _If you choose to traverse a Linked List recursively_, there will be a recursive function call added to the call stack for every node in the Linked List. Even if you're provided the Linked List, as in Scenario 1, you will still use Linear Space in the call stack, and that counts.
 
-------------------------------------------------------------------------
+---
 
-Stacks and Queues
-=================
+# Stacks and Queues
 
 Stacks and Queues aren't really “data structures” by the strict definition of the term. The more appropriate terminology would be to call them abstract data types (ADTs), meaning that their definitions are more conceptual and related to the rules governing their user-facing behaviors rather than their core implementations.
 
@@ -3233,8 +3118,7 @@ These two ADTs are similar to each other as well, but each obey their own specia
 
 Since we've covered Linked Lists in great length, these two data structures will be quick and easy. Let's break them down individually in the next couple of sections.
 
-What is a Stack?
-----------------
+## What is a Stack?
 
 Stacks are a Last In First Out (LIFO) data structure. The last Node added to a stack is always the first Node to be removed, and as a result, the first Node added is always the last Node removed.
 
@@ -3242,27 +3126,25 @@ The name Stack actually comes from this characteristic, as it is helpful to visu
 
 If you can imagine adding items to, or removing items from, a Stack of…literally anything…you'll realize that every (sane) person naturally obeys the LIFO rule.
 
-We add things to the *top* of a stack. We remove things from the *top* of a stack. We never add things to, or remove things from, the *bottom* of the stack. That's just crazy.
+We add things to the _top_ of a stack. We remove things from the _top_ of a stack. We never add things to, or remove things from, the _bottom_ of the stack. That's just crazy.
 
 Note: We can use JavaScript Arrays to implement a basic stack. `Array#push` adds to the top of the stack and `Array#pop` will remove from the top of the stack. In the exercise that follows, we'll build our own Stack class from scratch (without using any arrays). In an interview setting, your evaluator may be okay with you using an array as a stack.
 
-What is a Queue?
-----------------
+## What is a Queue?
 
 Queues are a First In First Out (FIFO) data structure. The first Node added to the queue is always the first Node to be removed.
 
 The name Queue comes from this characteristic, as it is helpful to visualize this data structure as a horizontal line of items with a beginning and an end. Personally, I like to think of a Queue as the line one waits on for an amusement park, at a grocery store checkout, or to see the teller at a bank.
 
-If you can imagine a queue of humans waiting…again, for literally anything…you'll realize that *most* people (the civil ones) naturally obey the FIFO rule.
+If you can imagine a queue of humans waiting…again, for literally anything…you'll realize that _most_ people (the civil ones) naturally obey the FIFO rule.
 
-People add themselves to the *back* of a queue, wait their turn in line, and make their way toward the *front*. People exit from the *front* of a queue, but only when they have made their way to being first in line.
+People add themselves to the _back_ of a queue, wait their turn in line, and make their way toward the _front_. People exit from the _front_ of a queue, but only when they have made their way to being first in line.
 
 We never add ourselves to the front of a queue (unless there is no one else in line), otherwise we would be “cutting” the line, and other humans don't seem to appreciate that.
 
 Note: We can use JavaScript Arrays to implement a basic queue. `Array#push` adds to the back (enqueue) and `Array#shift` will remove from the front (dequeue). In the exercise that follows, we'll build our own Queue class from scratch (without using any arrays). In an interview setting, your evaluator may be okay with you using an array as a queue.
 
-Stack and Queue Properties
---------------------------
+## Stack and Queue Properties
 
 Stacks and Queues are so similar in composition that we can discuss their properties together. They track the following three properties:
 
@@ -3272,7 +3154,7 @@ Stacks and Queues are so similar in composition that we can discuss their proper
 
 Notice that rather than having a `head` and a `tail` like Linked Lists, Stacks have a `top` , and Queues have a `front` and a `back` instead. Stacks don't have the equivalent of a `tail` because you only ever push or pop things off the top of Stacks. These properties are essentially the same; pointers to the end points of the respective List ADT where important actions way take place. The differences in naming conventions are strictly for human comprehension.
 
-------------------------------------------------------------------------
+---
 
 Similarly to Linked Lists, the values stored inside a Stack or a Queue are actually contained within Stack Node and Queue Node instances. Stack, Queue, and Singly Linked List Nodes are all identical, but just as a reminder and for the sake of completion, these List Nodes track the following two properties:
 
@@ -3280,22 +3162,19 @@ Similarly to Linked Lists, the values stored inside a Stack or a Queue are actua
 
 <table><thead><tr class="header"><th style="text-align: center;">Property</th><th style="text-align: center;">Description</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;"><code class="language-javascript">value</code></td><td style="text-align: center;">The actual value this node represents.</td></tr><tr class="even"><td style="text-align: center;"><code class="language-javascript">next</code></td><td style="text-align: center;">The next node in the Stack (relative to this node).</td></tr></tbody></table>
 
-Stack Methods
--------------
+## Stack Methods
 
 In the exercise that follows, we will implement a Stack data structure along with the following Stack methods:
 
 <table style="width:98%;"><colgroup><col style="width: 11%" /><col style="width: 8%" /><col style="width: 45%" /><col style="width: 34%" /></colgroup><thead><tr class="header"><th style="text-align: center;">Type</th><th style="text-align: center;">Name</th><th style="text-align: center;">Description</th><th style="text-align: center;">Returns</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">Insertion</td><td style="text-align: center;"><code class="language-javascript">push</code></td><td style="text-align: center;">Adds a Node to the top of the Stack.</td><td style="text-align: center;">Integer - New size of stack</td></tr><tr class="even"><td style="text-align: center;">Deletion</td><td style="text-align: center;"><code class="language-javascript">pop</code></td><td style="text-align: center;">Removes a Node from the top of the Stack.</td><td style="text-align: center;">Node removed from top of Stack</td></tr><tr class="odd"><td style="text-align: center;">Meta</td><td style="text-align: center;"><code class="language-javascript">size</code></td><td style="text-align: center;">Returns the current size of the Stack.</td><td style="text-align: center;">Integer</td></tr></tbody></table>
 
-Queue Methods
--------------
+## Queue Methods
 
 In the exercise that follows, we will implement a Queue data structure along with the following Queue methods:
 
 <table style="width:97%;"><colgroup><col style="width: 10%" /><col style="width: 10%" /><col style="width: 44%" /><col style="width: 33%" /></colgroup><thead><tr class="header"><th style="text-align: center;">Type</th><th style="text-align: center;">Name</th><th style="text-align: center;">Description</th><th style="text-align: center;">Returns</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">Insertion</td><td style="text-align: center;"><code class="language-javascript">enqueue</code></td><td style="text-align: center;">Adds a Node to the front of the Queue.</td><td style="text-align: center;">Integer - New size of Queue</td></tr><tr class="even"><td style="text-align: center;">Deletion</td><td style="text-align: center;"><code class="language-javascript">dequeue</code></td><td style="text-align: center;">Removes a Node from the front of the Queue.</td><td style="text-align: center;">Node removed from front of Queue</td></tr><tr class="odd"><td style="text-align: center;">Meta</td><td style="text-align: center;"><code class="language-javascript">size</code></td><td style="text-align: center;">Returns the current size of the Queue.</td><td style="text-align: center;">Integer</td></tr></tbody></table>
 
-Time and Space Complexity Analysis
-----------------------------------
+## Time and Space Complexity Analysis
 
 Before we begin our analysis, here is a quick summary of the Time and Space constraints of each Stack Operation.
 
@@ -3327,8 +3206,7 @@ The space complexity of Stacks and Queues is very simple. Whether we are instant
 
 For this reason, we always consider Stacks and Queues to have a linear space complexity, O(n).
 
-When should we use Stacks and Queues?
--------------------------------------
+## When should we use Stacks and Queues?
 
 At this point, we've done a lot of work understanding the ins and outs of Stacks and Queues, but we still haven't really discussed what we can use them for. The answer is actually…a lot!
 
@@ -3340,130 +3218,123 @@ Additionally, Stacks and Queues serve as the essential underlying data structure
 
 #### Stacks:
 
--   The Call Stack is a Stack data structure, and is used to manage the order of
+- The Call Stack is a Stack data structure, and is used to manage the order of
 
-    function invocations in your code.
+  function invocations in your code.
 
--   Browser History is often implemented using a Stack, with one great example
+- Browser History is often implemented using a Stack, with one great example
 
-    being the browser history object in the very popular React Router module.
+  being the browser history object in the very popular React Router module.
 
--   Undo/Redo functionality in just about any application. For example:
-    -   When you're coding in your text editor, each of the actions you take on your
+- Undo/Redo functionality in just about any application. For example:
 
-        keyboard are recorded by `push` ing that event to a Stack.
+  - When you're coding in your text editor, each of the actions you take on your
 
-    -   When you hit \[cmd + z\] to undo your most recent action, that event is
+    keyboard are recorded by `push` ing that event to a Stack.
+
+  - When you hit \[cmd + z\] to undo your most recent action, that event is
 
 `pop` ed off the Stack, because the last event that occured should be the first one to be undone (LIFO).
 
--   When you hit \[cmd + y\] to redo your most recent action, that event is
+- When you hit \[cmd + y\] to redo your most recent action, that event is
 
 `push` ed back onto the Stack.
 
 #### Queues:
 
--   Printers use a Queue to manage incoming jobs to ensure that documents are
+- Printers use a Queue to manage incoming jobs to ensure that documents are
 
-    printed in the order they are received.
+  printed in the order they are received.
 
--   Chat rooms, online video games, and customer service phone lines use a Queue
+- Chat rooms, online video games, and customer service phone lines use a Queue
 
-    to ensure that patrons are served in the order they arrive.
+  to ensure that patrons are served in the order they arrive.
 
-    -   In the case of a Chat Room, to be admitted to a size-limited room.
-    -   In the case of an Online Multi-Player Game, players wait in a lobby until
+  - In the case of a Chat Room, to be admitted to a size-limited room.
+  - In the case of an Online Multi-Player Game, players wait in a lobby until
 
-        there is enough space and it is their turn to be admitted to a game.
+    there is enough space and it is their turn to be admitted to a game.
 
-    -   In the case of a Customer Service Phone Line…you get the point.
+  - In the case of a Customer Service Phone Line…you get the point.
 
--   As a more advanced use case, Queues are often used as components or services
+- As a more advanced use case, Queues are often used as components or services
 
-    in the system design of a service-oriented architecture. A very popular and easy to use example of this is Amazon's Simple Queue Service (SQS), which is a part of their Amazon Web Services (AWS) offering.
+  in the system design of a service-oriented architecture. A very popular and easy to use example of this is Amazon's Simple Queue Service (SQS), which is a part of their Amazon Web Services (AWS) offering.
 
-    -   You would add this service to your system between two other services, one
+  - You would add this service to your system between two other services, one
 
-        that is sending information for processing, and one that is receiving information to be processed, when the volume of incoming requests is high and the integrity of the order with which those requests are processed must be maintained.
+    that is sending information for processing, and one that is receiving information to be processed, when the volume of incoming requests is high and the integrity of the order with which those requests are processed must be maintained.
 
-------------------------------------------------------------------------
+---
 
-Linked List Project
-===================
+# Linked List Project
 
 This project contains a skeleton for you to implement a linked list. This is a test-driven project. Run the tests and read the top-most error. If it's not clear what is failing, open the **test/test.js** file to figure out what the test is expecting. Make the top-most test pass.
 
 Keep making the top-most test pass until all tests pass.
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/data-structures-linked-list-starter.
+  https://github.com/appacademy-starters/data-structures-linked-list-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/linked_list.js` that implements the `Node` and `LinkedList` classes to make the tests pass.
+  the `/lib/linked_list.js` that implements the `Node` and `LinkedList` classes to make the tests pass.
 
-------------------------------------------------------------------------
+---
 
-Stack Project
-=============
+# Stack Project
 
 This project contains a skeleton for you to implement a stack. This is a test-driven project. Run the tests and read the top-most error. If it's not clear what is failing, open the **test/test.js** file to figure out what the test is expecting. Make the top-most test pass.
 
 Keep making the top-most test pass until all tests pass.
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/data-structures-stack-starter.
+  https://github.com/appacademy-starters/data-structures-stack-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/stack.js` that implements the `Node` and `Stack` classes to make the tests pass.
+  the `/lib/stack.js` that implements the `Node` and `Stack` classes to make the tests pass.
 
-------------------------------------------------------------------------
+---
 
-Queue Project
-=============
+# Queue Project
 
 This project contains a skeleton for you to implement a queue. This is a test-driven project. Run the tests and read the top-most error. If it's not clear what is failing, open the **test/test.js** file to figure out what the test is expecting. Make the top-most test pass.
 
 Keep making the top-most test pass until all tests pass.
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/data-structures-queue-starter.
+  https://github.com/appacademy-starters/data-structures-queue-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
 
-    the `/lib/queue.js` that implements the `Node` and `Queue` classes to make the tests pass.
+  the `/lib/queue.js` that implements the `Node` and `Queue` classes to make the tests pass.
 
-------------------------------------------------------------------------
+---
 
-WEEK-07 DAY-5 *Heaps*
-=====================
+# WEEK-07 DAY-5 _Heaps_
 
-------------------------------------------------------------------------
+---
 
-Graphs and Heaps
-================
+# Graphs and Heaps
 
 **The objective of this lesson** is for you to become comfortable with implementing common data structures. This is important because questions about data structures are incredibly likely to be interview questions for software engineers from junior to senior levels. Moreover, understanding how different data structures work will influence the libraries and frameworks that you choose when writing software.
 
@@ -3479,18 +3350,17 @@ When you are done, you will be able to:
 1.  Explain and implement a Heap.
 2.  Explain and implement a Graph.
 
-------------------------------------------------------------------------
+---
 
-Introduction to Heaps
-=====================
+# Introduction to Heaps
 
-Let's explore the **Heap** data structure! In particular, we'll explore **Binary Heaps**. A binary heap is a type of binary tree. However, a heap is not a binary *search* tree. A heap is a partially ordered data structure, whereas a BST has full order. In a heap, the root of the tree will be the maximum (max heap) or the minimum (min heap). Below is an example of a max heap:
+Let's explore the **Heap** data structure! In particular, we'll explore **Binary Heaps**. A binary heap is a type of binary tree. However, a heap is not a binary _search_ tree. A heap is a partially ordered data structure, whereas a BST has full order. In a heap, the root of the tree will be the maximum (max heap) or the minimum (min heap). Below is an example of a max heap:
 
-![max\_heap](images/max_heap.png)
+![max_heap](images/max_heap.png)
 
 Notice that the heap above does not follow search tree property where all values to the left of a node are less and all values to the right are greater or equal. Instead, the max heap invariant is:
 
--   given any node, its children must be less than or equal to the node
+- given any node, its children must be less than or equal to the node
 
 This constraint makes heaps much more relaxed in structure compared to a search tree. There is no guaranteed order among “siblings” or “cousins” in a heap. The relationship only flows down the tree from parent to child. In other words, in a max heap, a node will be greater than all of it's children, it's grandchildren, its great-grandchildren, and so on. A consequence of this is the root being the absolute maximum of the entire tree. We'll be exploring max heaps together, but these arguments are symmetric for a min heap.
 
@@ -3500,15 +3370,15 @@ We'll eventually implement a max heap together, but first we'll need to take a q
 
 Our heap implementation will not only be balanced, but it will also be **complete**. To clarify, **every complete tree is also a balanced tree**, but not every balanced tree is also complete. Our definition of a complete tree is:
 
--   a tree where all levels have the maximal number of nodes, except the bottom
+- a tree where all levels have the maximal number of nodes, except the bottom
 
-    the level
+  the level
 
--   AND the bottom level has all nodes filled as far left as possible
+- AND the bottom level has all nodes filled as far left as possible
 
 Here are few examples of the definition:
 
-![complete\_tree](images/complete_tree.png)
+![complete_tree](images/complete_tree.png)
 
 Notice that the tree is on the right fails the second point of our definition because there is a gap in the last level. Informally, you can think about a complete tree as packing its nodes as closely together as possible. This line of thinking will come into play when we code heaps later.
 
@@ -3520,18 +3390,17 @@ We'll analyze this in depth when we implement a heap in the next section!
 
 One of the most common uses of a binary heap is to implement a “[priority queue](https://en.wikipedia.org/wiki/Priority_queue)”. We learned before that a queue is a FIFO (First In, First Out) data structure. With a priority queue, items are removed from the queue based on a priority number. The priority number is used to place the items into the heap and pull them out in the correct priority order!
 
-------------------------------------------------------------------------
+---
 
-Introduction to Heaps
-=====================
+# Introduction to Heaps
 
-Let's explore the **Heap** data structure! In particular, we'll explore **Binary Heaps**. A binary heap is a type of binary tree. However, a heap is not a binary *search* tree. A heap is a partially ordered data structure, whereas a BST has full order. In a heap, the root of the tree will be the maximum (max heap) or the minimum (min heap). Below is an example of a max heap:
+Let's explore the **Heap** data structure! In particular, we'll explore **Binary Heaps**. A binary heap is a type of binary tree. However, a heap is not a binary _search_ tree. A heap is a partially ordered data structure, whereas a BST has full order. In a heap, the root of the tree will be the maximum (max heap) or the minimum (min heap). Below is an example of a max heap:
 
-![max\_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
+![max_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
 
 Notice that the heap above does not follow search tree property where all values to the left of a node are less and all values to the right are greater or equal. Instead, the max heap invariant is:
 
--   given any node, its children must be less than or equal to the node
+- given any node, its children must be less than or equal to the node
 
 This constraint makes heaps much more relaxed in structure compared to a search tree. There is no guaranteed order among “siblings” or “cousins” in a heap. The relationship only flows down the tree from parent to child. In other words, in a max heap, a node will be greater than all of it's children, it's grandchildren, its great-grandchildren, and so on. A consequence of this is the root being the absolute maximum of the entire tree. We'll be exploring max heaps together, but these arguments are symmetric for a min heap.
 
@@ -3541,15 +3410,15 @@ We'll eventually implement a max heap together, but first we'll need to take a q
 
 Our heap implementation will not only be balanced, but it will also be **complete**. To clarify, **every complete tree is also a balanced tree**, but not every balanced tree is also complete. Our definition of a complete tree is:
 
--   a tree where all levels have the maximal number of nodes, except the bottom
+- a tree where all levels have the maximal number of nodes, except the bottom
 
-    the level
+  the level
 
--   AND the bottom level has all nodes filled as far left as possible
+- AND the bottom level has all nodes filled as far left as possible
 
 Here are few examples of the definition:
 
-![complete\_tree](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/complete_tree.png)
+![complete_tree](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/complete_tree.png)
 
 Notice that the tree is on the right fails the second point of our definition because there is a gap in the last level. Informally, you can think about a complete tree as packing its nodes as closely together as possible. This line of thinking will come into play when we code heaps later.
 
@@ -3561,13 +3430,13 @@ We'll analyze this in depth when we implement a heap in the next section!
 
 One of the most common uses of a binary heap is to implement a “[priority queue](https://en.wikipedia.org/wiki/Priority_queue)”. We learned before that a queue is a FIFO (First In, First Out) data structure. With a priority queue, items are removed from the queue based on a priority number. The priority number is used to place the items into the heap and pull them out in the correct priority order!
 
-Heaps\*\*. A binary heap is a type of binary tree. However, a heap is not a binary *search* tree. A heap is a partially ordered data structure, whereas a BST has full order. In a heap, the root of the tree will be the maximum (max heap) or the minimum (min heap). Below is an example of a max heap:
+Heaps\*\*. A binary heap is a type of binary tree. However, a heap is not a binary _search_ tree. A heap is a partially ordered data structure, whereas a BST has full order. In a heap, the root of the tree will be the maximum (max heap) or the minimum (min heap). Below is an example of a max heap:
 
-![max\_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
+![max_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
 
 Notice that the heap above does not follow search tree property where all values to the left of a node are less and all values to the right are greater or equal. Instead, the max heap invariant is:
 
--   given any node, its children must be less than or equal to the node
+- given any node, its children must be less than or equal to the node
 
 This constraint makes heaps much more relaxed in structure compared to a search tree. There is no guaranteed order among “siblings” or “cousins” in a heap. The relationship only flows down the tree from parent to child. In other words, in a max heap, a node will be greater than all of it's children, it's grandchildren, its great-grandchildren, and so on. A consequence of this is the root being the absolute maximum of the entire tree. We'll be exploring max heaps together, but these arguments are symmetric for a min heap.
 
@@ -3577,15 +3446,15 @@ We'll eventually implement a max heap together, but first we'll need to take a q
 
 Our heap implementation will not only be balanced, but it will also be **complete**. To clarify, **every complete tree is also a balanced tree**, but not every balanced tree is also complete. Our definition of a complete tree is:
 
--   a tree where all levels have the maximal number of nodes, except the bottom
+- a tree where all levels have the maximal number of nodes, except the bottom
 
-    the level
+  the level
 
--   AND the bottom level has all nodes filled as far left as possible
+- AND the bottom level has all nodes filled as far left as possible
 
 Here are few examples of the definition:
 
-![complete\_tree](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/complete_tree.png)
+![complete_tree](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/complete_tree.png)
 
 Notice that the tree is on the right fails the second point of our definition because there is a gap in the last level. Informally, you can think about a complete tree as packing its nodes as closely together as possible. This line of thinking will come into play when we code heaps later.
 
@@ -3597,20 +3466,19 @@ We'll analyze this in depth when we implement a heap in the next section!
 
 One of the most common uses of a binary heap is to implement a “[priority queue](https://en.wikipedia.org/wiki/Priority_queue)”. We learned before that a queue is a FIFO (First In, First Out) data structure. With a priority queue, items are removed from the queue based on a priority number. The priority number is used to place the items into the heap and pull them out in the correct priority order!
 
-------------------------------------------------------------------------
+---
 
-Binary Heap Implementation
---------------------------
+## Binary Heap Implementation
 
 Now that we are familiar with the structure of a heap, let's implement one! What may be surprising is that the usual way to implement a heap is by simply using an array. That is, we won't need to create a node class with pointers. Instead, each index of the array will represent a node, with the root being at index 1. We'll avoid using index 0 of the array so our math works out nicely. From this point, we'll use the following rules to interpret the array as a heap:
 
--   index `i` represents a node in the heap
--   the left child of node `i` can be found at index `2 * i`
--   the right child of code `i` can be found at index `2 * i + 1`
+- index `i` represents a node in the heap
+- the left child of node `i` can be found at index `2 * i`
+- the right child of code `i` can be found at index `2 * i + 1`
 
 In other words, the array `[null, 42, 32, 24, 30, 9, 20, 18, 2, 7]` represents the heap below. Take a moment to analyze how the array indices work out to represent left and right children.
 
-![max\_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
+![max_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
 
 Pretty clever math right? We can also describe the relationship from child to parent node. Say we are given a node at index `i` in the heap, then it's parent is found at index `Math.floor(i / 2)` .
 
@@ -3663,8 +3531,8 @@ This is the “fetch” operation of a heap. Since we maintain heap property thr
 
 ### Time Complexity Analysis
 
--   insert: `O(log(n))`
--   deleteMax: `O(log(n))`
+- insert: `O(log(n))`
+- deleteMax: `O(log(n))`
 
 Recall that our heap will be a complete/balanced tree. This means it's height is `log(n)` where `n` is the number of items. Both `insert` and `deleteMax` have a time complexity of `log(n)` because of `siftUp` and `siftDown` respectively. In worst case `insert` , we will have to `siftUp` a leaf all the way to the root of the tree. In the worst case `deleteMax` , we will have to `siftDown` the new root all the way down to the leaf level. In either case, we'll have to traverse the full height of the tree, `log(n)` .
 
@@ -3674,17 +3542,17 @@ Now that we have established `O(log(n))` for a single insertion, let's analyze t
 
 ### Space Complexity Analysis
 
--   `O(n)`, since we use a single array to store heap data.heap, let's implement one! What
+- `O(n)`, since we use a single array to store heap data.heap, let's implement one! What
 
 may be surprising is that the usual way to implement a heap is by simply using an array. That is, we won't need to create a node class with pointers. Instead, each index of the array will represent a node, with the root being at index 1. We'll avoid using index 0 of the array so our math works out nicely. From this point, we'll use the following rules to interpret the array as a heap:
 
--   index `i` represents a node in the heap
--   the left child of node `i` can be found at index `2 * i`
--   the right child of code `i` can be found at index `2 * i + 1`
+- index `i` represents a node in the heap
+- the left child of node `i` can be found at index `2 * i`
+- the right child of code `i` can be found at index `2 * i + 1`
 
 In other words, the array `[null, 42, 32, 24, 30, 9, 20, 18, 2, 7]` represents the heap below. Take a moment to analyze how the array indices work out to represent left and right children.
 
-![max\_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
+![max_heap](https://s3-us-west-1.amazonaws.com/appacademy-open-assets/data_structures_algorithms/heaps/images/max_heap.png)
 
 Pretty clever math right? We can also describe the relationship from child to parent node. Say we are given a node at index `i` in the heap, then it's parent is found at index `Math.floor(i / 2)` .
 
@@ -3737,8 +3605,8 @@ This is the “fetch” operation of a heap. Since we maintain heap property thr
 
 ### Time Complexity Analysis
 
--   insert: `O(log(n))`
--   deleteMax: `O(log(n))`
+- insert: `O(log(n))`
+- deleteMax: `O(log(n))`
 
 Recall that our heap will be a complete/balanced tree. This means it's height is `log(n)` where `n` is the number of items. Both `insert` and `deleteMax` have a time complexity of `log(n)` because of `siftUp` and `siftDown` respectively. In worst case `insert` , we will have to `siftUp` a leaf all the way to the root of the tree. In the worst case `deleteMax` , we will have to `siftDown` the new root all the way down to the leaf level. In either case, we'll have to traverse the full height of the tree, `log(n)` .
 
@@ -3748,22 +3616,21 @@ Now that we have established `O(log(n))` for a single insertion, let's analyze t
 
 ### Space Complexity Analysis
 
--   `O(n)`, since we use a single array to store heap data.
+- `O(n)`, since we use a single array to store heap data.
 
-------------------------------------------------------------------------
+---
 
-Binary Heap Implementation
---------------------------
+## Binary Heap Implementation
 
 Now that we are familiar with the structure of a heap, let's implement one! What may be surprising is that the usual way to implement a heap is by simply using an array. That is, we won't need to create a node class with pointers. Instead, each index of the array will represent a node, with the root being at index 1. We'll avoid using index 0 of the array so our math works out nicely. From this point, we'll use the following rules to interpret the array as a heap:
 
--   index `i` represents a node in the heap
--   the left child of node `i` can be found at index `2 * i`
--   the right child of code `i` can be found at index `2 * i + 1`
+- index `i` represents a node in the heap
+- the left child of node `i` can be found at index `2 * i`
+- the right child of code `i` can be found at index `2 * i + 1`
 
 In other words, the array `[null, 42, 32, 24, 30, 9, 20, 18, 2, 7]` represents the heap below. Take a moment to analyze how the array indices work out to represent left and right children.
 
-![max\_heap](images/max_heap.png)
+![max_heap](images/max_heap.png)
 
 Pretty clever math right? We can also describe the relationship from child to parent node. Say we are given a node at index `i` in the heap, then it's parent is found at index `Math.floor(i / 2)` .
 
@@ -3816,8 +3683,8 @@ This is the “fetch” operation of a heap. Since we maintain heap property thr
 
 ### Time Complexity Analysis
 
--   insert: `O(log(n))`
--   deleteMax: `O(log(n))`
+- insert: `O(log(n))`
+- deleteMax: `O(log(n))`
 
 Recall that our heap will be a complete/balanced tree. This means it's height is `log(n)` where `n` is the number of items. Both `insert` and `deleteMax` have a time complexity of `log(n)` because of `siftUp` and `siftDown` respectively. In worst case `insert` , we will have to `siftUp` a leaf all the way to the root of the tree. In the worst case `deleteMax` , we will have to `siftDown` the new root all the way down to the leaf level. In either case, we'll have to traverse the full height of the tree, `log(n)` .
 
@@ -3827,14 +3694,13 @@ Now that we have established `O(log(n))` for a single insertion, let's analyze t
 
 ### Space Complexity Analysis
 
--   `O(n)`, since we use a single array to store heap data.
+- `O(n)`, since we use a single array to store heap data.
 
-------------------------------------------------------------------------
+---
 
-Heap Sort
----------
+## Heap Sort
 
-We've emphasized heavily that heaps are a *partially ordered* data structure. However, we can still leverage heaps in a sorting algorithm to end up with fully sorted array. The strategy is simple using our previous `MaxHeap` implementation:
+We've emphasized heavily that heaps are a _partially ordered_ data structure. However, we can still leverage heaps in a sorting algorithm to end up with fully sorted array. The strategy is simple using our previous `MaxHeap` implementation:
 
 1.  build the heap: `insert` all elements of the array into a `MaxHeap`
 2.  construct the sorted list: continue to `deleteMax` until the heap is empty, every deletion will return the next element in decreasing order
@@ -3859,17 +3725,16 @@ The code is straightforward:
 
 ### Time Complexity Analysis: O(nlog(n))
 
--   `n` is the size of the input array
--   step-1 requires `O(n)` time as previously discussed
--   step-2's while loop requires `n` steps in isolation and each `deleteMax` will require `log(n)` steps to restore max heap property (due to sifting-down). This means step 2 costs `O(nlog(n))`
--   the total time complexity of the algorithm is `O(n + nlog(n)) =                 O(nlog(n))`
+- `n` is the size of the input array
+- step-1 requires `O(n)` time as previously discussed
+- step-2's while loop requires `n` steps in isolation and each `deleteMax` will require `log(n)` steps to restore max heap property (due to sifting-down). This means step 2 costs `O(nlog(n))`
+- the total time complexity of the algorithm is `O(n + nlog(n)) = O(nlog(n))`
 
 ### Space Complexity Analysis:
 
 So `heapSort` performs as fast as our other efficient sorting algorithms, but how does it fair in space complexity? Our implementation above requires an extra `O(n)` amount of space because the heap is maintained separately from the input array. If we can figure out a way to do all of these heap operations in-place we can get constant `O(1)` space! Let's work on this now.
 
-In-Place Heap Sort
-------------------
+## In-Place Heap Sort
 
 The in-place algorithm will have the same 2 steps, but it will differ in the implementation details. Since we need to have all operations take place in a single array, we're going to have to denote two regions of the array. That is, we'll need a heap region and a sorted region. We begin by turning the entire region into a heap. Then we continually delete max to get the next element in increasing order. As the heap region shrinks, the sorted region will grow.
 
@@ -3908,12 +3773,12 @@ Let's focus on designing step-1 as an in-place algorithm. In other words, we'll 
 
 We weren't kidding when we said this would be similar to `MaxHeap#siftDown` . If you are not convinced, flip to the previous section and take a look! The few differences we want to emphasize are:
 
--   Given a node at index `i`, it's left index is `2 * i + 1` and it's right index is `2                 * i                 + 2`
-    -   Using these as our child index formulas will allow us to avoid using a placeholder element at index 0. The root of the heap will be at index 0.
--   The parameter `n` represents the number of nodes in the heap
-    -   You may feel that `array.length` also represents the number of nodes in the heap. That is true, but only in step-1. Later we will need to dynamically state the size of the heap. Remember, we are trying to do this without creating any extra arrays. We'll need to separate the heap and sorted regions of the array and `n` will dictate the end of the heap.
--   We created a separate `swap` helper function.
-    -   Nothing fancy here. Swapping will be valuable in step-2 of the algorithm as well, so we'll want to keep our code DRY (don't repeat yourself).
+- Given a node at index `i`, it's left index is `2 * i + 1` and it's right index is `2 * i + 2`
+  - Using these as our child index formulas will allow us to avoid using a placeholder element at index 0. The root of the heap will be at index 0.
+- The parameter `n` represents the number of nodes in the heap
+  - You may feel that `array.length` also represents the number of nodes in the heap. That is true, but only in step-1. Later we will need to dynamically state the size of the heap. Remember, we are trying to do this without creating any extra arrays. We'll need to separate the heap and sorted regions of the array and `n` will dictate the end of the heap.
+- We created a separate `swap` helper function.
+  - Nothing fancy here. Swapping will be valuable in step-2 of the algorithm as well, so we'll want to keep our code DRY (don't repeat yourself).
 
 To correctly convert the input array into a heap, we'll need to call `heapify` on children nodes before their parents. This is easy to do, just call `heapify` on each element right-to-left in the array:
 
@@ -3996,28 +3861,27 @@ Here is the full code for your reference:
         [array[i], array[j]] = [array[j], array[i]];
     }
 
-------------------------------------------------------------------------
+---
 
-Heaps Project
-=============
+# Heaps Project
 
 This project contains a skeleton for you to implement a max heap. This is a test-driven project. Run the tests and read the top-most error. If it's not clear what is failing, open the **test/test.js** file to figure out what the test is expecting. Make the top-most test pass.
 
 Keep making the top-most test pass until all tests pass.
 
-Instructions
-------------
+## Instructions
 
--   Clone the project from
+- Clone the project from
 
-    https://github.com/appacademy-starters/data-structures-max-heap-starter.
+  https://github.com/appacademy-starters/data-structures-max-heap-starter.
 
--   `cd` into the project folder
--   `npm install` to install dependencies in the project root directory
--   `npm test` to run the specs
--   You can view the test cases in `test/test.js`. Your job is to write code in
-    -   **lib/max\_heap.js** to implement the `MaxHeap` class
-    -   **lib/is\_heap.js** to implement the `isMaxHeap` function
-    -   **lib/leet\_code\_215.js** to implement the `findKthLargest` function located
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `test/test.js`. Your job is to write code in
 
-        at https://leetcode.com/problems/kth-largest-element-in-an-array/
+  - **lib/max_heap.js** to implement the `MaxHeap` class
+  - **lib/is_heap.js** to implement the `isMaxHeap` function
+  - **lib/leet_code_215.js** to implement the `findKthLargest` function located
+
+    at https://leetcode.com/problems/kth-largest-element-in-an-array/

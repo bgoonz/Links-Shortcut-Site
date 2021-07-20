@@ -1,90 +1,68 @@
-
-
 # ➤ Links Shortcut Websites
-
-
-
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#links)
 
 ## ➤ Links:
 
-  
-  
-  
-  
-  
-  
-
--   [✅Using Google Colab with GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=wKJ4bd5rt1wy)
--   [✅ To-Read(at some point)](https://gist.github.com/bgoonz/b07979f7a4a1c87f68e66e888dd2bbb2)
--   [✅Wordpress Blog](https://web-dev-hub.com/)
--   [✅ Lambda Prep](https://apply.lambdaschool.com/courses/web/)
--   [✅Notation](https://www.notion.so/Personal-Home-dba2672f6cfc451380a85953ad3e78d4)
--   [✅Netlify](https://app.netlify.com/)
--   [✅Word Press](https://wordpress.com/view/web-dev-hub.com/)
--   [✅ Regexer](https://regexr.com/)
--   [✅My Youtube Channel](https://www.youtube.com/channel/UC9-rYyUMsnEBK8G8fCyrXXA)
--   [✅My WordPress Blog](https://web-dev-hub.com/)
--   [✅Medium-Self-Hosted](https://modest-booth-4e17df.netlify.app/directory.html)
--   [✅Facebook](https://www.facebook.com/bryan.guner/)
--   [✅List of Technologies I want to learn](https://gist.github.com/bgoonz/a7e833436166d4ebb4905b078f5a352a)
--   [✅Gitlab](https://gitlab.com/)
--   [✅Lambda (OKTA)](https://lambdaschoolsso.okta.com/app/UserHome)
--   [✅Confluence DevOps](https://nickguner.atlassian.net/wiki/spaces/DEV/pages/1345388545/Python+Problems?atlOrigin=eyJpIjoiNzUwYjkxY2RiOTgxNGU1YjlmMjk0ZmM4ZmI1ZGNhNDEiLCJwIjoiYyJ9)
--   [✅FACEBOOK](https://www.facebook.com/bryan.guner/)
--   [✅Lambda-Email](https://mail.zoho.com/zm/#mail/folder/inbox)
--   [✅AMP Websites](https://amp.dev/)
--   [✅WEBSITES OF MY OWN CREATION](https://gist.github.com/bgoonz/659a9b81ac45453bedc0a1a36275b580)
--   [✅Excel2HTML Demo Site](https://pedantic-wing-adbf82.netlify.app/)
--   [✅Data Structures Learning Site](https://trusting-dijkstra-4d3b17.netlify.app/)
--   [✅Web-Dev-Hub-Original](https://web-dev-resource-hub.netlify.app/)
--   [✅Slack](https://app.slack.com/client/T4JUEB3ME/D01T2J8AP7X/thread/C01TBRN4ZD2-1617501657.011500)
--   [✅Slido](https://app.sli.do/event/xcj7bjgp)
--   [✅My Stared Repos](https://gistlog.co/bgoonz/9355c1d01508cf993d264d58ad2584f0)
--   [✅Lambda Canvas](https://lambdaschool.instructure.com/)
--   [✅Lambda-Resource-Site](https://lambda-prep.netlify.app/)
--   [✅Cool CSS Elements](https://elements.envato.com/)
--   [✅CSS Grid](https://cssgrid.io/)
--   [✅Website-Downloader](https://www6.waybackmachinedownloader.com/website-downloader-online/#)
--   [✅lambda-email](https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001)
--   [✅Edabit](https://edabit.com/)
--   [✅CodeWars](https://www.codewars.com/)
--   [✅Awesome Git User](https://github.com/sindresorhus)
--   [✅Awesome Git User \#2](https://github.com/substack)
--   [✅lambda-email](https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001)
--   [✅Gatsby Cloud](https://www.gatsbyjs.com/dashboard/f9296337-b3bc-4dfc-8a42-2af2b6425579/sites/33754b43-7691-43a6-aee3-235fa761d911/settings/hosting)
--   [✅Contentful Space](https://app.contentful.com/spaces/8bi3kosknnn4/home)
--   [✅STACKBIT](https://app.stackbit.com/studio/609b2d7c71a5dd0016f36326)
--   [✅Git Html Previewer](https://githtmlpreview.netlify.app/)
--   [✅React Gui Builder](https://openchakra.app/)
--   [✅My Medium Stories](https://medium.com/me/stories/public)
--   [✅AWS Console](https://console.aws.amazon.com/console/home?region=us-east-1)
--   [✅AWS Cloud 9](https://console.aws.amazon.com/cloud9/ide/1387ff00f7a34f7796fcdd9122e11530)
--   [✅Google Firebase Console](https://console.firebase.google.com/)
--   [✅Hasura graphQL Cloud](https://cloud.hasura.io/project/fe29e76b-000b-4c0d-ae12-55b46454f8d3/console)
--   [✅Herasha cloud heroku psql database](https://cloud.hasura.io/project/fe29e76b-000b-4c0d-ae12-55b46454f8d3/console/data/default/schema/public/tables/files/browse)
--   [✅Sanity](https://www.sanity.io/manage/personal/project/ke5fae8i)
--   [✅Visualizing Fractions](https://kguner-fractions-website.netlify.app/)
--   [✅Fake Json Api Backend](https://app.fakejson.com/member)
--   [✅Blogger Docs](https://developers.google.com/blogger/docs/3.0/performance?hl=en&authuser=0)
--   [✅Blogger Console](https://draft.blogger.com/)
--   [✅Link Dump Fil](https://gist.github.com/bgoonz/c8d651c0b2921f312b316f97073417a7)
--   [✅Knexjs](https://knexjs.org/)
-
-
-
-
-
+- [✅Using Google Colab with GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=wKJ4bd5rt1wy)
+- [✅ To-Read(at some point)](https://gist.github.com/bgoonz/b07979f7a4a1c87f68e66e888dd2bbb2)
+- [✅Wordpress Blog](https://web-dev-hub.com/)
+- [✅ Lambda Prep](https://apply.lambdaschool.com/courses/web/)
+- [✅Notation](https://www.notion.so/Personal-Home-dba2672f6cfc451380a85953ad3e78d4)
+- [✅Netlify](https://app.netlify.com/)
+- [✅Word Press](https://wordpress.com/view/web-dev-hub.com/)
+- [✅ Regexer](https://regexr.com/)
+- [✅My Youtube Channel](https://www.youtube.com/channel/UC9-rYyUMsnEBK8G8fCyrXXA)
+- [✅My WordPress Blog](https://web-dev-hub.com/)
+- [✅Medium-Self-Hosted](https://modest-booth-4e17df.netlify.app/directory.html)
+- [✅Facebook](https://www.facebook.com/bryan.guner/)
+- [✅List of Technologies I want to learn](https://gist.github.com/bgoonz/a7e833436166d4ebb4905b078f5a352a)
+- [✅Gitlab](https://gitlab.com/)
+- [✅Lambda (OKTA)](https://lambdaschoolsso.okta.com/app/UserHome)
+- [✅Confluence DevOps](https://nickguner.atlassian.net/wiki/spaces/DEV/pages/1345388545/Python+Problems?atlOrigin=eyJpIjoiNzUwYjkxY2RiOTgxNGU1YjlmMjk0ZmM4ZmI1ZGNhNDEiLCJwIjoiYyJ9)
+- [✅FACEBOOK](https://www.facebook.com/bryan.guner/)
+- [✅Lambda-Email](https://mail.zoho.com/zm/#mail/folder/inbox)
+- [✅AMP Websites](https://amp.dev/)
+- [✅WEBSITES OF MY OWN CREATION](https://gist.github.com/bgoonz/659a9b81ac45453bedc0a1a36275b580)
+- [✅Excel2HTML Demo Site](https://pedantic-wing-adbf82.netlify.app/)
+- [✅Data Structures Learning Site](https://trusting-dijkstra-4d3b17.netlify.app/)
+- [✅Web-Dev-Hub-Original](https://web-dev-resource-hub.netlify.app/)
+- [✅Slack](https://app.slack.com/client/T4JUEB3ME/D01T2J8AP7X/thread/C01TBRN4ZD2-1617501657.011500)
+- [✅Slido](https://app.sli.do/event/xcj7bjgp)
+- [✅My Stared Repos](https://gistlog.co/bgoonz/9355c1d01508cf993d264d58ad2584f0)
+- [✅Lambda Canvas](https://lambdaschool.instructure.com/)
+- [✅Lambda-Resource-Site](https://lambda-prep.netlify.app/)
+- [✅Cool CSS Elements](https://elements.envato.com/)
+- [✅CSS Grid](https://cssgrid.io/)
+- [✅Website-Downloader](https://www6.waybackmachinedownloader.com/website-downloader-online/#)
+- [✅lambda-email](https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001)
+- [✅Edabit](https://edabit.com/)
+- [✅CodeWars](https://www.codewars.com/)
+- [✅Awesome Git User](https://github.com/sindresorhus)
+- [✅Awesome Git User \#2](https://github.com/substack)
+- [✅lambda-email](https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001)
+- [✅Gatsby Cloud](https://www.gatsbyjs.com/dashboard/f9296337-b3bc-4dfc-8a42-2af2b6425579/sites/33754b43-7691-43a6-aee3-235fa761d911/settings/hosting)
+- [✅Contentful Space](https://app.contentful.com/spaces/8bi3kosknnn4/home)
+- [✅STACKBIT](https://app.stackbit.com/studio/609b2d7c71a5dd0016f36326)
+- [✅Git Html Previewer](https://githtmlpreview.netlify.app/)
+- [✅React Gui Builder](https://openchakra.app/)
+- [✅My Medium Stories](https://medium.com/me/stories/public)
+- [✅AWS Console](https://console.aws.amazon.com/console/home?region=us-east-1)
+- [✅AWS Cloud 9](https://console.aws.amazon.com/cloud9/ide/1387ff00f7a34f7796fcdd9122e11530)
+- [✅Google Firebase Console](https://console.firebase.google.com/)
+- [✅Hasura graphQL Cloud](https://cloud.hasura.io/project/fe29e76b-000b-4c0d-ae12-55b46454f8d3/console)
+- [✅Herasha cloud heroku psql database](https://cloud.hasura.io/project/fe29e76b-000b-4c0d-ae12-55b46454f8d3/console/data/default/schema/public/tables/files/browse)
+- [✅Sanity](https://www.sanity.io/manage/personal/project/ke5fae8i)
+- [✅Visualizing Fractions](https://kguner-fractions-website.netlify.app/)
+- [✅Fake Json Api Backend](https://app.fakejson.com/member)
+- [✅Blogger Docs](https://developers.google.com/blogger/docs/3.0/performance?hl=en&authuser=0)
+- [✅Blogger Console](https://draft.blogger.com/)
+- [✅Link Dump Fil](https://gist.github.com/bgoonz/c8d651c0b2921f312b316f97073417a7)
+- [✅Knexjs](https://knexjs.org/)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#links)
 
 ## ➤ Blog Links:
-
-  
-  
-
 
 [bgoonz-blog.netlify.app/)
 [owcase/]([https://bgoonz-blog.netlify.app/showcase/)
@@ -133,8 +111,6 @@
 
 ---
 
-
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#blog-templateshttpsbgoonzgithubiorepo-utils)
 
 ## ➤ [blog templates](https://bgoonz.github.io/repo-utils/)
@@ -149,13 +125,11 @@
 
 ![logo](https://avatars.githubusercontent.com/u/66654881?s=460&u=fa9d2cc45bc228dd9b7d3dee6d4653f940fab35a&v=4)
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#my-repo-utilities-npm-package)
 
 # ➤ MY REPO UTILITIES NPM PACKAGE
 
 ### This code is not exclusivley written by me ... it is just a list of files I use often during website development... use at your own risk
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#copy-2-clipboard)
 
@@ -165,7 +139,6 @@
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#git-html-preview-tool)
 
 ## ➤ Git-Html Preview-Tool:
@@ -173,7 +146,6 @@
 ![](images/git-preview.gif)
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#markdown-templates)
 
@@ -183,7 +155,6 @@
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#text-tools)
 
 ## ➤ Text Tools:
@@ -192,7 +163,6 @@
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#automatic-table-of-contents-generator)
 
 ## ➤ Automatic Table Of Contents Generator:
@@ -200,7 +170,6 @@
 ![](images/toc.PNG)
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#text-file-2-js-array)
 
@@ -231,8 +200,8 @@ npm i repo-utils
 ||
 ||
 V
-</center>
 
+</center>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#1-download-links-of-a-specific-file-extension-from-website)
 
@@ -242,7 +211,6 @@ V
 
  wget -r -A.pdf https://overapi.com/gitwget --wait=2 --level=inf --limit-rate=20K --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off
 ```
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#2-download-website-for-ofline-use)
 
@@ -257,7 +225,6 @@ httrack --ext-depth=2 _**url**_
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#3-recursivley-remove-files-named-cookiestxt)
 
 ## ➤ 3. Recursivley remove files named cookies.txt
@@ -271,7 +238,6 @@ find . -name cookies.txt -type f -exec rm -rf {} \;
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#4-recursivley-remove-lines-of-text-contaning-the-string-badfolder-from-files-in-the-working-directory)
 
 ## ➤ 4. Recursivley remove lines of text contaning the string badFolder from files in the working directory.
@@ -283,7 +249,6 @@ find . -type f -exec sed -i '/badFolder/d' ./* {} \;
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#5-recursivley-install-node_modules)
 
@@ -301,7 +266,6 @@ npm-recursive-install
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#6-recursivley-exicute-any-sequence-of-commands)
 
@@ -336,7 +300,6 @@ RecurseDirs "./"
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#7-copy-any-text-between-script-tags-in-a-file-called-_examplehtml_-to-be-inserted-into-a-new-file-_outjs_)
 
 ## ➤ 7. Copy any text between <**script**> tags in a file called _example.html_ to be inserted into a new file: _out.js_
@@ -349,7 +312,6 @@ sed -n -e '/<script>/,/<\/script>/p' example.html >out.js
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#8-recursivley-delete-node_modules-folders)
 
 ## ➤ 8. Recursivley Delete node_modules folders
@@ -361,7 +323,6 @@ find . -name 'node_modules' -type d -print -prune -exec rm -rf '{}' +
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#9-sanatize-file-and-folder-names-to-remove-illegal-characters-and-reserved-words)
 
@@ -397,7 +358,6 @@ sanitize_dir '/path/to/somewhere'
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#10-start-postgresql-in-terminal)
 
 ## ➤ 10. Start postgresql in terminal
@@ -410,7 +370,6 @@ sanitize_dir '/path/to/somewhere'
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#11-add-closing-body-and-script-tags-to-each-html-file-in-working-directory)
 
@@ -428,7 +387,6 @@ doneecho "<form>
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#12-batch-download-videos)
 
@@ -457,7 +415,6 @@ done
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#13-change-file-extension-from-txt-to-doc-for-all-files-in-working-directory)
 
 ## ➤ 13. Change File Extension from '.txt' to .doc for all files in working directory.
@@ -471,7 +428,6 @@ rename 's/\.txt$/.doc/' *.txt
 
 ```
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#14-recursivley-change-any-file-with-extension-jsdownload-to-js)
 
 ## ➤ 14. Recursivley change any file with extension .js.download to .js
@@ -484,7 +440,6 @@ find . -name "*.\.js\.download" -exec rename 's/\.js\.download$/.js/' '{}' +
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#15-copy-folder-structure-including-only-files-of-a-specific-extension-into-an-ouput-folder)
 
 ## ➤ 15. Copy folder structure including only files of a specific extension into an ouput Folder
@@ -496,7 +451,6 @@ find . -name '*.md' | cpio -pdm './../outputFolder'
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#pandoc)
 
@@ -736,7 +690,6 @@ NF&&f{ print s"/"$0 }'>listing.md
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#recursivley-remove-from-all-html-files-any-lines-contaning-the-string-badtext)
 
 # ➤ Recursivley remove from all html files any lines contaning the string "badText"
@@ -762,7 +715,6 @@ find . -name "*.zip" | while read filename; do unzip -o -d "`dirname "$filename"
 ```
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#recursivley-delete-zip-files-when-done)
 
@@ -802,7 +754,6 @@ done
 
 sed -i '/target-string/d' ./js-in-one-page.html
 ```
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#examples)
 
@@ -847,7 +798,6 @@ find . -empty -type d -print -delete
 
 ---
 
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#recursively-remove-git-folder-gitignore-file-and-gitmodules-file-and-gitattributes-file)
 
 # ➤ recursively remove .git folder, .gitignore file and .gitmodules file and .gitattributes file
@@ -859,7 +809,6 @@ find . \( -name ".git" -o -name ".gitignore" -o -name ".gitmodules" -o -name ".g
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#recursivley-remove-security-release-changelog-license--contributing-files)
 
@@ -874,7 +823,6 @@ find . \( -name "*SECURITY.txt" -o -name "*RELEASE.txt" -o  -name "*CHANGELOG.tx
 ---
 
 ---
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#div)
 
@@ -1440,3 +1388,4 @@ find . \( -name "*SECURITY.txt" -o -name "*RELEASE.txt" -o  -name "*CHANGELOG.tx
 └── ./style.css
 
 69 directories, 307 files
+```

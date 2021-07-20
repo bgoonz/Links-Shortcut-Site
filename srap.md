@@ -1,4 +1,3 @@
-
 [https://bgoonz-blog.netlify.app/]()
 [https://bgoonz-blog.netlify.app/showcase/]()
 [https://bgoonz-blog.netlify.app/blog/]()
