@@ -116,7 +116,6 @@ Preformatted blocks are useful for ASCII art:
                    |    -hrr-
                 ___|_____________
 
-
 ## <a href="#playing-the-blame-game" class="header-link"></a>Playing the blame game
 
 If you need to blame someone, the best way to do so is by quoting them:
