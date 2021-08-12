@@ -1,11 +1,17 @@
 # My Quick Links Website:
 
+---
 
 
 # [Pages](https://bgoonz.github.io/Links-Shortcut-Site/) ... [Netlify](https://links4242.netlify.app/) ... [Vercel](http://links-shortcut-site.vercel.app/)
 
+---
 
 ![image](./amazing-background.png)
+
+![SEO](./seo.PNG)
+
+---
 
 
 # Code:
@@ -475,3 +481,4 @@
 
 
 ```
+---
