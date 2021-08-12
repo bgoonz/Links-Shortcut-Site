@@ -77,7 +77,8 @@
  }
 
  body {
-   background: url(https://i.gifer.com/76YS.gif);
+   background: url(./amazing-background.JPEG);
+     background-repeat: repeat-y;
    zoom: 0.85;
    font-family: 'Raleway', sans-serif;
    font-size: 18px;
