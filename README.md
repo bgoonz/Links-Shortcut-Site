@@ -5,7 +5,7 @@
 # [Pages](https://bgoonz.github.io/Links-Shortcut-Site/) ... [Netlify](https://links4242.netlify.app/) ... [Vercel](http://links-shortcut-site.vercel.app/)
 
 
-![image](./amazing-background.JPEG)
+![image](./amazing-background.png)
 
 
 # Code:
