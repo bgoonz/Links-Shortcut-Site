@@ -17,29 +17,29 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-  </script>
+    </script>
   <script>
     function mySearchFunction() {
       // Declare variables
       let input, filter, ol, li, item, i, txtValue;
       // User Input
-      input = document.getElementById("myInput");
+      input = document.getElementById( "myInput" );
       // Filter, makes search not case sensitive
       filter = input.value.toUpperCase();
       // Grabs the parent element by id
-      ol = document.getElementById("stateList");
+      ol = document.getElementById( "stateList" );
       // Individual item on list
-      li = ol.getElementsByTagName("li");
+      li = ol.getElementsByTagName( "li" );
       // Treats lists items like an array, where each item can be accessed through      it's index
-      for (i = 0; i < li.length; i++) {
-        item = li[i];
+      for ( i = 0; i < li.length; i++ ) {
+        item = li[ i ];
         // Iterate over each list item to see if the value of the input, ignoring         case, matches the inner text or inner html of the item.
         txtValue = item.textContent || item.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        if ( txtValue.toUpperCase().indexOf( filter ) > -1 ) {
           // Displays list items that are a match, and nothing if no match
-          li[i].style.display = "";
+          li[ i ].style.display = "";
         } else {
-          li[i].style.display = "none";
+          li[ i ].style.display = "none";
         }
       }
     }
@@ -63,7 +63,7 @@
     <br>
     <br>
   </center>
-  <a href="https://github.com/bgoonz/Links-Shortcut-Site" class="github-corner" aria-label="View source on Github"><svg
+ <a target="_blank" href="https://github.com/bgoonz/Links-Shortcut-Site" class="github-corner" aria-label="View source on Github"><svg
       width="80" height="80" viewbox="0 0 250 250"
       style="z-index: 100000; fill:#194ccdaf; color:#fff; position: fixed; top: 20px; border: 0; left: 20px; transform: scale(-1.5, 1.5);"
       aria-hidden="true">
@@ -82,47 +82,47 @@
         Google Codelab with GitHub</a>
     </li>
     <li>
-      <a href="https://gist.github.com/bgoonz/b07979f7a4a1c87f68e66e888dd2bbb2">✅ To-Read(at some point)</a>
+     <a target="_blank" href="https://gist.github.com/bgoonz/b07979f7a4a1c87f68e66e888dd2bbb2">✅ To-Read(at some point)</a>
     </li>
     <li>
-      <a href="https://web-dev-hub.com/">✅Wordpress Blog</a>
+     <a target="_blank" href="https://web-dev-hub.com/">✅Wordpress Blog</a>
     </li>
     <li>
-      <a href="https://apply.lambdaschool.com/courses/web/">✅ Lambda Prep</a>
+     <a target="_blank" href="https://apply.lambdaschool.com/courses/web/">✅ Lambda Prep</a>
     </li>
     <li>
-      <a href="https://www.notion.so/Personal-Home-dba2672f6cfc451380a85953ad3e78d4">✅Notation</a>
+     <a target="_blank" href="https://www.notion.so/Personal-Home-dba2672f6cfc451380a85953ad3e78d4">✅Notation</a>
     </li>
     <li>
-      <a href="https://app.netlify.com/">✅Netlify</a>
+     <a target="_blank" href="https://app.netlify.com/">✅Netlify</a>
     </li>
     <li>
-      <a href="https://wordpress.com/view/web-dev-hub.com/">✅Word Press</a>
+     <a target="_blank" href="https://wordpress.com/view/web-dev-hub.com/">✅Word Press</a>
     </li>
     <li>
-      <a href="https://regexr.com/">✅ Regexer</a>
+     <a target="_blank" href="https://regexr.com/">✅ Regexer</a>
     </li>
     <li>
-      <a href="https://www.youtube.com/channel/UC9-rYyUMsnEBK8G8fCyrXXA">✅My Youtube Channel</a>
+     <a target="_blank" href="https://www.youtube.com/channel/UC9-rYyUMsnEBK8G8fCyrXXA">✅My Youtube Channel</a>
     </li>
     <li>
-      <a href="https://web-dev-hub.com/">✅My WordPress Blog</a>
+     <a target="_blank" href="https://web-dev-hub.com/">✅My WordPress Blog</a>
     </li>
     <li>
-      <a href="https://modest-booth-4e17df.netlify.app/directory.html">✅Medium-Self-Hosted</a>
+     <a target="_blank" href="https://modest-booth-4e17df.netlify.app/directory.html">✅Medium-Self-Hosted</a>
     </li>
     <li>
-      <a href="https://www.facebook.com/bryan.guner/">✅Facebook</a>
+     <a target="_blank" href="https://www.facebook.com/bryan.guner/">✅Facebook</a>
     </li>
     <li>
-      <a href="https://gist.github.com/bgoonz/a7e833436166d4ebb4905b078f5a352a">✅List of Technologies I want to
+     <a target="_blank" href="https://gist.github.com/bgoonz/a7e833436166d4ebb4905b078f5a352a">✅List of Technologies I want to
         learn</a>
     </li>
     <li>
-      <a href="https://gitlab.com/">✅Gitlab</a>
+     <a target="_blank" href="https://gitlab.com/">✅Gitlab</a>
     </li>
     <li>
-      <a href="https://lambdaschoolsso.okta.com/app/UserHome">✅Lambda (OKTA)</a>
+     <a target="_blank" href="https://lambdaschoolsso.okta.com/app/UserHome">✅Lambda (OKTA)</a>
     </li>
     <li>
       <a
@@ -130,68 +130,68 @@
         DevOps</a>
     </li>
     <li>
-      <a href="https://www.facebook.com/bryan.guner/">✅FACEBOOK</a>
+     <a target="_blank" href="https://www.facebook.com/bryan.guner/">✅FACEBOOK</a>
     </li>
     <li>
-      <a href="https://mail.zoho.com/zm/#mail/folder/inbox">✅Lambda-Email</a>
+     <a target="_blank" href="https://mail.zoho.com/zm/#mail/folder/inbox">✅Lambda-Email</a>
     </li>
     <li>
-      <a href="https://amp.dev/">✅AMP Websites</a>
+     <a target="_blank" href="https://amp.dev/">✅AMP Websites</a>
     </li>
     <li>
-      <a style="font-weigt:800;" href="https://gist.github.com/bgoonz/659a9b81ac45453bedc0a1a36275b580">✅WEBSITES OF
+     <a target="_blank" style="font-weigt:800;" href="https://gist.github.com/bgoonz/659a9b81ac45453bedc0a1a36275b580">✅WEBSITES OF
         MY OWN CREATION</a>
     </li>
     <li>
-      <a href="https://pedantic-wing-adbf82.netlify.app/">✅Excel2HTML Demo Site</a>
+     <a target="_blank" href="https://pedantic-wing-adbf82.netlify.app/">✅Excel2HTML Demo Site</a>
     </li>
     <li>
-      <a href="https://trusting-dijkstra-4d3b17.netlify.app/">✅Data Structures Learning Site</a>
+     <a target="_blank" href="https://trusting-dijkstra-4d3b17.netlify.app/">✅Data Structures Learning Site</a>
     </li>
     <li>
-      <a href="https://web-dev-resource-hub.netlify.app/">✅Web-Dev-Hub-Original</a>
+     <a target="_blank" href="https://web-dev-resource-hub.netlify.app/">✅Web-Dev-Hub-Original</a>
     </li>
     <li>
-      <a href="https://app.slack.com/client/T4JUEB3ME/D01T2J8AP7X/thread/C01TBRN4ZD2-1617501657.011500">✅Slack</a>
+     <a target="_blank" href="https://app.slack.com/client/T4JUEB3ME/D01T2J8AP7X/thread/C01TBRN4ZD2-1617501657.011500">✅Slack</a>
     </li>
     <li>
-      <a href="https://app.sli.do/event/xcj7bjgp">✅Slido</a>
+     <a target="_blank" href="https://app.sli.do/event/xcj7bjgp">✅Slido</a>
     </li>
     <li>
-      <a href="https://gistlog.co/bgoonz/9355c1d01508cf993d264d58ad2584f0">✅My Stared Repos</a>
+     <a target="_blank" href="https://gistlog.co/bgoonz/9355c1d01508cf993d264d58ad2584f0">✅My Stared Repos</a>
     </li>
     <li>
-      <a href="https://lambdaschool.instructure.com/">✅Lambda Canvas</a>
+     <a target="_blank" href="https://lambdaschool.instructure.com/">✅Lambda Canvas</a>
     </li>
     <li>
-      <a href="https://lambda-prep.netlify.app/">✅Lambda-Resource-Site</a>
+     <a target="_blank" href="https://lambda-prep.netlify.app/">✅Lambda-Resource-Site</a>
     </li>
     <li>
-      <a href="https://elements.envato.com/">✅Cool CSS Elements</a>
+     <a target="_blank" href="https://elements.envato.com/">✅Cool CSS Elements</a>
     </li>
     <li>
-      <a href="https://cssgrid.io/">✅CSS Grid</a>
+     <a target="_blank" href="https://cssgrid.io/">✅CSS Grid</a>
     </li>
     <li>
-      <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/#">✅Website-Downloader</a>
+     <a target="_blank" href="https://www6.waybackmachinedownloader.com/website-downloader-online/#">✅Website-Downloader</a>
     </li>
     <li>
-      <a href="https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001">✅lambda-email</a>
+     <a target="_blank" href="https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001">✅lambda-email</a>
     </li>
     <li>
-      <a href="https://edabit.com/">✅Edabit</a>
+     <a target="_blank" href="https://edabit.com/">✅Edabit</a>
     </li>
     <li>
-      <a href="https://www.codewars.com/">✅CodeWars</a>
+     <a target="_blank" href="https://www.codewars.com/">✅CodeWars</a>
     </li>
     <li>
-      <a href="https://github.com/sindresorhus">✅Awesome Git User</a>
+     <a target="_blank" href="https://github.com/sindresorhus">✅Awesome Git User</a>
     </li>
     <li>
-      <a href="https://github.com/substack">✅Awesome Git User #2</a>
+     <a target="_blank" href="https://github.com/substack">✅Awesome Git User #2</a>
     </li>
     <li>
-      <a href="https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001">✅lambda-email</a>
+     <a target="_blank" href="https://mail.zoho.com/zm/#mail/folder/inbox/p/1618574775270100001">✅lambda-email</a>
     </li>
     <li>
       <a
@@ -199,31 +199,31 @@
         Cloud</a>
     </li>
     <li>
-      <a href="https://app.contentful.com/spaces/8bi3kosknnn4/home">✅Contentfol Space</a>
+     <a target="_blank" href="https://app.contentful.com/spaces/8bi3kosknnn4/home">✅Contentfol Space</a>
     </li>
     <li>
-      <a href="https://app.stackbit.com/studio/609b2d7c71a5dd0016f36326">✅STACKBIT</a>
+     <a target="_blank" href="https://app.stackbit.com/studio/609b2d7c71a5dd0016f36326">✅STACKBIT</a>
     </li>
     <li>
-      <a href="https://githtmlpreview.netlify.app/">✅Git Html Previewer</a>
+     <a target="_blank" href="https://githtmlpreview.netlify.app/">✅Git Html Previewer</a>
     </li>
     <li>
-      <a href="https://openchakra.app/">✅React Gui Builder</a>
+     <a target="_blank" href="https://openchakra.app/">✅React Gui Builder</a>
     </li>
     <li>
-      <a href="https://medium.com/me/stories/public">✅My Medium Stories</a>
+     <a target="_blank" href="https://medium.com/me/stories/public">✅My Medium Stories</a>
     </li>
     <li>
-      <a href="https://console.aws.amazon.com/console/home?region=us-east-1">✅AWS Console</a>
+     <a target="_blank" href="https://console.aws.amazon.com/console/home?region=us-east-1">✅AWS Console</a>
     </li>
     <li>
-      <a href="https://console.aws.amazon.com/cloud9/ide/1387ff00f7a34f7796fcdd9122e11530">✅AWS Cloud 9</a>
+     <a target="_blank" href="https://console.aws.amazon.com/cloud9/ide/1387ff00f7a34f7796fcdd9122e11530">✅AWS Cloud 9</a>
     </li>
     <li>
-      <a href="https://console.firebase.google.com/">✅Google Firebase Console</a>
+     <a target="_blank" href="https://console.firebase.google.com/">✅Google Firebase Console</a>
     </li>
     <li>
-      <a href="https://cloud.hasura.io/project/fe29e76b-000b-4c0d-ae12-55b46454f8d3/console">✅Hasura graphQL Cloud</a>
+     <a target="_blank" href="https://cloud.hasura.io/project/fe29e76b-000b-4c0d-ae12-55b46454f8d3/console">✅Hasura graphQL Cloud</a>
     </li>
     <li>
       <a
@@ -231,109 +231,109 @@
         cloud heroku psql database</a>
     </li>
     <li>
-      <a href="https://www.sanity.io/manage/personal/project/ke5fae8i">✅Sanity</a>
+     <a target="_blank" href="https://www.sanity.io/manage/personal/project/ke5fae8i">✅Sanity</a>
     </li>
     <li>
-      <a href="https://kguner-fractions-website.netlify.app/">✅Visualizing Fractions</a>
+     <a target="_blank" href="https://kguner-fractions-website.netlify.app/">✅Visualizing Fractions</a>
     </li>
     <li>
-      <a href="https://app.fakejson.com/member">✅Fake Json Api Backend</a>
+     <a target="_blank" href="https://app.fakejson.com/member">✅Fake Json Api Backend</a>
     </li>
     <li>
-      <a href="https://developers.google.com/blogger/docs/3.0/performance?hl=en&authuser=0">✅Blogger Docs</a>
+     <a target="_blank" href="https://developers.google.com/blogger/docs/3.0/performance?hl=en&authuser=0">✅Blogger Docs</a>
     </li>
     <li>
-      <a href="https://draft.blogger.com/">✅Blogger Console</a>
+     <a target="_blank" href="https://draft.blogger.com/">✅Blogger Console</a>
     </li>
     <li>
-      <a href="https://gist.github.com/bgoonz/c8d651c0b2921f312b316f97073417a7">✅Link Dump Fil</a>
+     <a target="_blank" href="https://gist.github.com/bgoonz/c8d651c0b2921f312b316f97073417a7">✅Link Dump Fil</a>
     </li>
     <li>
-      <a href="https://knexjs.org/">✅Knexjs</a>
+     <a target="_blank" href="https://knexjs.org/">✅Knexjs</a>
     </li>
     <li>
-      <a href="https://newsapi.org/">✅NEWSApi</a>
+     <a target="_blank" href="https://newsapi.org/">✅NEWSApi</a>
     </li>
     <li>
-      <a href="https://www.tnd.dev/">✅Jamstack Tools</a>
+     <a target="_blank" href="https://www.tnd.dev/">✅Jamstack Tools</a>
     </li>
     <li>
-      <a href="https://octokit.github.io/">✅https://octokit.github.io/</a>
+     <a target="_blank" href="https://octokit.github.io/">✅https://octokit.github.io/</a>
     </li>
     <li>
-      <a href="https://www.gatsbyjs.com/starters/?d=gatsby">✅Gatsby Templates</a>
+     <a target="_blank" href="https://www.gatsbyjs.com/starters/?d=gatsby">✅Gatsby Templates</a>
     </li>
     <li>
-      <a href="https://revealjs.com/installation/#basic-setup">✅html slides</a>
+     <a target="_blank" href="https://revealjs.com/installation/#basic-setup">✅html slides</a>
     </li>
     <li>
-      <a href="https://gist.github.com/bgoonz/ad5c9944f383f1ed07239b672d87c69c">✅Bookmarks</a>
+     <a target="_blank" href="https://gist.github.com/bgoonz/ad5c9944f383f1ed07239b672d87c69c">✅Bookmarks</a>
     </li>
     <li>
-      <a href="https://bgoonz42.blogspot.com/">✅Blogger2</a>
+     <a target="_blank" href="https://bgoonz42.blogspot.com/">✅Blogger2</a>
     </li>
     <li>
-      <a href="https://unruffled-curran-b8a076.netlify.app/my-websites.html">✅my websites</a>
+     <a target="_blank" href="https://unruffled-curran-b8a076.netlify.app/my-websites.html">✅my websites</a>
     </li>
     <li>
-      <a href="https://purifycss.online/">✅Remove Unused CSS</a>
+     <a target="_blank" href="https://purifycss.online/">✅Remove Unused CSS</a>
     </li>
     <li>
-      <a href="https://cloudinary.com/console/c-d3e7c369000a1db1ee19b4e7f9e3ab/getting-started">✅ Cloudinary</a>
+     <a target="_blank" href="https://cloudinary.com/console/c-d3e7c369000a1db1ee19b4e7f9e3ab/getting-started">✅ Cloudinary</a>
     </li>
     <li>
-      <a href="https://app.codesignal.com/">✅Code Signal</a>
+     <a target="_blank" href="https://app.codesignal.com/">✅Code Signal</a>
     </li>
     <li>
-      <a href="https://mail.zoho.com/zm/#mail/folder/inbox">✅Lambda Email</a>
+     <a target="_blank" href="https://mail.zoho.com/zm/#mail/folder/inbox">✅Lambda Email</a>
     </li>
     <li>
-      <a href="https://templates.netlify.com/">✅Netlify JAMSTACK templates</a>
+     <a target="_blank" href="https://templates.netlify.com/">✅Netlify JAMSTACK templates</a>
     </li>
     <li>
-      <a href="https://spaces.w3schools.com/space/explore42">✅W3 Spaces</a>
+     <a target="_blank" href="https://spaces.w3schools.com/space/explore42">✅W3 Spaces</a>
     </li>
     <li>
-      <a href="https://gist.github.com/bgoonz/730fd7c7fa1f7fd3404f2553da99db1f">✅All My Repos</a>
+     <a target="_blank" href="https://gist.github.com/bgoonz/730fd7c7fa1f7fd3404f2553da99db1f">✅All My Repos</a>
     </li>
     <li>
-      <a href="https://bgoonz-blog.netlify.app/">✅Main Blog 2.0</a>
+     <a target="_blank" href="https://bgoonz-blog.netlify.app/">✅Main Blog 2.0</a>
     </li>
     <li>
-      <a href="https://golden-lobe-519.notion.site/Data-Structures-c3fe3debbe494b929ed2f20070b631f8">✅Notion Data
+     <a target="_blank" href="https://golden-lobe-519.notion.site/Data-Structures-c3fe3debbe494b929ed2f20070b631f8">✅Notion Data
         Structures</a>
     </li>
     <li>
-      <a href="https://bootcamp42.gitbook.io/python/">✅Python Gitbook </a>
+     <a target="_blank" href="https://bootcamp42.gitbook.io/python/">✅Python Gitbook </a>
     </li>
-<li>
-<a href="https://vercel.com/algos/bgoonz-branch-the-algos">✅Vercel</a>
-</li>
-   <li>
-<a href="https://app.netlify.com/teams/bgoonz">✅Netlify</a>
-</li>
-<li>
-<a href="https://www.notion.so/">✅Notion Login</a>
-</li>
-<li>
-<a href="https://onedrive.live.com/">✅One Drive Storage</a>
-</li>
-<li>
-<a href="https://www.npmjs.com/">✅NPM Website
-</li>
-<li>
-<a href="https://github.com/bgoonz?tab=repositories">✅My Repos</a>
-</li>
-<li>
-<a href="https://app.netlify.com/teams/bgoonz/overview">✅Netlify</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/">✅MDN DOCS</a>
-</li>
-<li>
-<a href="https://1lib.us/s/machine%20learning">✅Free Technical Books</a>
-</li>
-<!--<li>
+    <li>
+     <a target="_blank" href="https://vercel.com/algos/bgoonz-branch-the-algos">✅Vercel</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://app.netlify.com/teams/bgoonz">✅Netlify</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://www.notion.so/">✅Notion Login</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://onedrive.live.com/">✅One Drive Storage</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://www.npmjs.com/">✅NPM Website
+    </li>
+    <li>
+     <a target="_blank" href="https://github.com/bgoonz?tab=repositories">✅My Repos</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://app.netlify.com/teams/bgoonz/overview">✅Netlify</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://developer.mozilla.org/en-US/">✅MDN DOCS</a>
+    </li>
+    <li>
+     <a target="_blank" href="https://1lib.us/s/machine%20learning">✅Free Technical Books</a>
+    </li>
+    <!--<li>
 <a href="">✅</a>
 </li>
 <li>
@@ -433,18 +433,18 @@
   </div>
   <script>
     //reverse list
-    let list = document.getElementById("stateList");
+    let list = document.getElementById( "stateList" );
     let i = list.childNodes.length;
-    while (i--)
-      list.appendChild(list.childNodes[i]);
+    while ( i-- )
+      list.appendChild( list.childNodes[ i ] );
 
     function reverse_lists() {
-      let olists = document.getElementsByTagName('ol');
-      for (let i = 0; i < olists.length; i++) {
-        if (!olists[i].className.match(/\breversed\b/)) continue;
-        let items = olists[i].getElementsByTagName('li');
-        for (let j = 0; j < items.length; j++) {
-          items[j].setAttribute("value", items.length - j);
+      let olists = document.getElementsByTagName( 'ol' );
+      for ( let i = 0; i < olists.length; i++ ) {
+        if ( !olists[ i ].className.match( /\breversed\b/ ) ) continue;
+        let items = olists[ i ].getElementsByTagName( 'li' );
+        for ( let j = 0; j < items.length; j++ ) {
+          items[ j ].setAttribute( "value", items.length - j );
         }
       }
     }
